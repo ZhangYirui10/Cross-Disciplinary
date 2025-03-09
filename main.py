@@ -1,5 +1,6 @@
 from src.knowledge_graph import KnowledgeGraph
 import time
+import json
 # from flask import Flask, request, jsonify
 
 kg = KnowledgeGraph()
@@ -37,8 +38,23 @@ def init_knowledge_graph():
                     "link": row[10]})
                 kg.insert_connection(row[3], row[1])
 
-
-    
+    with open('src/article.txt', 'r') as fin:
+        content = json.loads(fin.read())
+        for i in content:
+            try:
+                if not kg.check_node_exists(i['title']):
+                    kg.insert("paper", 'p', {
+                        "name": i['title'],
+                        "openalex_id": i['openalex_id'],
+                        "author_id": i['author_id'],
+                        "doi": i['doi'],
+                        "date": i['publication_date']})
+                    for j in i['topics']:
+                        kg.insert_connection(i['title'], j['display_name'])
+            except Exception as e:
+                print(e)
+                continue
+        
 def main():
     # wait for the neo4j to start
     time.sleep(8)

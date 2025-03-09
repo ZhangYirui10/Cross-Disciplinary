@@ -1,4 +1,6 @@
-with open('../data/field.txt', 'r') as field_fin:
-    for line in field_fin:
-        row = line.strip().split('\t')
-        print(row)
+import json
+with open('src/article.txt', 'r') as fin:
+    
+    content = json.loads(fin.read())
+    for i in content:
+        print(i)
