@@ -2,7 +2,7 @@ from openai import OpenAI
 import os
 
 client = OpenAI(
-    api_key="")
+    api_key=os.getenv("API_KEY"))
 
 
 def CallGPT(prompt):

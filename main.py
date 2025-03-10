@@ -52,6 +52,67 @@ def init_knowledge_graph():
                         "date": i['publication_date']})
                     for j in i['topics']:
                         kg.insert_connection(i['title'], j['display_name'])
+
+                    try:
+                        with open(f"src/gptoutput_json/{i['openalex_id']}.json", 'r') as g:
+                            data = json.loads(g.read())
+                            if "Keywords" in data:
+                                for kw in data["Keywords"]:
+                                    kg.insert("keyword", 'k', {
+                                        "name": kw})
+                                    kg.insert_connection(i['title'], kw)
+                            if "Problem" in data:
+                                kg.insert("problem", 'q', {
+                                    "name": "Problem"+i['openalex_id'],
+                                    "description": data["Problem"]})
+                                kg.insert_connection(i['title'], data["Problem"]+i['openalex_id'])
+                                try:
+                                    with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
+                                        gdata = json.loads(g.read())["Entities"]
+                                        if "Problem" in gdata:
+                                            for entity in gdata["Problem"]:
+                                                kg.insert("problemkeyword", 's', {
+                                                    "name": entity})
+                                                kg.insert_connection(data["Problem"]+i['openalex_id'], entity)
+                                except Exception as e:
+                                    print(e)
+                            if "Method" in data:
+                                kg.insert("method", 'm', {
+                                    "name":"Method"+i['openalex_id'],
+                                    "description": data["Method"]})
+                                kg.insert_connection(i['title'], data["Method"]+i['openalex_id'])
+                                try:
+                                    with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
+                                        gdata = json.loads(g.read())["Entities"]
+                                        if "Method" in gdata:
+                                            for entity in gdata["Method"]:
+                                                kg.insert("methodkeyword", 't', {
+                                                    "name": entity})
+                                                kg.insert_connection(data["Method"]+i['openalex_id'], entity)
+                                except Exception as e:
+                                    print(e)
+                            if "Model" in data:
+                                kg.insert("model", 'n', {
+                                    "name": data["Model"],
+                                    })
+                                kg.insert_connection(i['title'], data["Model"])
+                            if "Task" in data:
+                                try:
+                                    with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
+                                        gdata = json.loads(g.read())["Entities"]
+                                        if "Task" in gdata:
+
+                                            kg.insert("task", 'a', {
+                                                "name": gdata['Task'],
+                                                "description": data["Task"]})
+                                            kg.insert_connection(i['title'], gdata['Task'])
+                                except Exception as e:
+                                    print(e)
+                            
+                    except Exception as e:
+                        print(e)
+                        pass
+
             except Exception as e:
                 print(e)
                 continue
@@ -61,7 +122,7 @@ def main():
     time.sleep(8)
     
     init_knowledge_graph()
-    print(CallGPT("What is the impact of COVID-19 on the economy?"))
+    # print(CallGPT("What is the impact of COVID-19 on the economy?"))
     
 
 
