@@ -20,21 +20,20 @@ def CallGPT(prompt):
     except:
         return ""
     
-def ExtractPaper(title):
+def ExtractPaper(fulltext):
     question = {
-        "problem_prompt":f"Extract the paper with the title: {title}",
-        "method_prompt":f"Please provide the method section of the {title}.",
-        "metric_prompt":f"Please provide the metric section of the {title}.",
-        "dataset_prompt":f"Please provide the dataset section of the {title}.",
-        "task_prompt":f"Please provide the task section of the {title}.",
-        "model_prompt":f"Please provide the model section of the {title}.",
-        "results_prompt":f"Please provide the results section of the {title}.",
-        "innovation_prompt":f"Please provide the innovation section of the {title}."
+        "problem_prompt":f"Extract the paper with the fulltext",
+        "method_prompt":f"Please provide the method section of the .",
+        "metric_prompt":f"Please provide the metric section of the .",
+        "dataset_prompt":f"Please provide the dataset section of the .",
+        "task_prompt":f"Please provide the task section of the .",
+        "model_prompt":f"Please provide the model section of the .",
+        "results_prompt":f"Please provide the results section of the .",
+        "innovation_prompt":f"Please provide the innovation section of the ."
     }
-    for q in question:
-        question[q] = CallGPT(question[q])
-
-    return question
+    question_list = list(question.values())
+    prompt = f"{fulltext}\n" + "\n".join(question_list)
+    return CallGPT(prompt)
 
 
 if __name__ == "__main__":
