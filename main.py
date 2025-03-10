@@ -8,7 +8,7 @@ kg = KnowledgeGraph()
 def init_knowledge_graph():
     kg.clear_knowledge_graph()
 
-    with open('src/field.txt', 'r') as field_fin:
+    with open('data/field.txt', 'r') as field_fin:
         for line in field_fin:
             row = line.strip().split('\t')
             if len(row) < 11:
@@ -38,7 +38,7 @@ def init_knowledge_graph():
                     "link": row[10]})
                 kg.insert_connection(row[3], row[1])
 
-    with open('src/article.txt', 'r') as fin:
+    with open('data/article.txt', 'r') as fin:
         content = json.loads(fin.read())
         for i in content:
             try:
