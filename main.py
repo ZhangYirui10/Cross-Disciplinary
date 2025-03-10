@@ -65,7 +65,7 @@ def init_knowledge_graph():
                                 kg.insert("problem", 'q', {
                                     "name": "Problem"+i['openalex_id'],
                                     "description": data["Problem"]})
-                                kg.insert_connection(i['title'], data["Problem"]+i['openalex_id'])
+                                kg.insert_connection(i['title'], "Problem"+i['openalex_id'])
                                 try:
                                     with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
                                         gdata = json.loads(g.read())["Entities"]
@@ -73,14 +73,14 @@ def init_knowledge_graph():
                                             for entity in gdata["Problem"]:
                                                 kg.insert("problemkeyword", 'a', {
                                                     "name": entity})
-                                                kg.insert_connection(data["Problem"]+i['openalex_id'], entity)
+                                                kg.insert_connection("Problem"+i['openalex_id'], entity)
                                 except Exception as e:
                                     print(e)
                             if "Method" in data:
                                 kg.insert("method", 'm', {
                                     "name":"Method"+i['openalex_id'],
                                     "description": data["Method"]})
-                                kg.insert_connection(i['title'], data["Method"]+i['openalex_id'])
+                                kg.insert_connection(i['title'], "Method"+i['openalex_id'])
                                 try:
                                     with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
                                         gdata = json.loads(g.read())["Entities"]
@@ -88,7 +88,7 @@ def init_knowledge_graph():
                                             for entity in gdata["Method"]:
                                                 kg.insert("methodkeyword", 'c', {
                                                     "name": entity})
-                                                kg.insert_connection(data["Method"]+i['openalex_id'], entity)
+                                                kg.insert_connection("Method"+i['openalex_id'], entity)
                                 except Exception as e:
                                     print(e)
                             if "Model" in data:
