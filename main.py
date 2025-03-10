@@ -71,7 +71,7 @@ def init_knowledge_graph():
                                         gdata = json.loads(g.read())["Entities"]
                                         if "Problem" in gdata:
                                             for entity in gdata["Problem"]:
-                                                kg.insert("problemkeyword", 's', {
+                                                kg.insert("problemkeyword", 'a', {
                                                     "name": entity})
                                                 kg.insert_connection(data["Problem"]+i['openalex_id'], entity)
                                 except Exception as e:
@@ -86,7 +86,7 @@ def init_knowledge_graph():
                                         gdata = json.loads(g.read())["Entities"]
                                         if "Method" in gdata:
                                             for entity in gdata["Method"]:
-                                                kg.insert("methodkeyword", 't', {
+                                                kg.insert("methodkeyword", 'c', {
                                                     "name": entity})
                                                 kg.insert_connection(data["Method"]+i['openalex_id'], entity)
                                 except Exception as e:
@@ -102,12 +102,30 @@ def init_knowledge_graph():
                                         gdata = json.loads(g.read())["Entities"]
                                         if "Task" in gdata:
 
-                                            kg.insert("task", 'a', {
+                                            kg.insert("task", 'j', {
                                                 "name": gdata['Task'],
                                                 "description": data["Task"]})
                                             kg.insert_connection(i['title'], gdata['Task'])
                                 except Exception as e:
                                     print(e)
+                            if "Results" in data:
+                                kg.insert("result", 'b', {
+                                    "name": "Result"+i['openalex_id'],
+                                    "description": str(data["Results"])})
+                                kg.insert_connection(i['title'], "Result"+i['openalex_id'])
+                                try:
+                                    with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
+                                        gdata = json.loads(g.read())["Entities"]
+                                        if "Results" in gdata:
+                                            for entity in gdata["Results"]:
+                                                if gdata["Results"][entity]:
+                                                    kg.insert("resultkeyword", 'e', {
+                                                        "name": entity+i['openalex_id'],
+                                                        "description": ','.join(gdata["Results"][entity])})
+                                                    kg.insert_connection("Result"+i['openalex_id'], entity+i['openalex_id'])
+                                except Exception as e:
+                                    print(e)
+
                             
                     except Exception as e:
                         print(e)
@@ -119,6 +137,7 @@ def init_knowledge_graph():
         
 def main():
     # wait for the neo4j to start
+    # dfstpkqamcnjb
     time.sleep(8)
     
     init_knowledge_graph()
