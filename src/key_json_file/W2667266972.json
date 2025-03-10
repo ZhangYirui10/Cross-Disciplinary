@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "IT-mediated technologies for development",
+        "Problem": ["Gaps", "Challenges", "Crowdsourcing", "Sharing economy"],
+        "Method": ["Comparative analysis"],
+        "Results": {
+            "Dataset": ["N/A"],
+            "Model": ["N/A"],
+            "Metric": ["N/A"]
+        }
+    }
+}

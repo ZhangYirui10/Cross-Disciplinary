@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Privacy and cybersecurity assessment",
+        "Problem": ["Privacy risks", "Cybersecurity risks", "Smart city implications"],
+        "Method": ["Governance analysis", "International responses"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "Keywords": ["diabetic retinopathy", "exudates detection", "statistical classification", "machine learning", "retinal images"],
+  "Problem": "Current methods for detecting lesions in retinal images require manual analysis, which is time-consuming and not scalable for large datasets.",
+  "Method": "The paper proposes an enhanced MDD classifier that combines brightness adjustment and statistical classification for effective detection of lesions in retinal images.",
+  "Model": "NO",
+  "Task": "Detection of lesions in color retinal images",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Abnormal Images", "MDD", "Accuracy", "66%"],
+    ["Abnormal Images", "Enhanced MDD", "Accuracy", "100%"],
+    ["Normal Images", "MDD", "Accuracy", "Unknown"],
+    ["Normal Images", "Enhanced MDD", "Accuracy", "70%"]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Object categorization",
+        "Problem": ["Computationally expensive", "Inefficient higher-order features"],
+        "Method": ["Feature selection", "Feature extraction", "Progressive extraction"],
+        "Results": {
+            "Dataset": ["PASCAL VOC2006", "MSRC"],
+            "Model": ["Proposed", "Method 1", "Method 2", "AdaBoost classifier (1st order)", "AdaBoost classifier (1st & 2nd order)"],
+            "Metric": ["Accuracy", "Error Rate"]
+        }
+    }
+}

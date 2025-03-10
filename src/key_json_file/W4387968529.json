@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Nighttime dehazing",
+        "Problem": ["Glow", "Low-light conditions", "Visibility"],
+        "Method": ["Guided APSF", "Gradient-adaptive convolution"],
+        "Results": {
+            "Dataset": ["GTA5"],
+            "Model": ["Ours", "Yan", "Li", "Zhang"],
+            "Metric": ["PSNR"]
+        }
+    }
+}

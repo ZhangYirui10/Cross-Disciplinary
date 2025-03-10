@@ -1,0 +1,9 @@
+{
+  "Keywords": ["metaverse", "data management", "sensor networks", "augmented reality", "virtual environments"],
+  "Problem": "The paper addresses the challenges of managing large and diverse data generated in the metaverse from both physical and virtual spaces, ensuring real-time interaction and effective data processing.",
+  "Method": "The paper discusses novel technologies and database approaches for efficient data management and dissemination in the metaverse, focusing on real-time synchronization between physical and virtual environments.",
+  "Model": "NO",
+  "Task": "Data management in the metaverse",
+  "Main Results Table": "Table X",
+  "Results": []
+}

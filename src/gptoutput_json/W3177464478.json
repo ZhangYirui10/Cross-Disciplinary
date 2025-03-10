@@ -1,0 +1,15 @@
+{
+  "Keywords": ["migrant crises", "international cooperation", "experimental economics", "reciprocity", "fairness"],
+  "Problem": "The paper focuses on the challenges of cooperation among countries during migrant crises, particularly due to one-way migration routes and differences in wealth.",
+  "Method": "The study employs a pass-the-buck economic game to simulate decision-making about sheltering migrants, analyzing the impacts of one-way routes and wealth disparities.",
+  "Model": "NO",
+  "Task": "Investigating cooperation in migrant crises using experimental economic methods",
+  "Main Results Table": "Figure 4",
+  "Results": [
+    ["USA Participants", "First Leader (One-Way Route)", "Shelter Rate", "21%"],
+    ["USA Participants", "Second Leader (One-Way Route)", "Shelter Rate", "19%"],
+    ["Singapore Participants", "First Leader (One-Way Route)", "Shelter Rate", "27%"],
+    ["Singapore Participants", "Second Leader (Symmetric)", "Shelter Rate", "50%"],
+    ["USA Participants", "First Leader (Circular Route)", "Shelter Rate", "62%"]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Kinship verification",
+        "Problem": "Kinship relationship verification",
+        "Method": ["Facial image data collection", "Feature extraction", "Classifier training"],
+        "Results": {
+            "Dataset": ["Parent-child Data Set", "Parent-child Data Set"],
+            "Model": ["K-Nearest-Neighbors", "Human Evaluation"],
+            "Metric": ["Classification Accuracy"]
+        }
+    }
+}

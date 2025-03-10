@@ -1,0 +1,12 @@
+{
+  "Keywords": ["DN-graph", "graph mining", "triangulation", "dense subgraphs", "approximate algorithms"],
+  "Problem": "Mining dense neighborhood graphs (DN-graphs) is difficult due to the NP-completeness of the problem and resource constraints in large graphs.",
+  "Method": "The paper proposes triangulation-based algorithms for approximating DN-graphs using iterative scanning of triangles, accommodating large-scale and semi-streaming environments.",
+  "Model": "NO",
+  "Task": "Dense neighborhood graph mining",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Flickr Dataset", "BiTriDN", "Max λ value", "279"],
+    ["Flickr Dataset", "StreamDN", "Over-estimation", "72%"]
+  ]
+}

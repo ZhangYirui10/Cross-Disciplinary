@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Secure Nearest Neighbor", "Encrypted Query Processing", "Data Privacy", "Cloud Computing", "Order-Preserving Encryption"],
+  "Problem": "Existing secure nearest neighbor methods have insecurities and are vulnerable to attacks, compromising the confidentiality of queries and data in cloud databases.",
+  "Method": "This paper proposes a secure Voronoi diagram method that partitions encrypted data into groups to return relevant partition elements, ensuring security without revealing sensitive information.",
+  "Model": "Secure Voronoi Diagram (SVD)",
+  "Task": "Secure nearest neighbor query processing",
+  "Main Results Table": "Table 12",
+  "Results": [
+    ["California Points Dataset", "SVD", "Query Time", "< 0.01 seconds"],
+    ["Texas Points Dataset", "SVD", "Query Time", "< 0.02 seconds"]
+  ]
+}

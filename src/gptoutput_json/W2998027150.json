@@ -1,0 +1,12 @@
+{
+  "Keywords": ["3D Human Pose Estimation", "Spatio-Temporal Networks", "Occlusion Handling", "Semi-Supervised Learning"],
+  "Problem": "Estimating 3D human poses from monocular videos is challenging under varying scales, speeds, and occlusions.",
+  "Method": "The paper proposes a spatio-temporal network that integrates multi-scale features and masks out keypoints during training to robustly estimate 3D poses despite occlusions.",
+  "Model": "NO",
+  "Task": "3D human pose estimation from monocular video",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["Human3.6M", "Our result", "MPJPE", "36.2mm"],
+    ["Human3.6M", "Our result", "P-MPJPE", "26.2mm"]
+  ]
+}

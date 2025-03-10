@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Private data release",
+        "Problem": ["Privacy", "High-dimensional data", "Data utility loss"],
+        "Method": ["Differential privacy", "Bayesian networks", "Synthetic data generation"],
+        "Results": {
+            "Dataset": ["Adult", "NLTCS", "TPC-E", "BR2000"],
+            "Model": ["Q2", "Q3"],
+            "Metric": ["Average Variation Distance"]
+        }
+    }
+}

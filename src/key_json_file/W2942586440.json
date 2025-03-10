@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Diabetic retinopathy detection",
+        "Problem": ["Blindness reduction", "Under-resourced countries"],
+        "Method": ["Ensemble AI model", "Convolutional neural networks"],
+        "Results": {
+            "Dataset": ["Validation dataset"],
+            "Model": ["AI model"],
+            "Metric": ["AUC", "Sensitivity for referable diabetic retinopathy", "Sensitivity for vision-threatening diabetic retinopathy", "Sensitivity for diabetic macular oedema"]
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "Keywords": ["Convolutional Neural Networks", "Fracture Detection", "Wrist Radiographs", "Automated Localization"],
+  "Problem": "Current methods struggle with accurate detection and localization of wrist fractures in radiographs, leading to missed diagnoses.",
+  "Method": "The study employs an object detection CNN, specifically Inception-ResNet Faster R-CNN, to effectively identify and localize radius and ulna fractures in wrist radiographs.",
+  "Model": "Faster R-CNN with Inception-ResNet",
+  "Task": "Automated fracture detection and localization on wrist radiographs",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Test Cohort", "CNN", "Per-Image Sensitivity", "95.7%"],
+    ["Test Cohort", "CNN", "Per-Image Specificity", "82.5%"],
+    ["Test Cohort", "CNN", "AUC", "0.918"],
+    ["Test Cohort", "CNN", "Frontal Per-Mark Sensitivity", "91.2%"],
+    ["Test Cohort", "CNN", "Lateral Per-Mark Sensitivity", "96.3%"]
+  ]
+}

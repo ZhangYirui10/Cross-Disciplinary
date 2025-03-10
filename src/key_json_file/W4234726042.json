@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Publishing high-dimensional data",
+        "Problem": ["Noise overpowering signals", "Ineffective data release"],
+        "Method": ["Bayesian network", "Noise injection", "Synthetic data sampling"],
+        "Results": {
+            "Dataset": ["NLTCS", "ACS", "Adult", "BR2000"],
+            "Model": ["PrivBayes", "PrivBayes", "PrivBayes", "PrivBayes"],
+            "Metric": ["Q4 Accuracy", "Q3 Accuracy", "Classification Error", "Q2 Accuracy"]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Predicting election outcomes",
+        "Problem": ["Effectiveness of social media", "Diverse political contexts"],
+        "Method": ["Volumetric models", "Sentiment models", "Social network models"],
+        "Results": {
+            "Dataset": ["Malaysia", "India", "Pakistan"],
+            "Model": ["Volumetric models", "Sentiment models", "Social network models"],
+            "Metric": ["MAE", "MAE", "MAE"]
+        }
+    }
+}

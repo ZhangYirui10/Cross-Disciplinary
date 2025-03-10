@@ -1,0 +1,12 @@
+{
+  "Keywords": ["diabetic retinopathy", "fractal analysis", "retinal vascular geometry", "type 1 diabetes", "microvascular complications"],
+  "Problem": "Current methods inadequately quantify early microvascular damage in diabetic retinopathy, impacting early detection and monitoring.",
+  "Method": "The study employs fractal analysis of retinal vasculature from fundus photographs to quantitatively measure geometric complexity, correlating it with diabetic retinopathy signs.",
+  "Model": "NO",
+  "Task": "Quantitative assessment of early diabetic retinopathy using retinal fractal dimension analysis.",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["N/A", "N/A", "Odds Ratio (95% CI)", "1.37 (1.21–1.56) per 0.01 increase in fractal dimension"],
+    ["N/A", "Quartile 1 vs. Quartile 4", "Odds Ratio (95% CI)", "3.92 (2.02–7.61)"]
+  ]
+}

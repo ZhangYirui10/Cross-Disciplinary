@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Large Selective Kernel Network", "Remote Sensing Object Detection", "Deep Learning"],
+  "Problem": "Current methods fail to effectively incorporate the wide-range context of various objects in remote sensing images during object detection.",
+  "Method": "The paper introduces a Large Selective Kernel Network that dynamically adjusts the receptive field in the feature extraction backbone to effectively model the context of different objects, giving improved object detection performance.",
+  "Model": "Large Selective Kernel Network (LSKNet)",
+  "Task": "Remote sensing object detection",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Dataset 1", "Model 1", "Metric 1", "Result 1"],
+    ["Dataset 2", "Model 2", "Metric 2", "Result 2"]
+  ]
+}

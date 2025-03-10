@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Image defogging",
+        "Problem": ["Dense fog", "Non-uniform fog", "Ineffective recovery"],
+        "Method": ["Structure-representation network", "Uncertainty feedback learning"],
+        "Results": {
+            "Dataset": ["Dense-HAZE", "NH-HAZE", "O-HAZE", "SMOKE"],
+            "Model": ["Ours", "Ours", "Ours", "Ours"],
+            "Metric": ["PSNR", "PSNR", "PSNR", "PSNR"]
+        }
+    }
+}

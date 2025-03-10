@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Energy savings",
+        "Problem": ["Energy consumption", "AC usage"],
+        "Method": ["Randomized control trial", "Monetary incentives"],
+        "Results": {
+            "Dataset": ["Energy Consumption", "DMT Adjusted", "DMT Post-Intervention"],
+            "Model": ["GT", "AT"],
+            "Metric": ["kWh", "°C"]
+        }
+    }
+}

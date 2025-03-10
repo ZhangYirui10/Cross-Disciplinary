@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Geographical Resource Locating", "Web 2.0", "Tag Matching", "Spatial Database", "Geo-tf-idf Ranking"],
+  "Problem": "Traditional web resource searching strategies are ineffective in Web 2.0 due to the lack of context in user-generated tags, making it challenging to locate relevant geographical resources.",
+  "Method": "The paper proposes a tag-centric query processing strategy that uses a new indexing method combining R*-tree and inverted list, and a geo-tf-idf ranking mechanism to locate co-located resources effectively.",
+  "Model": "NO",
+  "Task": "Locating geographical resources in Web 2.0 applications",
+  "Main Results Table": "Table 8",
+  "Results": [
+    ["Synthetic Data", "Virtual bR*-tree", "ART", "4 seconds"],
+    ["Synthetic Data", "Virtual bR*-tree", "ART", "10 seconds"],
+    ["Real Data", "mCK query", "Accuracy", "85%"],
+    ["Real Data", "Google Maps", "Accuracy", "78%"]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "Keywords": ["nighttime", "haze", "glow", "low-light", "gradient"],
+  "Problem": "Existing nighttime dehazing methods struggle to handle glow and low-light conditions, affecting visibility.",
+  "Method": "The paper enhances visibility in nighttime haze images by suppressing glow and improving low-light areas using guided APSF and gradient-adaptive convolution.",
+  "Model": "NO",
+  "Task": "Nighttime haze image dehazing",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["GTA5", "Ours", "PSNR", "30.383"],
+    ["GTA5", "Yan [84]", "PSNR", "26.997"],
+    ["GTA5", "Li [45]", "PSNR", "21.024"],
+    ["GTA5", "Zhang [93]", "PSNR", "20.921"]
+  ]
+}

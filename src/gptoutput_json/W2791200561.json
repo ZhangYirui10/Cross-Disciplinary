@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Social Media Predictions", "Elections", "Sentiment Analysis", "Volumetric Analysis", "Social Network Analysis"],
+  "Problem": "This study addresses the effectiveness of social media in predicting election outcomes in diverse political contexts.",
+  "Method": "The authors compared volumetric, sentiment, and social network approaches to predict election outcomes from Twitter data across Malaysia, India, and Pakistan.",
+  "Model": "NO",
+  "Task": "Predicting election outcomes using social media data",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["Malaysia", "Volumetric models", "MAE", "1.63"],
+    ["India", "Sentiment models", "MAE", "3.00"],
+    ["Pakistan", "Social network models", "MAE", "5.84"]
+  ]
+}

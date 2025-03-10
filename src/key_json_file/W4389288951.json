@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "AI governance analysis",
+        "Problem": ["Lack of effective frameworks", "Potential risks", "Misunderstandings"],
+        "Method": ["Document analysis", "Trend identification"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

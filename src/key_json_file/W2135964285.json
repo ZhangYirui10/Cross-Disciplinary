@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Demographic recognition",
+        "Problem": ["Social context", "Group structure", "Demographic accuracy"],
+        "Method": ["Contextual features", "Social interaction"],
+        "Results": {
+            "Dataset": ["Image Dataset", "Image Dataset", "Image Dataset", "Image Dataset"],
+            "Model": ["Contextual Features", "Appearance Classifier", "Combined Context and Appearance"],
+            "Metric": ["Exact Gender Accuracy", "Age Accuracy", "Exact Age Category Accuracy"]
+        }
+    }
+}

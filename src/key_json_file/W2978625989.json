@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Image classification",
+        "Problem": ["Noisy labels", "Overfitting"],
+        "Method": ["Meta-learning framework", "Noise-tolerant parameters", "Synthetic noisy labels", "Consistent predictions"],
+        "Results": {
+            "Dataset": ["CIFAR-10", "CLOTHING1M"],
+            "Model": ["MLNT-teacher", "MLNT-student"],
+            "Metric": ["Accuracy"]
+        }
+    }
+}

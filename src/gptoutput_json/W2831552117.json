@@ -1,0 +1,15 @@
+{
+  "Keywords": ["autonomous vehicles", "governance", "safety", "liability", "privacy"],
+  "Problem": "Governments are challenged in addressing the risks associated with the rapid development of autonomous vehicles, including safety, liability, privacy, and cybersecurity issues.",
+  "Method": "The paper analyzes governmental responses to risks posed by autonomous vehicles by categorizing strategies into prevention-oriented, control-oriented, toleration-oriented, and adaptation-oriented approaches.",
+  "Model": "NO",
+  "Task": "Governance of risks associated with autonomous vehicles",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["US", "Safety", "Strategy", "Light control"],
+    ["UK", "Liability", "Strategy", "Toleration"],
+    ["Australia", "Privacy", "Strategy", "Light control"],
+    ["China", "Cybersecurity", "Strategy", "Control"],
+    ["Germany", "Liability", "Strategy", "Light control"]
+  ]
+}

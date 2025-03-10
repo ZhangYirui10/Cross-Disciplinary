@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Contrast enhancement",
+        "Problem": ["JPEG artifacts", "Reduced quality"],
+        "Method": ["Artifact suppression", "Structure-texture decomposition"],
+        "Results": {
+            "Dataset": ["Tone-Curve Adjustment"],
+            "Model": ["Ours", "SA-DCT"],
+            "Metric": ["Mean SSIM", "Mean PSNR"]
+        }
+    }
+}

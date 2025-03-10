@@ -1,0 +1,9 @@
+{
+  "Keywords": ["convolutional neural networks", "deep learning", "computer vision"],
+  "Problem": "Convolutional neural networks need continuous improvement to keep pace with advances in data availability and computing power for tasks like visual and speech recognition.",
+  "Method": "The paper surveys improvements in convolutional neural networks across various aspects such as layer design, activation functions, and optimization, highlighting advancements that enhance performance.",
+  "Model": "NO",
+  "Task": "Survey of recent advances in convolutional neural networks",
+  "Main Results Table": "Table 1",
+  "Results": []
+}

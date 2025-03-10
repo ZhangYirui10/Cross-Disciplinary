@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Scholarly paper recommendation",
+        "Problem": ["Latent interests", "Publication history"],
+        "Method": ["User profile construction", "Citation enhancement"],
+        "Results": {
+            "Dataset": ["ACL Papers"],
+            "Model": ["Most recent Paper", "Most recent Paper with References"],
+            "Metric": ["NDCG@5", "NDCG@10", "MRR"]
+        }
+    }
+}

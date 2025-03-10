@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "AI legal personality assessment",
+        "Problem": ["Accountability gaps", "Damage from autonomous AI"],
+        "Method": ["Legal personality theories", "Justifications analysis"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

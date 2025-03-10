@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Impact Exploration",
+        "Problem": ["Disproportionate effects", "Socio-economic consequences"],
+        "Method": ["Scoping review", "Synthesis of studies"],
+        "Results": {
+            "Dataset": ["Older people", "Children/students", "Low-income populations", "Migrant workers", "Sex workers", "Victims of domestic violence", "Refugees"],
+            "Model": ["96 studies", "58 studies", "14 studies", "9 studies", "16 studies", "14 studies"],
+            "Metric": ["Mental health outcomes", "Educational disruption", "Job loss", "Job and income loss", "Reduced access to healthcare", "Increased incidence of violence", "Crowded living conditions"]
+        }
+    }
+}

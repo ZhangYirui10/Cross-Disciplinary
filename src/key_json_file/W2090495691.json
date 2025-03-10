@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Remote sensing object detection",
+        "Problem": ["Incorporating context", "Object detection limitations"],
+        "Method": ["Large Selective Kernel Network", "Dynamic receptive field"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

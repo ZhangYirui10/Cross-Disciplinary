@@ -1,0 +1,13 @@
+{
+  "Keywords": ["bipartite graph ranking", "graph regularization", "personalized recommendation", "popularity prediction", "n-partite graphs"],
+  "Problem": "The paper focuses on ranking vertices of bipartite graphs while incorporating both graph structure and prior information about vertices.",
+  "Method": "The proposed BiRank algorithm iteratively assigns scores to vertices by optimizing a regularization function, ensuring convergence to a unique stationary ranking.",
+  "Model": "BiRank",
+  "Task": "Ranking vertices in bipartite graphs for popularity prediction and personalized recommendation",
+  "Main Results Table": "Table 4",
+  "Results": [
+    ["YouTube", "BiRank", "Spearman coefficient", "88.21%"],
+    ["Flickr", "BiRank", "Spearman coefficient", "64.76%"],
+    ["Last.fm", "BiRank", "Spearman coefficient", "70.93%"]
+  ]
+}

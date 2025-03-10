@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Lesion Detection",
+        "Problem": ["Manual analysis", "Time-consuming", "Not scalable"],
+        "Method": ["Brightness adjustment", "Statistical classification"],
+        "Results": {
+            "Dataset": ["Abnormal Images", "Normal Images"],
+            "Model": ["MDD", "Enhanced MDD"],
+            "Metric": ["Accuracy"]
+        }
+    }
+}

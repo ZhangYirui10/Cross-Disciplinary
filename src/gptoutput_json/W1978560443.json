@@ -1,0 +1,16 @@
+{
+  "Keywords": ["Behavioral Economics", "Consumer Behavior", "Marketing", "Game Theory", "Loss Aversion"],
+  "Problem": "Standard economic models often fail to accurately predict consumer and firm behavior due to unrealistic assumptions about rationality.",
+  "Method": "The paper reviews and applies six behavioral economics models that incorporate psychological insights to better understand and influence market behaviors.",
+  "Model": "NO",
+  "Task": "Analyzing and modeling consumer and firm behavior in marketing using behavioral economics.",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Business-to-business pricing contracts", "Reference-dependent preferences", "Weight on transaction utility", "Higher price contracts lead to improved channel efficiency"],
+    ["Sales force compensation", "Inequality aversion", "Envy and guilt parameters", "Increased salesperson effort"],
+    ["Price plans for gym memberships", "Hyperbolic discounting", "Preference for immediacy", "Improved membership uptake"],
+    ["Price competition with differentiated products", "Quantal response equilibrium", "Better response sensitivity", "Enhanced prediction of market behavior"],
+    ["Market entry", "Cognitive hierarchy", "Thinking steps", "Optimized firm entry strategies"],
+    ["Lowest-price guarantees", "Self-tuning EWA", "Feedback sensitivity", "Higher consumer confidence and sales"]
+  ]
+}

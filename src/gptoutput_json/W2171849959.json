@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Discriminant analysis", "Fukunaga-Koontz transform", "Classification", "Pattern recognition", "Machine learning"],
+  "Problem": "Current methods in discriminant analysis struggle with extracting optimal subspaces for effective classification in high-dimensional data.",
+  "Method": "The paper proposes a novel approach utilizing the Fukunaga-Koontz Transform to decompose data space and find discriminant subspaces, improving multiple discriminant analysis.",
+  "Model": "NO",
+  "Task": "Pattern classification and dimensionality reduction",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["PIE", "LDA/FKT", "Accuracy", "98.09%"],
+    ["PIE", "MDA/FKT", "Accuracy", "95.03%"],
+    ["Banca", "LDA/FKT", "Accuracy", "85.33%"],
+    ["Banca", "MDA/FKT", "Accuracy", "86.15%"]
+  ]
+}

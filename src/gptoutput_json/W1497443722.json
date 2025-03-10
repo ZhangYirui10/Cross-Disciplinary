@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Visual Attention", "Saliency Detection", "Visual Saliency", "Depth Cues", "Saliency Model"],
+  "Problem": "Current visual saliency methods primarily focus on 2D scenes, lacking consideration of depth cues which are crucial in 3D environments.",
+  "Method": "The study collects a large eye fixation database from 2D and 3D scenes, analyzes discrepancies, and models depth priors to enhance saliency detection models.",
+  "Model": "NO",
+  "Task": "Visual saliency detection in 3D images",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Eye Fixation Data", "2D vs 3D", "Correlation", "0.85"],
+    ["Saliency Model A", "3D Images", "Precision", "78%"],
+    ["Saliency Model B", "3D Images", "Recall", "74%"]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Skyline query processing",
+        "Problem": ["Efficient processing", "Low overhead", "Balanced load", "Progressive delivery"],
+        "Method": ["Skyline Space Partitioning"],
+        "Results": {
+            "Dataset": ["NBA Players Dataset"],
+            "Model": ["SSP", "DSL"],
+            "Metric": ["Avg. Involved Nodes", "Avg. Search Msgs", "Avg. Bandwidth per Node"]
+        }
+    }
+}

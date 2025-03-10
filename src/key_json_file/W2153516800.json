@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Top-k frequent skyline computation",
+        "Problem": ["High-dimensional datasets", "Overwhelming skyline points"],
+        "Method": ["Approximate algorithms", "Skyline frequency", "Dominating subspaces"],
+        "Results": {
+            "Dataset": ["NBA Dataset"],
+            "Model": ["Top-10 frequent skyline points", "Bottom-10 frequent skyline points"],
+            "Metric": ["Skyline frequency", "Dominating frequency"]
+        }
+    }
+}

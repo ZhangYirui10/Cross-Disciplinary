@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Co-segmentation",
+        "Problem": ["Inconsistent backgrounds", "User input for extraction"],
+        "Method": ["Interactive co-segmentation", "Energy minimization", "User scribbles"],
+        "Results": {
+            "Dataset": ["CMU-Cornell iCoseg Dataset", "Synthetic Scribbles"],
+            "Model": ["iCoseg"],
+            "Metric": ["Segmentation Accuracy"]
+        }
+    }
+}

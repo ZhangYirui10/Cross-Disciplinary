@@ -1,0 +1,9 @@
+{
+  "Keywords": ["Misinformation", "Disinformation", "Generative AI", "Digital Resilience", "Public Trust"],
+  "Problem": "The paper addresses the challenges posed by misinformation, disinformation, and mal-information amplified by Generative AI in digital ecosystems, necessitating new strategies for regulation and consumer engagement.",
+  "Method": "The paper proposes a three-tiered framework to analyze consumer interactions with MDM, emphasizing behavioral insights and technical detection methods to mitigate the impact of GenAI on information integrity.",
+  "Model": "NO",
+  "Task": "Understanding and mitigating misinformation, disinformation, and mal-information in digital environments.",
+  "Main Results Table": "Table 1",
+  "Results": []
+}

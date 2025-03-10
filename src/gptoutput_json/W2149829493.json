@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Multi-Channel Correlation Filters", "Object Detection", "Frequency Domain", "Computer Vision"],
+  "Problem": "Current multi-channel detectors in computer vision are inefficient in memory and computation during training and detection processes.",
+  "Method": "The paper proposes a multi-channel correlation filter framework that learns filters in the frequency domain, improving computational and memory efficiency compared to existing spatial methods.",
+  "Model": "Multi-Channel Correlation Filter",
+  "Task": "Visual detection and localization tasks",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Facial Landmark Localization", "Our method", "Localization Rate", "0.4"],
+    ["Car Detection", "MCCF", "Detection Rate", "0.4"],
+    ["Pedestrian Detection", "MCCF", "Detection Rate", "0.2"]
+  ]
+}

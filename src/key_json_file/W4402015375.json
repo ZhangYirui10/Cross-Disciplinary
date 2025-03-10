@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Heat exchange efficiency evaluation",
+        "Problem": ["Lack of integration", "Numerical simulation", "In-situ testing"],
+        "Method": ["Heat transfer model", "Cylindrical heat source theory", "Thermal response tests"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

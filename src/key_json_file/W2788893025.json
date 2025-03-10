@@ -1,0 +1,32 @@
+{
+    "Entities": {
+        "Task": "Rating prediction",
+        "Problem": ["Cold-start issue", "Non-transparency", "Local recommendation inefficiencies"],
+        "Method": ["Aspect-aware Latent Factor Model"],
+        "Results": {
+            "Dataset": [
+                "Instant Video",
+                "Automotive",
+                "Baby",
+                "Beauty",
+                "Cell Phones",
+                "Clothing",
+                "Digital Music",
+                "Grocery",
+                "Health",
+                "Home & Kitchen",
+                "Musical Instruments",
+                "Office Products",
+                "Patio",
+                "Pet Supplies",
+                "Sports & Outdoors",
+                "Tools & Home",
+                "Toys & Games",
+                "Video Games",
+                "Yelp 2017"
+            ],
+            "Model": ["ALFM"],
+            "Metric": ["RMSE"]
+        }
+    }
+}

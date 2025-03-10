@@ -1,0 +1,16 @@
+{
+  "Keywords": ["Aspect Attention", "Rating Prediction", "Recommender Systems"],
+  "Problem": "Current recommender systems inadequately capture the varying aspect attentions users pay to items, leading to suboptimal rating predictions.",
+  "Method": "The paper presents the A3NCF model, which employs a novel topic model for extracting user preferences and item characteristics, combined with an attention network to adaptively model user attention on item aspects.",
+  "Model": "A3NCF",
+  "Task": "Rating prediction in recommendation systems",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Baby", "A3NCF", "RMSE", "1.082"],
+    ["Grocery", "A3NCF", "RMSE", "0.985"],
+    ["Home & Kitchen", "A3NCF", "RMSE", "1.051"],
+    ["Garden", "A3NCF", "RMSE", "1.021"],
+    ["Sports", "A3NCF", "RMSE", "0.940"],
+    ["Yelp2017", "A3NCF", "RMSE", "1.152"]
+  ]
+}

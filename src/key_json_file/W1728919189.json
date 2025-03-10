@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Resilience strategies analysis",
+        "Problem": ["Crisis in creative industries", "COVID-19 impact", "Inadequate emergency resilience"],
+        "Method": ["Contrast emergency resilience", "Propose ecological resilience framework"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Educational Datafication", "Surveillance", "Corporate Discourse", "Dataveillance", "Teaching and Learning"],
+  "Problem": "Corporate discourse in education overemphasizes the benefits of dataveillance while neglecting its potential costs to students' and teachers' agency and the essence of education.",
+  "Method": "The paper analyzes the discourse from eight major educational platform providers to uncover how data practices are framed as natural within education.",
+  "Model": "NO",
+  "Task": "Analyzing corporate discourse about educational tracking and data practices in education.",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Blackboard", "Real-time monitoring", "Visibility", "360-degree view of every student"],
+    ["IBM Watson Education", "Personalized learning", "User engagement", "Data-driven access"],
+    ["Pearson", "Digital ocean concept", "Data integration", "Improved educational outcomes"]
+  ]
+}

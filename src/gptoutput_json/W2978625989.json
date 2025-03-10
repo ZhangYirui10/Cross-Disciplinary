@@ -1,0 +1,14 @@
+{
+  "Keywords": ["noisy labels", "meta-learning", "deep learning", "image classification"],
+  "Problem": "Training deep neural networks on noisy labeled datasets often leads to performance degradation due to overfitting on label noise.",
+  "Method": "The proposed method uses a meta-learning framework to create noise-tolerant model parameters through synthetic noisy labels and consistent predictions against a teacher model.",
+  "Model": "NO",
+  "Task": "Image classification on noisy labeled datasets",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["CIFAR-10", "MLNT-teacher (3rd iter.)", "Accuracy", "93.52%"],
+    ["CIFAR-10", "MLNT-student (3rd iter.)", "Accuracy", "92.91%"],
+    ["CLOTHING1M", "MLNT-teacher (3rd iter.)", "Accuracy", "73.47%"],
+    ["CLOTHING1M", "MLNT-student (3rd iter.)", "Accuracy", "73.44%"]
+  ]
+}

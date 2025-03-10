@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Deep learning", "Distributed training", "Neural networks", "Scalability", "Parameter synchronization"],
+  "Problem": "Training deep neural networks is expensive due to large model complexities and massive datasets, creating challenges in scalability and ease of programming.",
+  "Method": "SINGA is proposed as a distributed deep learning system that provides an intuitive programming model and flexibility by supporting various training frameworks and neural net partitioning schemes.",
+  "Model": "NO",
+  "Task": "Distributed deep learning and training of large models over big datasets.",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["CIFAR-10", "SINGA Model", "Top-1 Accuracy", "90.0%"],
+    ["MNIST", "SINGA Model", "Classification Accuracy", "98.6%"]
+  ]
+}

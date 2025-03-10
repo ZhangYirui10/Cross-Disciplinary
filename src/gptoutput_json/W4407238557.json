@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Generative AI", "Misinformation Detection", "Multimodal", "Evidence Pollution", "Cross-Modal Reasoning"],
+  "Problem": "Existing misinformation detectors struggle with evidence polluted by generative AI models, affecting their accuracy.",
+  "Method": "The paper proposes cross-modal evidence reranking and claim-evidence reasoning to enhance robustness in detecting out-of-context multimodal misinformation despite polluted evidence.",
+  "Model": "NO",
+  "Task": "Out-of-context multimodal misinformation detection",
+  "Main Results Table": "Table 4",
+  "Results": [
+    ["NewsCLIPpings", "SNIFFER", "Accuracy", "88.82%"],
+    ["VERITE", "SNIFFER", "Accuracy", "75.44%"],
+    ["NewsCLIPpings", "CCN", "Accuracy", "87.56%"],
+    ["VERITE", "CCN", "Accuracy", "62.12%"]
+  ]
+}

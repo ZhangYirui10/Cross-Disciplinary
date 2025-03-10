@@ -1,0 +1,12 @@
+{
+  "Keywords": ["disruptive technology", "regulation", "governance", "policy challenges", "emerging technologies"],
+  "Problem": "Policymakers face significant challenges in responding to rapidly evolving disruptive technologies that fundamentally alter economies and societies.",
+  "Method": "The paper proposes a framework for understanding the regulatory challenges of disruptive technologies by combining substantive and procedural policy tools to establish effective governance.",
+  "Model": "NO",
+  "Task": "Regulating emerging disruptive technologies",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Cybersecurity", "Regulatory Authority Allocation", "Regulation Change", "Dynamic adjustment in regulatory authority"],
+    ["GDPR", "Actor Involvement", "Resistance Overcoming", "Actors pushed for changes during crisis"]
+  ]
+}

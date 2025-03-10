@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Policy Analysis",
+        "Problem": ["Big Tech influence", "Governance concerns", "Policy imbalance"],
+        "Method": ["Kingdon's multiple streams framework"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

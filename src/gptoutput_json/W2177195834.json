@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Adherent Raindrop Detection", "Raindrop Removal", "Computer Vision"],
+  "Problem": "Raindrops on surfaces significantly degrade scene visibility in outdoor vision systems.",
+  "Method": "The paper presents a method to detect and remove adherent raindrops using spatio-temporal derivatives and video completion techniques.",
+  "Model": "NO",
+  "Task": "Raindrop detection and removal in video",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Experiment 1", "Detection", "Precision", "0.85"],
+    ["Experiment 2", "Removal", "Average Error", "5.2%"]
+  ]
+}

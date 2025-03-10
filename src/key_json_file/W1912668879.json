@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Crowdsourcing techniques in policy cycle",
+        "Problem": ["Sparsity of research", "Lack of comprehensive framework"],
+        "Method": ["Framework categorization", "Literature identification"],
+        "Results": {
+            "Dataset": ["VLMs", "Tournaments", "Open Collaboration"],
+            "Model": ["Research A", "Research B", "Research C"],
+            "Metric": ["Agenda Setting", "Problem Definition", "Policy Design"]
+        }
+    }
+}

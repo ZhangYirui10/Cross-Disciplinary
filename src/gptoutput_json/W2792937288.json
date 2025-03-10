@@ -1,0 +1,11 @@
+{
+  "Keywords": ["Multi-Human Parsing", "Graph-GAN", "Instance Segmentation", "Computer Vision", "Semantic Annotations"],
+  "Problem": "Existing human parsing methods primarily address single-person scenarios, neglecting the complexities of multiple persons in real-world interactions and occlusions.",
+  "Method": "The paper presents the MH-Parser model, utilizing a Graph-GAN to generate global parsing maps and individual instance masks in a simultaneous, bottom-up manner.",
+  "Model": "MH-Parser",
+  "Task": "Multi-human parsing in real-world scenes",
+  "Main Results Table": "Table X",
+  "Results": [
+    ["MHP Dataset", "MH-Parser", "Parsing Accuracy", "Results not specified in provided text"]
+  ]
+}

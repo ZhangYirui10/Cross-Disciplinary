@@ -1,0 +1,14 @@
+{
+  "Keywords": ["creative industry", "platformization", "Webtoon", "cultural production", "digital labor"],
+  "Problem": "The article addresses the potentially exploitative effects of platformization on creative labor within the South Korean Webtoon industry.",
+  "Method": "The study analyzes interviews and observations of Webtoon artists to understand how platformization shifts labor practices and relationships within this cultural industry.",
+  "Model": "NO",
+  "Task": "Analyzing the impact of platformization on creative labor and cultural production in the Webtoon industry.",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Webtoon Market Value", "Estimate", "Market Value", "US$368 million"],
+    ["Projected Market Value by 2020", "Estimate", "Market Value", "US$894 million"],
+    ["Average Monthly Salary for Professionals", "Webtoonists", "Salary", "US$15,000"],
+    ["Compensation for Amateurs", "Webtoonists", "Average Compensation", "US$360"]
+  ]
+}

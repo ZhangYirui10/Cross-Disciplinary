@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Survey of CNN advances",
+        "Problem": ["Continuous improvement", "Data availability", "Computing power"],
+        "Method": ["Layer design", "Activation functions", "Optimization"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

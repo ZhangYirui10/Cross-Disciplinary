@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Visual saliency detection",
+        "Problem": ["2D focus", "Depth cues"],
+        "Method": ["Eye fixation database", "Discrepancy analysis", "Depth priors modeling"],
+        "Results": {
+            "Dataset": ["Eye Fixation Data", "Saliency Model A", "Saliency Model B"],
+            "Model": ["2D vs 3D", "3D Images"],
+            "Metric": ["Correlation", "Precision", "Recall"]
+        }
+    }
+}

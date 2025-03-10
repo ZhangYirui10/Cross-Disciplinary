@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Coronary heart disease mortality prediction",
+        "Problem": ["Retinal vascular fractal dimension", "Cardiovascular disease risk factor"],
+        "Method": ["Fractal dimension analysis", "Retinal imaging", "Longitudinal study"],
+        "Results": {
+            "Dataset": ["Df Quartile 1", "Df Quartile 4", "Df Quartile 2 and 3"],
+            "Model": ["CHD Mortality", "CHD Mortality", "CHD Mortality"],
+            "Metric": ["22.0%", "11.9%", "11.5%"]
+        }
+    }
+}

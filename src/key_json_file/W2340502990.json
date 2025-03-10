@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Recommendation",
+        "Problem": ["Implicit feedback", "Unobserved data", "Dynamic environments"],
+        "Method": ["eALS", "Popularity-aware weighting"],
+        "Results": {
+            "Dataset": ["Yelp", "Amazon"],
+            "Model": ["eALS"],
+            "Metric": ["Hit Ratio", "NDCG"]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Hallucination in LLMs",
+        "Problem": ["Limitations of LLMs", "Inability to learn all computable functions"],
+        "Method": ["Learning theory", "Empirical validation"],
+        "Results": {
+            "Dataset": ["Task A", "Task B"],
+            "Model": ["LLM-X", "LLM-Y"],
+            "Metric": ["Hallucination Rate"]
+        }
+    }
+}

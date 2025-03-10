@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Statistics publishing",
+        "Problem": ["Sensitive information protection", "Event sequence privacy"],
+        "Method": ["w-event privacy", "Sliding window mechanism", "Dynamic budget allocation"],
+        "Results": {
+            "Dataset": ["Rome Dataset", "World Cup Dataset"],
+            "Model": ["BA", "BD", "FASΤw"],
+            "Metric": ["MAE"]
+        }
+    }
+}

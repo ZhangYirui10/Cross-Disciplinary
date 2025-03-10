@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Scalable architecture for Networked Virtual Environments",
+        "Problem": ["Scalability", "User accommodation", "Decentralization"],
+        "Method": ["Peer-to-peer architecture", "Voronoi diagrams"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

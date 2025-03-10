@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Aspect Extraction", "Opinion Extraction", "Deep Learning", "Coupled Attention", "Sentiment Analysis"],
+  "Problem": "The paper addresses the challenge of effectively extracting aspect and opinion terms from user-generated texts without relying on syntactic parsers or additional linguistic resources.",
+  "Method": "The proposed Coupled Multi-Layer Attentions model enables co-extraction of aspect and opinion terms through an end-to-end approach using attention mechanisms without requiring any pre-processing.",
+  "Model": "Coupled Multi-layer Attentions (CMLA)",
+  "Task": "Aspect and opinion terms co-extraction from text",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["SemEval-14 Restaurant", "CMLA", "Aspect Extraction F1", "85.29%"],
+    ["SemEval-14 Laptop", "CMLA", "Aspect Extraction F1", "83.18%"],
+    ["SemEval-15 Restaurant", "CMLA", "Aspect Extraction F1", "77.80%"]
+  ]
+}

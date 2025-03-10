@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Skyline Query Processing",
+        "Problem": ["Continuous Processing", "Moving Objects", "Static and Dynamic Dimensions"],
+        "Method": ["Kinetic-based Data Structure", "Spatiotemporal Coherence", "Filtering Unqualified Points"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

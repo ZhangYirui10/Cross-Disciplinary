@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Keyword-based selection",
+        "Problem": ["Inadequate summarization", "Relationship representation", "Effective selection"],
+        "Method": ["Keyword relationship summarization", "Ranking methods"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

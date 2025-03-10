@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Multimodal Fusion", "Multimedia Analysis", "Feature Level Fusion", "Decision Level Fusion", "Hybrid Fusion"],
+  "Problem": "Current approaches to multimodal fusion for multimedia analysis struggle with the complexities of integrating diverse data sources effectively.",
+  "Method": "The paper reviews various fusion methodologies and highlights issues like synchronization, confidence levels, and optimal modality selection to enhance multimedia analysis.",
+  "Model": "NO",
+  "Task": "Multimodal fusion for various multimedia analysis tasks",
+  "Main Results Table": "Table 4",
+  "Results": [
+    ["TRECVID", "Linear weighted fusion", "Mean Average Precision", "Top Performance"],
+    ["XM2VTS", "SVM", "Identification Rate", "95%"],
+    ["BANCA", "Dynamic Bayesian Networks", "Accuracy", "90%"]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Fog Removal", "Image Processing", "Uncertainty Feedback Learning"],
+  "Problem": "Current image defogging methods struggle with dense and non-uniform fog, leading to ineffective recovery of background information.",
+  "Method": "The paper proposes a structure-representation network combined with uncertainty feedback learning to iteratively enhance defogging results, focusing on dense and non-uniform fog areas.",
+  "Model": "Structure Representation Network",
+  "Task": "Image defogging",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Dense-HAZE", "Ours", "PSNR", "16.67"],
+    ["NH-HAZE", "Ours", "PSNR", "20.99"],
+    ["O-HAZE", "Ours", "PSNR", "24.61"],
+    ["SMOKE", "Ours", "PSNR", "18.83"]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Intellectual Property Exploration",
+        "Problem": ["Impact of generative AI on IP", "Legal framework for data compensation", "Ownership of AI outputs"],
+        "Method": ["Legal framework analysis", "Policy response evaluation", "Regulatory proposal"],
+        "Results": {
+            "Dataset": ["Getty Images vs. Stability AI", "Andy Warhol vs. Lynn Goldsmith"],
+            "Model": ["Copyright Infringement", "Fair Use"],
+            "Metric": ["Legal Decision", "Supreme Court Ruling"]
+        }
+    }
+}

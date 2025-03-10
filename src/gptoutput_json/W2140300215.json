@@ -1,0 +1,16 @@
+{
+  "Keywords": ["Skyline Query", "Peer-to-Peer Networks", "Query Load Balancing", "Distributed Systems"],
+  "Problem": "Efficient skyline query processing in peer-to-peer networks is challenging due to the need for low overhead, balanced load distribution, and progressive result delivery.",
+  "Method": "The paper proposes Skyline Space Partitioning (SSP), which adaptively partitions the query search space and balances the load across peers to enhance skyline query processing efficiency.",
+  "Model": "Skyline Space Partitioning (SSP)",
+  "Task": "Skyline query processing in distributed environments",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["NBA Players Dataset", "SSP", "Avg. Involved Nodes", "84"],
+    ["NBA Players Dataset", "DSL", "Avg. Involved Nodes", "110"],
+    ["NBA Players Dataset", "SSP", "Avg. Search Msgs", "272"],
+    ["NBA Players Dataset", "DSL", "Avg. Search Msgs", "2491"],
+    ["NBA Players Dataset", "SSP", "Avg. Bandwidth per Node", "13"],
+    ["NBA Players Dataset", "DSL", "Avg. Bandwidth per Node", "204"]
+  ]
+}

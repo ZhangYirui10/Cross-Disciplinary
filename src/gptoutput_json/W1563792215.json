@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Discourse Parsing", "Penn Discourse Treebank", "Natural Language Processing"],
+  "Problem": "Identifying discourse relations in free text is challenging due to the complexity and ambiguity of language.",
+  "Method": "The paper presents an end-to-end discourse parser that integrates components for classifying relations, labeling arguments, and identifying attribution spans, using a fully data-driven approach.",
+  "Model": "NO",
+  "Task": "Discourse relation identification in text",
+  "Main Results Table": "Table 9",
+  "Results": [
+    ["PDTB 2.0", "End-to-End Parser", "Partial F1", "46.80%"],
+    ["PDTB 2.0", "End-to-End Parser", "Exact F1", "38.18%"]
+  ]
+}

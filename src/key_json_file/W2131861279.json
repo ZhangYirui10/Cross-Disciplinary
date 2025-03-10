@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Implicit discourse relation classification",
+        "Problem": ["Accuracy", "Lack of explicit cues", "Contextual dependencies"],
+        "Method": ["Contextual features", "Constituent parse features", "Dependency parse features", "Word pair statistics"],
+        "Results": {
+            "Dataset": ["PDTB Sections 2-21", "PDTB Baseline", "PDTB Random"],
+            "Model": ["Max Entropy Classifier", "Majority Classifier", "Random Classifier"],
+            "Metric": ["Accuracy"]
+        }
+    }
+}

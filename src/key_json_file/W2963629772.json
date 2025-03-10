@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Data collection and analysis",
+        "Problem": ["Multidimensional data", "Local differential privacy", "Accuracy", "Inefficiency"],
+        "Method": ["Local differential privacy mechanisms", "Numeric data collection", "Categorical data collection"],
+        "Results": {
+            "Dataset": ["BR Dataset"],
+            "Model": ["Laplace", "Duchi et al.", "PM", "HM"],
+            "Metric": ["MSE"]
+        }
+    }
+}

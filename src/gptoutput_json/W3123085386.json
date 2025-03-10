@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Multi-location Inventory System", "Newsvendor", "Behavioral Operations Management", "Experimental Economics"],
+  "Problem": "Current inventory models fail to account for the psychological biases exhibited by decision-makers, affecting ordering decisions in multi-location systems.",
+  "Method": "The paper proposes a behavioral model that incorporates reference-dependence, capturing psychological costs of leftovers and stock outs to predict order decisions more accurately.",
+  "Model": "Reference-Dependence Behavioral Model",
+  "Task": "Ordering decisions in multi-location newsvendor settings",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Centralized Low-Profit", "Standard Model", "Expected Profits", "5760"],
+    ["Centralized High-Profit", "Standard Model", "Expected Profits", "29760"],
+    ["Decentralized Low-Profit", "Standard Model", "Expected Profits", "3521"],
+    ["Decentralized High-Profit", "Standard Model", "Expected Profits", "27521"]
+  ]
+}

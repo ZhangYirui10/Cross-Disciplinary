@@ -1,0 +1,13 @@
+{
+  "Keywords": ["rain removal", "deep learning", "image processing", "rain detection", "atmospheric veiling"],
+  "Problem": "Current methods inadequately handle the complex challenges of removing rain from a single image, especially in the presence of heavy rain and rain streak accumulation.",
+  "Method": "The paper proposes a recurrent rain detection and removal network that progressively clears rain streaks while incorporating a contextualized dilated network for improved feature extraction.",
+  "Model": "Recurrent Joint Rain Detection and Removal Network (JORDER-R)",
+  "Task": "Single image rain removal",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Rain12", "JORDER", "PSNR", "36.02"],
+    ["Rain100L", "JORDER", "PSNR", "36.11"],
+    ["Rain100H", "JORDER-R", "PSNR", "23.45"]
+  ]
+}

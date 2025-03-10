@@ -1,0 +1,15 @@
+{
+  "Keywords": ["Livestock", "Multimedia-learning", "Animal Health", "Poverty"],
+  "Problem": "Poor livestock keepers face a significant information gap regarding animal health and husbandry, leading to ineffective management of their livestock.",
+  "Method": "The study presents the Tamil Livestock Guru, an interactive multimedia tool designed to provide tailored knowledge to poor livestock keepers in Tamil Nadu, India.",
+  "Model": "NO",
+  "Task": "Knowledge transfer for animal health among poor livestock keepers",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Year 2004", "Total Users", "User Numbers", "470"],
+    ["Year 2005", "Total Users", "User Numbers", "549"],
+    ["Year 2006", "Total Users", "User Numbers", "1121"],
+    ["Year 2007", "Total Users", "User Numbers", "4484"],
+    ["Year 2008", "Total Users", "User Numbers (Up to March)", "2094"]
+  ]
+}

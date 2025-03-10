@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Distributed deep learning",
+        "Problem": ["Expensive training", "Model complexity", "Scalability challenges"],
+        "Method": ["SINGA system", "Neural net partitioning"],
+        "Results": {
+            "Dataset": ["CIFAR-10", "MNIST"],
+            "Model": ["SINGA Model"],
+            "Metric": ["Top-1 Accuracy", "Classification Accuracy"]
+        }
+    }
+}

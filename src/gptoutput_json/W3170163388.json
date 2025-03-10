@@ -1,0 +1,14 @@
+{
+  "Keywords": ["financial incentives", "weight loss", "gender differences", "randomized controlled trial"],
+  "Problem": "Current assumptions suggest cash rewards for weight loss work equally across genders, yet evidence shows differences in effectiveness.",
+  "Method": "The paper conducts a randomized controlled trial to evaluate the impact of cash incentives on weight loss among males and females, revealing significant gender differences.",
+  "Model": "NO",
+  "Task": "Evaluating the effectiveness of financial incentives for weight loss across genders",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Weight Loss", "Males (IW)", "Percentage", "2.40%"],
+    ["Weight Loss", "Males (Control)", "Percentage", "0.87%"],
+    ["Weight Loss", "Females (IW)", "Percentage", "1.03%"],
+    ["Weight Loss", "Females (Control)", "Percentage", "1.44%"]
+  ]
+}

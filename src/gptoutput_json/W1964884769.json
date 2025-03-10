@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Co-segmentation", "Interactive Segmentation", "Scribble Guidance", "Computer Vision"],
+  "Problem": "Existing unsupervised co-segmentation methods are ill-defined for groups of related images due to inconsistent backgrounds, requiring user input for effective foreground extraction.",
+  "Method": "The paper proposes iCoseg, an interactive co-segmentation algorithm that uses user scribbles to guide an energy minimization framework, intelligently recommending scribble locations for improved segmentation performance.",
+  "Model": "iCoseg",
+  "Task": "Co-segmentation of foreground objects from groups of related images",
+  "Main Results Table": "Figure 6",
+  "Results": [
+    ["CMU-Cornell iCoseg Dataset", "iCoseg", "Segmentation Accuracy", "Close to upper bound with significantly less effort"],
+    ["Synthetic Scribbles", "iCoseg", "Segmentation Accuracy", "High accuracy achieved with user-guided scribbles"]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "3D human pose estimation",
+        "Problem": ["Varying scales", "Varying speeds", "Occlusions"],
+        "Method": ["Spatio-temporal network", "Multi-scale features", "Keypoint masking"],
+        "Results": {
+            "Dataset": ["Human3.6M"],
+            "Model": ["Our result"],
+            "Metric": ["MPJPE", "P-MPJPE"]
+        }
+    }
+}

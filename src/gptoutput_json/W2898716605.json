@@ -1,0 +1,15 @@
+{
+  "Keywords": ["sEMG", "gesture recognition", "CNN-RNN architecture", "attention mechanism", "deep learning"],
+  "Problem": "Current methods struggle to capture the spatial and temporal properties of sEMG signals for accurate gesture recognition.",
+  "Method": "The paper proposes an attention-based hybrid CNN-RNN architecture that captures both spatial and temporal information of sEMG signals, improving gesture recognition performance.",
+  "Model": "Attention-based hybrid CNN-RNN architecture",
+  "Task": "sEMG-based gesture recognition",
+  "Main Results Table": "Table 4",
+  "Results": [
+    ["NinaProDB1", "Attention-based hybrid CNN-RNN with feature-signal-image1", "Classification Accuracy", "87.0%"],
+    ["NinaProDB2", "Attention-based hybrid CNN-RNN with feature-signal-image1", "Classification Accuracy", "82.2%"],
+    ["BioPatRec26MOV", "Attention-based hybrid CNN-RNN with feature-signal-image1", "Classification Accuracy", "94.1%"],
+    ["CapgMyo-DBa", "Attention-based hybrid CNN-RNN", "Classification Accuracy", "99.7%"],
+    ["csl-hdemg", "Attention-based hybrid CNN-RNN", "Classification Accuracy", "94.5%"]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "Keywords": ["biometric verification", "continuous verification", "multi-modal biometrics", "operating system security", "user authentication"],
+  "Problem": "Current biometric authentication systems struggle to provide continuous verification without compromising usability and security during interactive sessions.",
+  "Method": "The paper presents a multi-modal biometric verification system that integrates face and fingerprint verification to ensure continuous authentication of the user, enhancing security while minimizing false positives.",
+  "Model": "NO",
+  "Task": "Continuous biometric verification in interactive login sessions",
+  "Main Results Table": "Table 9",
+  "Results": []
+}

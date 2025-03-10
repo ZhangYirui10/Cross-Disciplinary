@@ -1,0 +1,14 @@
+{
+  "Keywords": ["task-oriented dialogue systems", "sequence-to-sequence model", "belief tracking", "dialogue management", "end-to-end training"],
+  "Problem": "Current task-oriented dialogue systems struggle with complex architectures and cannot effectively handle out-of-vocabulary slot values.",
+  "Method": "The paper proposes Sequicity, a unified framework utilizing a single sequence-to-sequence model to simplify belief tracking and response generation in task-oriented dialogues.",
+  "Model": "Two Stage CopyNet (TSCP)",
+  "Task": "Task-oriented dialogue management",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["CamRest676", "TSCP", "BLEU", "0.927"],
+    ["CamRest676", "TSCP", "Success F1", "0.253"],
+    ["KVRET", "TSCP", "BLEU", "0.845"],
+    ["KVRET", "TSCP", "Success F1", "0.219"]
+  ]
+}

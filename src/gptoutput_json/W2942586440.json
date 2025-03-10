@@ -1,0 +1,14 @@
+{
+  "Keywords": ["diabetic retinopathy", "artificial intelligence", "deep learning", "Zambia", "screening"],
+  "Problem": "Radical measures are required to identify and reduce blindness due to diabetes in under-resourced countries like Zambia.",
+  "Method": "An ensemble AI model was developed using two convolutional neural networks to classify retinal fundus images for diabetic retinopathy screening.",
+  "Model": "NO",
+  "Task": "Detection of diabetic retinopathy and associated risk factors",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Validation dataset", "AI model", "AUC", "0.973"],
+    ["Validation dataset", "AI model", "Sensitivity for referable diabetic retinopathy", "92.25%"],
+    ["Validation dataset", "AI model", "Sensitivity for vision-threatening diabetic retinopathy", "99.42%"],
+    ["Validation dataset", "AI model", "Sensitivity for diabetic macular oedema", "97.19%"]
+  ]
+}

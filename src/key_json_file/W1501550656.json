@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "User identification",
+        "Problem": ["Fixed strings limitation", "Free-text typing"],
+        "Method": ["Goodness Measure", "Classifiers"],
+        "Results": {
+            "Dataset": ["English Words", "Non-English Sequences"],
+            "Model": ["Classifier A", "Classifier B"],
+            "Metric": ["Mean Accuracy"]
+        }
+    }
+}

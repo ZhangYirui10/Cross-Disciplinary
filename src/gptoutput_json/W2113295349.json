@@ -1,0 +1,9 @@
+{
+  "Keywords": ["k-dominant skyline", "high-dimensional space", "dominance relation"],
+  "Problem": "Current skyline query techniques struggle with high-dimensional data, leading to overwhelming numbers of points that might be dominant.",
+  "Method": "The paper proposes the k-dominant concept, which relaxes the strict dominance requirement to allow a point to be k-dominated by several other points across multiple dimensions.",
+  "Model": "NO",
+  "Task": "Finding k-dominant skylines in high-dimensional spaces",
+  "Main Results Table": "Table 1",
+  "Results": []
+}

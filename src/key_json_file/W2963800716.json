@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Image restoration",
+        "Problem": ["Raindrop interference", "Visibility degradation"],
+        "Method": ["Attentive Generative Adversarial Network", "Visual attention"],
+        "Results": {
+            "Dataset": ["Raindrop Dataset"],
+            "Model": ["Eigen13", "Pix2Pix", "Ours (AA+AD)"],
+            "Metric": ["PSNR", "SSIM"]
+        }
+    }
+}

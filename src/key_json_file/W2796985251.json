@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Multi-human parsing",
+        "Problem": ["Crowded scenes", "Inaccurate parsing", "Behavior analysis", "Autonomous driving"],
+        "Method": ["Nested Adversarial Network", "GAN-like sub-nets"],
+        "Results": {
+            "Dataset": ["MHP", "Cityscapes"],
+            "Model": ["Nested Adversarial Network"],
+            "Metric": ["mIoU"]
+        }
+    }
+}

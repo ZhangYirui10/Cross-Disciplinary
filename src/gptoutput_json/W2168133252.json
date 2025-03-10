@@ -1,0 +1,16 @@
+{
+  "Keywords": ["Object Categorization", "Feature Selection", "Higher-order Spatial Features", "Computer Vision", "Bag-of-Visual Words"],
+  "Problem": "Current methods exhaustively compute higher-order spatial features, which are computationally expensive and inefficient for object categorization.",
+  "Method": "The paper proposes a method that integrates feature selection and extraction, progressively extracting higher-order spatial features based on selected lower-order ones, improving efficiency and accuracy.",
+  "Model": "NO",
+  "Task": "Object categorization in computer vision",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["PASCAL VOC2006", "Proposed", "Accuracy", "75.9%"],
+    ["PASCAL VOC2006", "Method 1", "Accuracy", "71.3%"],
+    ["PASCAL VOC2006", "Method 2", "Accuracy", "74.1%"],
+    ["MSRC", "Proposed", "Accuracy", "21.2%"],
+    ["MSRC", "AdaBoost classifier (1st order feat)", "Error Rate", "24.1%"],
+    ["MSRC", "AdaBoost classifier (1st & 2nd order)", "Error Rate", "21.2%"]
+  ]
+}

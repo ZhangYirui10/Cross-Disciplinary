@@ -1,0 +1,12 @@
+{
+  "Keywords": ["high dimensional skylines", "skyline frequency", "efficient algorithms", "dominance", "data mining"],
+  "Problem": "In high-dimensional datasets, the number of skyline points can become overwhelming, making them less insightful for decision-making processes.",
+  "Method": "The paper presents approximate algorithms that compute top-k frequent skyline points by leveraging the concept of skyline frequency and maximizing efficiency in determining dominating subspaces.",
+  "Model": "NO",
+  "Task": "Top-k frequent skyline computation",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["NBA Dataset", "Top-10 frequent skyline points", "Skyline frequency", "Various frequencies listed"],
+    ["NBA Dataset", "Bottom-10 frequent skyline points", "Dominating frequency", "Various frequencies listed"]
+  ]
+}

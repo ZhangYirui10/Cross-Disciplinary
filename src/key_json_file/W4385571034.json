@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Remote sensing object detection",
+        "Problem": ["Context incorporation"],
+        "Method": ["Large Selective Kernel Network", "Dynamic receptive field"],
+        "Results": {
+            "Dataset": ["SQuAD", "ImageNet"],
+            "Model": ["BERT", "ResNet-50"],
+            "Metric": ["EM", "Top-1 Accuracy"]
+        }
+    }
+}

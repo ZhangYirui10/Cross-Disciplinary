@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Chronic Kidney Disease", "Deep Learning Algorithm", "Retinal Images", "Screening Tool"],
+  "Problem": "Screening for chronic kidney disease is challenging due to low adherence rates to traditional methods, requiring a non-invasive and effective solution.",
+  "Method": "A deep learning algorithm was developed to detect chronic kidney disease from retinal images, validated across multiple datasets to assess effectiveness.",
+  "Model": "NO",
+  "Task": "Detection of chronic kidney disease from retinal photographs",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["SEED", "Image-only", "AUC", "0.911"],
+    ["SP2", "RF only", "AUC", "0.829"],
+    ["BES", "Hybrid", "AUC", "0.858"]
+  ]
+}

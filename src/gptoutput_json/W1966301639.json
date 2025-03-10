@@ -1,0 +1,9 @@
+{
+  "Keywords": ["Networked Virtual Environment", "peer-to-peer", "Voronoi diagram", "scalability", "interest management"],
+  "Problem": "The paper focuses on solving the scalability issue in Networked Virtual Environments, particularly how to accommodate more users without centralized resources.",
+  "Method": "The paper proposes a fully-distributed peer-to-peer architecture utilizing Voronoi diagrams to manage user interactions and optimize resource distribution based on user locality.",
+  "Model": "NO",
+  "Task": "Scalable architecture for Networked Virtual Environments",
+  "Main Results Table": "Table 2",
+  "Results": []
+}

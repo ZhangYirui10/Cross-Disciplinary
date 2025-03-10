@@ -1,0 +1,12 @@
+{
+  "Keywords": ["kinship verification", "facial features", "feature extraction", "image classification", "computer vision"],
+  "Problem": "The paper addresses the challenge of automatically verifying kinship relationships between pairs of face images.",
+  "Method": "The proposed method involves collecting facial image data, extracting discriminative features, and training classifiers to determine kinship based on facial characteristics.",
+  "Model": "NO",
+  "Task": "Kinship verification through facial image analysis",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Parent-child Data Set", "K-Nearest-Neighbors", "Classification Accuracy", "70.67%"],
+    ["Parent-child Data Set", "Human Evaluation", "Classification Accuracy", "67.19%"]
+  ]
+}

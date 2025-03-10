@@ -1,0 +1,15 @@
+{
+  "Keywords": ["Image Captioning", "Language CNN", "Deep Learning"],
+  "Problem": "Generating accurate image captions that capture implicit semantic information and relationships in a natural language is challenging for machines.",
+  "Method": "The paper proposes a language CNN model that incorporates convolutional layers to capture long-range dependencies in word sequences for improved image captioning.",
+  "Model": "NO",
+  "Task": "Image Captioning",
+  "Main Results Table": "Table 5",
+  "Results": [
+    ["MS COCO", "CNNL+RNN", "CIDEr", "95.2%"],
+    ["MS COCO", "CNNL+RHN", "CIDEr", "98.9%"],
+    ["MS COCO", "CNNL+LSTM", "CIDEr", "99.1%"],
+    ["Flickr30k", "CNNL+RNN", "METEOR", "22.6%"],
+    ["Flickr30k", "CNNL+RHN", "METEOR", "21.6%"]
+  ]
+}

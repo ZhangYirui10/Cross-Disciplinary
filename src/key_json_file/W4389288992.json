@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "AI governance analysis",
+        "Problem": ["Lack of governance frameworks", "Inconsistent ethical practices"],
+        "Method": ["Document analysis"],
+        "Results": {
+            "Dataset": ["Country", "Company"],
+            "Model": ["Year", "Year"],
+            "Metric": ["Percentage with AI Governance Principles", "Percentage with AI Governance Principles"]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Secure nearest neighbor query processing",
+        "Problem": ["Insecurities", "Vulnerabilities", "Compromised confidentiality"],
+        "Method": ["Secure Voronoi diagram"],
+        "Results": {
+            "Dataset": ["California Points Dataset", "Texas Points Dataset"],
+            "Model": ["SVD", "SVD"],
+            "Metric": ["Query Time"]
+        }
+    }
+}

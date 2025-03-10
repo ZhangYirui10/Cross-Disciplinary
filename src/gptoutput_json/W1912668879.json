@@ -1,0 +1,13 @@
+{
+  "Keywords": ["crowdsourcing", "policy making", "public administration", "policy cycle", "open collaboration"],
+  "Problem": "Research on the systematic use of crowdsourcing in policy making is sparse and lacks a comprehensive framework to guide its implementation across different policy stages.",
+  "Method": "The paper establishes a framework that categorizes and situates existing research on crowdsourcing within the stages of the policy cycle, identifying gaps and overlaps in the literature.",
+  "Model": "NO",
+  "Task": "Investigating the application of crowdsourcing techniques in various stages of the policy cycle.",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["VLMs (e.g. M-Turk, Crowdflower)", "Research A", "Agenda Setting", "Brabham (2012b)"],
+    ["Tournaments (e.g. Innocentive, Challenge.gov)", "Research B", "Problem Definition", "Basto et al. (2010)"],
+    ["Open Collaboration (e.g. Twitter, Wikipedia, Ushahidi)", "Research C", "Policy Design", "Seltzer & Mahmoudi (2012)"]
+  ]
+}

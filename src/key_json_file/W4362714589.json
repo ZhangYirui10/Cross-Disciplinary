@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Machine unlearning",
+        "Problem": ["Access to training data", "Data loss", "Data unavailability"],
+        "Method": ["Zero-shot machine unlearning", "Noise generation"],
+        "Results": {
+            "Dataset": ["CIFAR10", "SVHN", "MNIST"],
+            "Model": ["AllCNN", "AllCNN", "AllCNN"],
+            "Metric": ["1-class Unlearning F1", "2-class Unlearning F1", "1-class Unlearning F1"]
+        }
+    }
+}

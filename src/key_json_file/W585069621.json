@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Crop Classification",
+        "Problem": ["Single Temporal Images", "Heterogeneous Regions"],
+        "Method": ["Nonparametric Classification", "Probabilistic Method"],
+        "Results": {
+            "Dataset": ["Multitemporal Imagery", "Spring Data"],
+            "Model": ["Nonparametric Classification", "Probabilistic Method"],
+            "Metric": ["Accuracy", "Crop Yield Estimation"]
+        }
+    }
+}

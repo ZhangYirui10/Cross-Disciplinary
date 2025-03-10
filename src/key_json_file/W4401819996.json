@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Misinformation mitigation",
+        "Problem": ["Misinformation", "Disinformation", "Mal-information", "Generative AI challenges"],
+        "Method": ["Framework analysis", "Behavioral insights", "Technical detection"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "Keywords": ["social context", "group images", "demographic recognition", "computer vision", "facial structure"],
+  "Problem": "Current facial recognition methods ignore the social context and structure in images of groups, which affects demographic recognition accuracy.",
+  "Method": "The paper proposes extracting contextual features that encapsulate group structure and social interaction, improving demographic recognition without relying solely on face appearance.",
+  "Model": "NO",
+  "Task": "Demographic recognition in group images",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Image Dataset", "Contextual Features", "Exact Gender Accuracy", "66.9%"],
+    ["Image Dataset", "Contextual Features", "Age Accuracy (with one category error)", "64.4%"],
+    ["Image Dataset", "Appearance Classifier", "Exact Gender Accuracy", "69.6%"],
+    ["Image Dataset", "Combined Context and Appearance", "Exact Age Category Accuracy", "74.1%"]
+  ]
+}

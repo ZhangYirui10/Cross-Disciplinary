@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Diabetic retinopathy assessment",
+        "Problem": ["Inadequate quantification", "Microvascular damage"],
+        "Method": ["Fractal analysis", "Retinal vasculature", "Fundus photographs"],
+        "Results": {
+            "Dataset": ["N/A", "N/A"],
+            "Model": ["N/A", "Quartile 1 vs. Quartile 4"],
+            "Metric": ["Odds Ratio (95% CI)", "Odds Ratio (95% CI)"]
+        }
+    }
+}

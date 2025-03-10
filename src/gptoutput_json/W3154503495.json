@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Human parsing", "Multi-human parsing", "Graph-based GAN", "Image segmentation"],
+  "Problem": "Existing methods struggle with multi-human parsing, especially when individuals interact closely or are occluded in images.",
+  "Method": "The paper introduces MH-Parser, a graph-based generative adversarial model designed to jointly generate global parsing maps and instance masks for multiple humans in an image.",
+  "Model": "MH-Parser",
+  "Task": "Multi-human parsing",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["MHP Dataset", "MH-Parser", "APp", "50.10%"],
+    ["MHP Dataset", "Mask R-CNN", "APp", "52.68%"],
+    ["MHP Dataset", "DL", "APp", "47.76%"],
+    ["PASCAL-Person-Part", "MH-Parser", "APr 0.5", "42.31%"]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Contrast Enhancement", "JPEG Artifacts Removal", "Image Processing"],
+  "Problem": "Contrast enhancement methods unintentionally amplify JPEG compression artifacts, leading to reduced image quality.",
+  "Method": "The proposed framework integrates JPEG artifact suppression with contrast enhancement using structure-texture decomposition to enhance contrast while mitigating artifacts.",
+  "Model": "NO",
+  "Task": "Contrast enhancement in JPEG compressed images.",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Tone-Curve Adjustment", "Ours", "Mean SSIM", "92.05"],
+    ["Tone-Curve Adjustment", "SA-DCT", "Mean PSNR", "30.12"]
+  ]
+}

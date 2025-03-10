@@ -1,0 +1,12 @@
+{
+  "Keywords": ["visual saliency", "object-level attributes", "semantic attributes", "eye-tracking dataset", "gaze prediction"],
+  "Problem": "Existing models inadequately predict human gaze by primarily focusing on pixel-level attributes without considering object and semantic-level information.",
+  "Method": "The paper proposes a three-layered saliency architecture integrating pixel, object, and semantic attributes to better predict human gaze.",
+  "Model": "NO",
+  "Task": "Predicting human gaze in natural scenes",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["OSIE", "Proposed Model", "Fixation Density", "Significant Improvement"],
+    ["OSIE", "Control Group (None)", "Fixation Density", "Significantly Less"]
+  ]
+}

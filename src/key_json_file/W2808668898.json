@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Rating prediction",
+        "Problem": ["Inadequate attention capture", "Suboptimal predictions"],
+        "Method": ["A3NCF", "Topic model", "Attention network"],
+        "Results": {
+            "Dataset": ["Baby", "Grocery", "Home & Kitchen", "Garden", "Sports", "Yelp2017"],
+            "Model": ["A3NCF"],
+            "Metric": ["RMSE"]
+        }
+    }
+}

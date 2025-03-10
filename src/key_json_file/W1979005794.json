@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Privacy preservation",
+        "Problem": ["Inadequate protection", "Overprotection"],
+        "Method": ["Personalized anonymity"],
+        "Results": {
+            "Dataset": ["Dataset Pri-leaf", "Dataset Pri-mixed"],
+            "Model": ["k-anonymity", "l-diversity", "Personalized method"],
+            "Metric": ["Breach Probability"]
+        }
+    }
+}

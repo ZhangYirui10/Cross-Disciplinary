@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Single image rain removal",
+        "Problem": ["Inadequate methods", "Complex challenges", "Heavy rain", "Rain streak accumulation"],
+        "Method": ["Recurrent rain detection", "Rain removal network", "Contextualized dilated network"],
+        "Results": {
+            "Dataset": ["Rain12", "Rain100L", "Rain100H"],
+            "Model": ["JORDER", "JORDER", "JORDER-R"],
+            "Metric": ["PSNR", "PSNR", "PSNR"]
+        }
+    }
+}

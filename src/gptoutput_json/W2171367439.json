@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Fractal analysis", "Retinal microvasculature", "Coronary heart disease", "Mortality", "Microcirculation"],
+  "Problem": "The study investigates the relationship between retinal vascular fractal dimension and coronary heart disease mortality, highlighting suboptimal microvascular branching as a potential risk factor for cardiovascular disease.",
+  "Method": "The research examines fractal dimension from retinal images of participants over a 14-year period, correlating it with coronary heart disease mortality data.",
+  "Model": "NO",
+  "Task": "Coronary heart disease mortality prediction",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Df Quartile 1 (lowest)", "CHD Mortality", "22.0%", "HR 1.44 (1.13, 1.83)"],
+    ["Df Quartile 4 (highest)", "CHD Mortality", "11.9%", "HR 1.51 (1.14, 1.98)"],
+    ["Df Quartile 2 and 3 (middle)", "CHD Mortality", "11.5%", "HR 1.0 (reference)"]
+  ]
+}

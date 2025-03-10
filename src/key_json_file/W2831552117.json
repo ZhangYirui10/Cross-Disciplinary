@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Governance of risks",
+        "Problem": ["Safety", "Liability", "Privacy", "Cybersecurity"],
+        "Method": ["Prevention-oriented", "Control-oriented", "Toleration-oriented", "Adaptation-oriented"],
+        "Results": {
+            "Dataset": ["US", "UK", "Australia", "China", "Germany"],
+            "Model": ["Safety", "Liability", "Privacy", "Cybersecurity"],
+            "Metric": ["Strategy"]
+        }
+    }
+}

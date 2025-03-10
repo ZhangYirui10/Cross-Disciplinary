@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "sEMG-based gesture recognition",
+        "Problem": ["Spatial properties", "Temporal properties", "Gesture recognition accuracy"],
+        "Method": ["Attention-based hybrid CNN-RNN"],
+        "Results": {
+            "Dataset": ["NinaProDB1", "NinaProDB2", "BioPatRec26MOV", "CapgMyo-DBa", "csl-hdemg"],
+            "Model": ["Attention-based hybrid CNN-RNN with feature-signal-image1", "Attention-based hybrid CNN-RNN"],
+            "Metric": ["Classification Accuracy"]
+        }
+    }
+}

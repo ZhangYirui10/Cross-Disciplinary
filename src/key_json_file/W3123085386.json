@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Ordering decisions",
+        "Problem": ["Psychological biases", "Multi-location systems"],
+        "Method": ["Behavioral model", "Reference-dependence"],
+        "Results": {
+            "Dataset": ["Centralized Low-Profit", "Centralized High-Profit", "Decentralized Low-Profit", "Decentralized High-Profit"],
+            "Model": ["Standard Model", "Standard Model", "Standard Model", "Standard Model"],
+            "Metric": ["Expected Profits", "Expected Profits", "Expected Profits", "Expected Profits"]
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "Keywords": ["subjective well-being", "Twitter analysis", "language methods", "data-driven methods", "geographical variation"],
+  "Problem": "Current word-level methods for estimating subjective well-being from social media are inconsistent due to regional and cultural language use variations.",
+  "Method": "The paper evaluates word-level and data-driven methods for estimating regional well-being using Twitter data, showing that data-driven methods provide more robust estimates than traditional word-level approaches.",
+  "Model": "NO",
+  "Task": "Estimating subjective well-being from Twitter data",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Gallup-Sharecare Well-Being Index", "LIWC 2015", "Life Satisfaction", "-0.21"],
+    ["Gallup-Sharecare Well-Being Index", "LabMT", "Happiness", "0.27"],
+    ["Gallup-Sharecare Well-Being Index", "WWBP", "Worry", "0.02"],
+    ["Gallup-Sharecare Well-Being Index", "Swiss Chocolate", "Sadness", "0.09"]
+  ]
+}

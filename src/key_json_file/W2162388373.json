@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Clustering",
+        "Problem": ["Ineffective methods", "Utilization of comments"],
+        "Method": ["CoNMF"],
+        "Results": {
+            "Dataset": ["Last.fm", "Yelp"],
+            "Model": ["k-means", "CoNMF-P"],
+            "Metric": ["Accuracy", "F1"]
+        }
+    }
+}

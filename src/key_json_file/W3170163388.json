@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Weight Loss Incentives",
+        "Problem": ["Gender differences", "Assumption challenge"],
+        "Method": ["Randomized controlled trial"],
+        "Results": {
+            "Dataset": ["Weight Loss"],
+            "Model": ["Males (IW)", "Males (Control)", "Females (IW)", "Females (Control)"],
+            "Metric": ["Percentage"]
+        }
+    }
+}

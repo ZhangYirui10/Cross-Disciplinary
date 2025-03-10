@@ -1,0 +1,11 @@
+{
+  "Keywords": ["Association Rule Mining", "Multiple Minimum Supports", "Frequent Items", "Rare Items", "Data Mining"],
+  "Problem": "Current methods fail to effectively address the diverse frequency occurrences of items in databases during association rule mining.",
+  "Method": "The paper introduces an algorithm that allows specifying multiple minimum supports for different items, enhancing the discovery of rules involving both frequent and rare items.",
+  "Model": "MSapriori",
+  "Task": "Association rule mining with varied minimum supports.",
+  "Main Results Table": "Figure 3",
+  "Results": [
+    ["Synthetic Dataset", "MSapriori", "Large Itemsets Found", "8.5% of single minsup method"]
+  ]
+}

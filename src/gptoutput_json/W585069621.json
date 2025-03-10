@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Nonparametric Classification", "Probabilistic Classification", "Agricultural Crops", "Multitemporal Imagery", "Remote Sensing"],
+  "Problem": "Current classification methods struggle to effectively classify agricultural crops using single temporal images, limiting accuracy in heterogeneous regions.",
+  "Method": "The paper presents a nonparametric and probabilistic classification approach that utilizes multitemporal satellite imagery to improve crop classification accuracy.",
+  "Model": "NO",
+  "Task": "Agricultural crop classification using multitemporal remote sensing images",
+  "Main Results Table": "Table 8",
+  "Results": [
+    ["Multitemporal Imagery", "Nonparametric Classification", "Accuracy", "Higher than single image classifications"],
+    ["Spring Data", "Probabilistic Method", "Crop Yield Estimation", "Improved estimation accuracy"]
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "Keywords": ["Scattering media", "visibility enhancement", "dehazing", "defogging"],
+  "Problem": "The degradation of images captured in foggy or hazy scenes reduces visibility and contrast, complicating effective image processing and computer vision tasks.",
+  "Method": "The paper surveys existing dehazing methods and introduces a quantitative benchmark based on ground truth images to evaluate their performance objectively.",
+  "Model": "NO",
+  "Task": "Image dehazing",
+  "Main Results Table": "Table 6",
+  "Results": [
+    ["Fattal's dataset", "Tan 08", "Mean Absolute Difference", "0.109"],
+    ["Fattal's dataset", "Fattal 08", "Mean Absolute Difference", "0.158"],
+    ["Fattal's dataset", "Kratz 09", "Mean Absolute Difference", "0.099"],
+    ["Fattal's dataset", "He 09", "Mean Absolute Difference", "0.036"],
+    ["Fattal's dataset", "Tarel 09", "Mean Absolute Difference", "0.173"],
+    ["Fattal's dataset", "Ancuti 13", "Mean Absolute Difference", "0.188"],
+    ["Fattal's dataset", "Meng 13", "Mean Absolute Difference", "0.052"],
+    ["Fattal's dataset", "Tang 14", "Mean Absolute Difference", "0.087"],
+    ["Fattal's dataset", "Fattal 14", "Mean Absolute Difference", "0.025"],
+    ["Fattal's dataset", "Cai 16", "Mean Absolute Difference", "0.042"],
+    ["Fattal's dataset", "Berman 16", "Mean Absolute Difference", "0.032"]
+  ]
+}

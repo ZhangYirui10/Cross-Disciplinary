@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Multi-Human Parsing", "Deep Nested Adversarial Network", "Generative Adversarial Networks", "Crowded Scenes", "Computer Vision"],
+  "Problem": "Current methods struggle to accurately parse and analyze humans in crowded scenes, affecting applications like behavior analysis and autonomous driving.",
+  "Method": "The paper introduces a Nested Adversarial Network (NAN) that uses a nested structure of GAN-like sub-nets to improve semantic saliency prediction and instance-aware clustering for better parsing.",
+  "Model": "Nested Adversarial Network (NAN)",
+  "Task": "Multi-human parsing in crowded scenes",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["MHP", "Nested Adversarial Network", "mIoU", "75.3%"],
+    ["Cityscapes", "Nested Adversarial Network", "mIoU", "85.4%"]
+  ]
+}

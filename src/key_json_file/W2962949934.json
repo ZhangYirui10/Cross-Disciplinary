@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "CNN Advancements Survey",
+        "Problem": ["Data complexity", "Data variety", "Performance limitations"],
+        "Method": ["Layer improvements", "Activation functions", "Loss functions", "Application enhancements"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

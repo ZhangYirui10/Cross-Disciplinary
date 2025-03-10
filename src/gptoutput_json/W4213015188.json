@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Electronic Appointment Reminders", "Veterans Affairs Health System", "Patient Waiting Times", "Healthcare Delivery", "Appointment Scheduling"],
+  "Problem": "The association between electronic appointment reminder systems and patient waiting times in healthcare systems has not been thoroughly investigated.",
+  "Method": "This study utilizes a cohort analysis of patient appointments in the VA health system to assess the impact of the VEText reminder system on waiting times.",
+  "Model": "NO",
+  "Task": "Assessing the effect of electronic appointment reminders on patient waiting times",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Waiting Time", "VEText Intervention", "Reduction", "6.51 days"],
+    ["Waiting Time", "Before VEText", "Mean", "53.79 days"],
+    ["Waiting Time", "After VEText", "Mean", "60.69 days"]
+  ]
+}

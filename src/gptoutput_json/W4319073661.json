@@ -1,0 +1,17 @@
+{
+  "Keywords": ["COVID-19", "vulnerable populations", "physical distancing", "socio-economic impacts"],
+  "Problem": "Physical distancing measures during COVID-19 disproportionately affect vulnerable groups, leading to unintended negative socio-economic consequences.",
+  "Method": "This scoping review synthesizes results from 265 studies to examine the impacts of physical distancing on various vulnerable populations globally.",
+  "Model": "NO",
+  "Task": "Exploration of the impacts of physical distancing measures on vulnerable populations during the COVID-19 pandemic.",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Older people", "Study count", "Mental health outcomes", "Prolonged loneliness and increased health risks"],
+    ["Children/students", "96 studies", "Educational disruption", "Significant learning disparities"],
+    ["Low-income populations", "58 studies", "Job loss", "Food insecurity and mental distress"],
+    ["Migrant workers", "14 studies", "Job and income loss", "High exposure risks and limited healthcare access"],
+    ["Sex workers", "9 studies", "Reduced access to healthcare", "Higher economic hardship"],
+    ["Victims of domestic violence", "16 studies", "Increased incidence of violence", "Reduced access to support services"],
+    ["Refugees", "14 studies", "Crowded living conditions", "Limited access to basic necessities and healthcare"]
+  ]
+}

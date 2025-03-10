@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Implicit Discourse Relations", "Penn Discourse Treebank", "Natural Language Processing"],
+  "Problem": "Current methods struggle to accurately classify implicit discourse relations due to lack of explicit cues and contextual dependencies.",
+  "Method": "The paper proposes a classifier that utilizes contextual features, constituent and dependency parse features, and word pair statistics to improve the accuracy of implicit discourse relation recognition.",
+  "Model": "NO",
+  "Task": "Implicit discourse relation classification",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["PDTB Sections 2-21", "Max Entropy Classifier", "Accuracy", "40.2%"],
+    ["PDTB Baseline", "Majority Classifier", "Accuracy", "26.1%"],
+    ["PDTB Random", "Random Classifier", "Accuracy", "9.1%"]
+  ]
+}

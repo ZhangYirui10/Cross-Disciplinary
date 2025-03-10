@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Geographical resource locating",
+        "Problem": ["Ineffective searching", "Lack of context", "User-generated tags"],
+        "Method": ["Tag-centric query processing", "R*-tree", "Inverted list", "Geo-tf-idf ranking"],
+        "Results": {
+            "Dataset": ["Synthetic Data", "Real Data"],
+            "Model": ["Virtual bR*-tree", "mCK query", "Google Maps"],
+            "Metric": ["ART", "Accuracy"]
+        }
+    }
+}

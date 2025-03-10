@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Examining message framing impact",
+        "Problem": ["Message framing", "Social distancing intentions"],
+        "Method": ["Experiments", "Identity influence"],
+        "Results": {
+            "Dataset": ["Experiment 1", "Experiment 2"],
+            "Model": ["Health Promotion", "Disease Prevention"],
+            "Metric": ["Social Distancing Intentions", "Reduced planned trips"]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Evaluating multicultural arts impact",
+        "Problem": ["Inadequate measurement", "Complex impact", "Social wellbeing", "Cultural wellbeing", "Economic wellbeing"],
+        "Method": ["Bi-directional theory-based approach", "Theoretical frameworks", "Empirical fieldwork"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Impact analysis",
+        "Problem": ["Exploitation", "Platformization effects"],
+        "Method": ["Interviews", "Observations"],
+        "Results": {
+            "Dataset": ["Webtoon Market Value", "Projected Market Value by 2020", "Average Monthly Salary for Professionals", "Compensation for Amateurs"],
+            "Model": ["Estimate", "Estimate", "Webtoonists", "Webtoonists"],
+            "Metric": ["Market Value", "Market Value", "Salary", "Average Compensation"]
+        }
+    }
+}

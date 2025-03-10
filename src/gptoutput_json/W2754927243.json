@@ -1,0 +1,15 @@
+{
+  "Keywords": ["Image Captioning", "Coarse-to-Fine Learning", "Deep Learning", "Reinforcement Learning"],
+  "Problem": "Existing image captioning methods struggle to generate rich, fine-grained descriptions and address exposure bias and loss-evaluation mismatch.",
+  "Method": "The paper proposes a coarse-to-fine multi-stage prediction framework using multiple decoders, optimized with reinforcement learning to improve the quality of image captions.",
+  "Model": "Stack-Cap",
+  "Task": "Image captioning",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["MSCOCO", "Stack-Cap", "BLEU-4", "35.2%"],
+    ["MSCOCO", "Stack-Cap", "CIDEr", "109.1"],
+    ["MSCOCO", "LSTM (XE)", "BLEU-4", "28.5%"],
+    ["MSCOCO", "LSTM+AttTop-Down (XE)", "BLEU-4", "33.3%"],
+    ["MSCOCO", "Stack-Cap*", "BLEU-4", "34.6%"]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "Keywords": ["reflection separation", "diffuse reflection", "specular reflection", "chromaticity", "computer vision"],
+  "Problem": "Current methods require explicit color segmentation, which is problematic for complex textured images, hindering accurate separation of diffuse and specular reflections.",
+  "Method": "The paper presents a method for separating reflection components based on chromaticity without explicit color segmentation, utilizing intensity logarithmic differentiation and an iterative framework.",
+  "Model": "NO",
+  "Task": "Separation of diffuse and specular reflection components in textured surfaces using a single image.",
+  "Main Results Table": "Figure 5",
+  "Results": []
+}

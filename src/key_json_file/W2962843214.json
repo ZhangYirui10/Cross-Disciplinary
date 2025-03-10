@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Aspect and opinion term extraction",
+        "Problem": ["User-generated content", "Traditional methods"],
+        "Method": ["Recursive neural networks", "Conditional random fields"],
+        "Results": {
+            "Dataset": ["SemEval-2014 Restaurant", "SemEval-2014 Laptop"],
+            "Model": ["RNCRF", "SemEval-1", "WDEmb+B+CRF"],
+            "Metric": ["F1 Score"]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Image captioning",
+        "Problem": ["Rich descriptions", "Fine-grained descriptions", "Exposure bias", "Loss-evaluation mismatch"],
+        "Method": ["Coarse-to-fine prediction", "Multi-stage prediction", "Reinforcement learning"],
+        "Results": {
+            "Dataset": ["MSCOCO"],
+            "Model": ["Stack-Cap", "LSTM (XE)", "LSTM+AttTop-Down (XE)", "Stack-Cap*"],
+            "Metric": ["BLEU-4", "CIDEr"]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Twitter data analysis",
+        "Problem": ["Biases", "Incomplete datasets", "Usage dynamics"],
+        "Method": ["Complete dataset collection", "User engagement analysis", "Language analysis", "Bot behavior analysis"],
+        "Results": {
+            "Dataset": ["Hashtag Category", "Celebrities", "Sex", "Iranian Protests", "Entertainment", "Advertisement", "Politics", "Finance", "Games", "Other", "Unknown"],
+            "Model": ["Occurrences", "20,809,742", "20,529,196", "13,488,295", "4,392,227", "4,644,540", "3,858,550", "3,549,107", "3,348,128", "2,672,291", "4,176,432"],
+            "Metric": [""]
+        }
+    }
+}

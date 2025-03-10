@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Queer Asian cinema exploration",
+        "Problem": ["Marginalization of queer studies", "Decentering Western perspectives"],
+        "Method": ["Survey of trends", "Research traditions"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Multi-human parsing",
+        "Problem": ["Multi-person interaction", "Occlusion"],
+        "Method": ["Graph-GAN", "Bottom-up parsing"],
+        "Results": {
+            "Dataset": ["MHP Dataset"],
+            "Model": ["MH-Parser"],
+            "Metric": ["Parsing Accuracy"]
+        }
+    }
+}

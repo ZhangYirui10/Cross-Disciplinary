@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Near Infrared Imaging", "Photograph Enhancement", "Image Processing", "Wavelet Transformation"],
+  "Problem": "Current methods struggle to effectively enhance underexposed or overexposed photographs, resulting in loss of detail and poor contrast.",
+  "Method": "The paper proposes a technique that enhances visible images by transferring contrast and texture information from corresponding near infrared images through wavelet decomposition.",
+  "Model": "NO",
+  "Task": "Photograph enhancement using near infrared images",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["HDR Scene", "Alpha-blending", "Visual Quality", "Poor"],
+    ["HDR Scene", "Tone-mapped HDR", "Ghosting Effect", "Present"],
+    ["HDR Scene", "Our Method", "Visual Quality", "High"]
+  ]
+}

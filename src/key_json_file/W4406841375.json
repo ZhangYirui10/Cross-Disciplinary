@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Multimodal misinformation detection",
+        "Problem": ["Vulnerabilities", "Generative AI pollution", "Degraded performance"],
+        "Method": ["Cross-modal evidence reranking", "Cross-modal claim-evidence reasoning"],
+        "Results": {
+            "Dataset": ["NewsCLIPpings", "VERITE"],
+            "Model": ["CCN", "SNIFFER"],
+            "Metric": ["Accuracy"]
+        }
+    }
+}

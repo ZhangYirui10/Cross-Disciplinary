@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Dense neighborhood graph mining",
+        "Problem": ["NP-completeness", "Resource constraints"],
+        "Method": ["Triangulation-based algorithms", "Iterative scanning"],
+        "Results": {
+            "Dataset": ["Flickr Dataset"],
+            "Model": ["BiTriDN", "StreamDN"],
+            "Metric": ["Max λ value", "Over-estimation"]
+        }
+    }
+}

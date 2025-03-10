@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Differential Privacy", "Bayesian Networks", "Synthetic Data Generation", "High-Dimensional Data", "Privacy-Preserving Data Publishing"],
+  "Problem": "Existing differential privacy methods struggle to release high-dimensional data effectively due to noise overpowering signals, rendering published data largely useless.",
+  "Method": "PrivBayes constructs a Bayesian network model of the data for low-dimensional marginals, injects noise privately, and samples from the approximate distribution for synthetic data release.",
+  "Model": "PrivBayes",
+  "Task": "Publishing high-dimensional data while ensuring differential privacy.",
+  "Main Results Table": "Table 6",
+  "Results": [
+    ["NLTCS", "PrivBayes", "Q4 Accuracy", "Low variation distance"],
+    ["ACS", "PrivBayes", "Q3 Accuracy", "High accuracy"],
+    ["Adult", "PrivBayes", "Classification Error", "Lowest misclassification rate"],
+    ["BR2000", "PrivBayes", "Q2 Accuracy", "Improved accuracy over baselines"]
+  ]
+}

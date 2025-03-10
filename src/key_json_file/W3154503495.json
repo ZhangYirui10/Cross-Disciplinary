@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Multi-human parsing",
+        "Problem": ["Occlusion", "Interaction"],
+        "Method": ["Graph-based model", "Generative adversarial model"],
+        "Results": {
+            "Dataset": ["MHP Dataset", "PASCAL-Person-Part"],
+            "Model": ["MH-Parser", "Mask R-CNN", "DL"],
+            "Metric": ["APp", "APr 0.5"]
+        }
+    }
+}

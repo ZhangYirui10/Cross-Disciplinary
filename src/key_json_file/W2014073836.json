@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "MRO cost estimation",
+        "Problem": ["Inaccurate quotations", "Limited feedback data"],
+        "Method": ["Data mining", "Regular expressions", "Text mining"],
+        "Results": {
+            "Dataset": ["Test Cases"],
+            "Model": ["Estimation Accuracy"],
+            "Metric": ["20% Deviation", "25% Deviation", "10% Deviation"]
+        }
+    }
+}

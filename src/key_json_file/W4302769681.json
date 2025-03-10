@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Catalytic activity evaluation",
+        "Problem": ["CuO content", "CO oxidation", "CuO-Ce0.6Zr0.4O₂ catalysts"],
+        "Method": ["Microwave heating decomposition"],
+        "Results": {
+            "Dataset": ["N/A"],
+            "Model": ["CuO-Ce0.6Zr0.4O₂ (5%)", "CuO-Ce0.6Zr0.4O₂ (10%)", "CuO-Ce0.6Zr0.4O₂ (15%)", "CuO-Ce0.6Zr0.4O₂ (20%)", "CuO-Ce0.6Zr0.4O₂ (25%)"],
+            "Metric": ["CO conversion"]
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "Keywords": ["AC temperature", "Behavioral change", "Energy conservation", "Incentives", "Tropical countries"],
+  "Problem": "Air conditioners in tropical countries contribute significantly to energy consumption, necessitating effective strategies to reduce their usage.",
+  "Method": "The study conducts a randomized control trial comparing gradual and abrupt monetary incentives to encourage users to raise AC temperatures, thereby reducing energy consumption.",
+  "Model": "NO",
+  "Task": "Encouraging higher air conditioning temperatures to achieve energy savings.",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Energy Consumption", "GT", "kWh", "Lower Energy Consumption"],
+    ["Energy Consumption", "AT", "kWh", "Higher than CC"],
+    ["DMT Adjusted", "GT", "°C", "Higher than AT and CC in Periods 1 and 2"],
+    ["DMT Post-Intervention", "GT", "°C", "Higher than CC and AT"]
+  ]
+}

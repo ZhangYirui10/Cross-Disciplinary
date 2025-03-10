@@ -1,0 +1,9 @@
+{
+  "Keywords": ["AI governance", "ethical principles", "accountability", "transparency", "responsible AI"],
+  "Problem": "Many governments and companies lack effective frameworks or principles to govern the use of AI, leading to potential risks and misunderstandings in their application.",
+  "Method": "The paper analyzes documents released by 193 countries and 100 companies to identify trends and convergence in AI governance principles, highlighting key aspects such as fairness and transparency.",
+  "Model": "NO",
+  "Task": "Analysis of AI governance frameworks and principles across governments and companies",
+  "Main Results Table": "Table 3",
+  "Results": []
+}

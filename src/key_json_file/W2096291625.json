@@ -1,0 +1,14 @@
+```json
+{
+    "Entities": {
+        "Task": "Privatization and outsourcing analysis",
+        "Problem": ["Reliance on private contractors", "Accountability concerns", "Oversight implications"],
+        "Method": ["Outsourcing survey", "Accountability challenges analysis"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}
+```

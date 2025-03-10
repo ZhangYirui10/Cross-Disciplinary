@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Estimating geographic subjective well-being",
+        "Problem": ["Regional language variations", "Cultural differences"],
+        "Method": ["Word-level analysis", "Data-driven analysis"],
+        "Results": {
+            "Dataset": ["Gallup Well-Being Index"],
+            "Model": ["LIWC 2015", "LabMT", "WWBP", "Swiss Chocolate"],
+            "Metric": ["Life Satisfaction", "Direct Life Satisfaction prediction"]
+        }
+    }
+}

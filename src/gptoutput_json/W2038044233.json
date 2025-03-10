@@ -1,0 +1,9 @@
+{
+  "Keywords": ["keyword query", "database selection", "relational databases", "keyword relationship summarization", "distributed data sources"],
+  "Problem": "Current methods inadequately summarize the relationships between keywords in relational databases for effective selection during keyword-based queries across multiple distributed databases.",
+  "Method": "The paper proposes a method to summarize keyword relationships in relational databases based on their structure and develop ranking methods for selecting the most useful databases for given keyword queries.",
+  "Model": "NO",
+  "Task": "Keyword-based selection of relational databases",
+  "Main Results Table": "Table 2",
+  "Results": []
+}

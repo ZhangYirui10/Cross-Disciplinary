@@ -1,0 +1,16 @@
+{
+  "Keywords": ["Raindrop Removal", "Generative Adversarial Network", "Image Processing", "Deep Learning", "Visual Attention"],
+  "Problem": "Raindrops on glass severely degrade image visibility, making it challenging to recover the original background scene from raindrop-affected images.",
+  "Method": "The paper proposes an Attentive Generative Adversarial Network that leverages visual attention in both the generative and discriminative components to effectively restore images by focusing on raindrop regions.",
+  "Model": "Attentive Generative Adversarial Network",
+  "Task": "Image restoration through raindrop removal",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Raindrop Dataset", "Eigen13 [1]", "PSNR", "28.59"],
+    ["Raindrop Dataset", "Eigen13 [1]", "SSIM", "0.6726"],
+    ["Raindrop Dataset", "Pix2Pix [10]", "PSNR", "30.14"],
+    ["Raindrop Dataset", "Pix2Pix [10]", "SSIM", "0.8299"],
+    ["Raindrop Dataset", "Ours (AA+AD)", "PSNR", "31.57"],
+    ["Raindrop Dataset", "Ours (AA+AD)", "SSIM", "0.9023"]
+  ]
+}

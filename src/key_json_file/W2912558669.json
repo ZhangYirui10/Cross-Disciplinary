@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Fracture Detection",
+        "Problem": ["Accuracy", "Missed Diagnoses"],
+        "Method": ["Object Detection CNN", "Inception-ResNet Faster R-CNN"],
+        "Results": {
+            "Dataset": ["Test Cohort"],
+            "Model": ["CNN"],
+            "Metric": ["Per-Image Sensitivity", "Per-Image Specificity", "AUC", "Frontal Per-Mark Sensitivity", "Lateral Per-Mark Sensitivity"]
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "Keywords": ["Double U-pipe ground heat exchanger", "heat transfer model", "in-situ testing", "shallow geothermal energy", "numerical simulation"],
+  "Problem": "Research lacks integration of numerical simulation with in-situ testing for evaluating heat transfer efficiency of double U-pipe ground heat exchangers.",
+  "Method": "The study develops a heat transfer model using cylindrical heat source theory and in-situ thermal response tests to analyze the factors affecting heat exchange efficiency.",
+  "Model": "Double U-pipe ground heat transfer model",
+  "Task": "Evaluating heat exchange efficiency of double U-pipe ground heat exchangers",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Initial Ground Temperature 9.2°C", "Outlet Temperature", "Heat Exchange Rate", "5.88°C", "9.84 kW"],
+    ["Initial Ground Temperature 12.2°C", "Outlet Temperature", "Heat Exchange Rate", "6.96°C", "15.52 kW"],
+    ["Inlet Temperature 4°C", "Outlet Temperature", "Heat Exchange Rate", "6.94°C", "15.52 kW"],
+    ["Inlet Temperature 6°C", "Outlet Temperature", "Heat Exchange Rate", "6.37°C", "11.74 kW"],
+    ["Inlet Temperature 8°C", "Outlet Temperature", "Heat Exchange Rate", "5.66°C", "7.96 kW"]
+  ]
+}

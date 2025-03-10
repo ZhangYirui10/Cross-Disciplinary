@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Machine Unlearning", "Zero-Shot Learning", "Privacy", "Deep Learning", "Data Deletion"],
+  "Problem": "Existing machine unlearning methods require access to training data, which is not practical in cases where data is lost or unavailable.",
+  "Method": "The paper proposes a zero-shot machine unlearning method that operates without access to original training data, using noise generation to effectively unlearn targeted classes.",
+  "Model": "NO",
+  "Task": "Machine unlearning without access to training data",
+  "Main Results Table": "Table I",
+  "Results": [
+    ["CIFAR10", "AllCNN", "1-class Unlearning F1", "5.11%"],
+    ["SVHN", "AllCNN", "2-class Unlearning F1", "50.23%"],
+    ["MNIST", "AllCNN", "1-class Unlearning F1", "0%"]
+  ]
+}

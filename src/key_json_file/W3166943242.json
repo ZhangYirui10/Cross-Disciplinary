@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Governance of artificial intelligence",
+        "Problem": ["Rapid development", "Management challenges", "Ethical concerns"],
+        "Method": ["Emerging governance frameworks", "Adaptive governance", "Hybrid governance"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

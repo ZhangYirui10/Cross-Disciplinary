@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Political Communication", "Social Media", "Political Discussion", "Twitter", "Civic Engagement"],
+  "Problem": "Political discussions on social media are often toxic and do not foster healthy dialogue.",
+  "Method": "The study employs a discontinuous time series design and natural language processing to analyze tweets before and after Twitter's character limit change.",
+  "Model": "NO",
+  "Task": "Analyzing the quality of political discussions on Twitter",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["Twitter Data", "Uncivil Behavior", "Incivility Reduction", "Significant"],
+    ["Twitter Data", "Deliberative Attributes", "Justification Increase", "Significant"],
+    ["Twitter Data", "Politeness", "Politeness Increase", "Significant"],
+    ["Twitter Data", "Empathy", "Emotional Decrease", "Significant"]
+  ]
+}

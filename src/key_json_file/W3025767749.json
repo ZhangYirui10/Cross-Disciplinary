@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Chronic kidney disease detection",
+        "Problem": ["Low adherence", "Screening challenges", "Non-invasive solution"],
+        "Method": ["Deep learning algorithm", "Retinal image analysis"],
+        "Results": {
+            "Dataset": ["SEED", "SP2", "BES"],
+            "Model": ["Image-only", "RF only", "Hybrid"],
+            "Metric": ["AUC"]
+        }
+    }
+}

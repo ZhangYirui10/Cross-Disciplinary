@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Visual detection and localization",
+        "Problem": ["Inefficient memory", "Inefficient computation"],
+        "Method": ["Multi-channel correlation filter", "Frequency domain learning"],
+        "Results": {
+            "Dataset": ["Facial Landmark Localization", "Car Detection", "Pedestrian Detection"],
+            "Model": ["Our method", "MCCF"],
+            "Metric": ["Localization Rate", "Detection Rate"]
+        }
+    }
+}

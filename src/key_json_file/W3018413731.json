@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Estimating subjective well-being",
+        "Problem": ["Inconsistency", "Regional language variations", "Cultural language variations"],
+        "Method": ["Word-level methods", "Data-driven methods"],
+        "Results": {
+            "Dataset": ["Gallup-Sharecare Well-Being Index"],
+            "Model": ["LIWC 2015", "LabMT", "WWBP", "Swiss Chocolate"],
+            "Metric": ["Life Satisfaction", "Happiness", "Worry", "Sadness"]
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Matrix Factorization", "Implicit Feedback", "Online Learning", "Recommendation Systems"],
+  "Problem": "Current methods struggle to optimize recommendations from implicit feedback while managing the large volume of unobserved data and adapting to dynamic online environments.",
+  "Method": "The paper presents an efficient element-wise Alternating Least Squares (eALS) algorithm with item popularity-aware weighting to effectively learn from implicit feedback and support real-time updates.",
+  "Model": "eALS",
+  "Task": "Implicit feedback matrix factorization for online recommendation",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Yelp", "eALS", "Hit Ratio", "0.23"],
+    ["Yelp", "eALS", "NDCG", "0.07"],
+    ["Amazon", "eALS", "Hit Ratio", "0.8"],
+    ["Amazon", "eALS", "NDCG", "0.2"]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Differential Privacy", "Bayesian Networks", "Synthetic Data Generation", "Privacy-Preserving Data Publishing"],
+  "Problem": "Existing methods struggle to publish high-dimensional data while ensuring privacy without significant loss of data utility.",
+  "Method": "The paper presents PRIVBAYES, a differentially private method that constructs Bayesian networks to approximate high-dimensional data distributions, enabling accurate synthetic data generation.",
+  "Model": "PRIVBAYES",
+  "Task": "Private data release via Bayesian networks",
+  "Main Results Table": "Table 4",
+  "Results": [
+    ["Adult", "Q2", "Average Variation Distance", "Improved Accuracy"],
+    ["NLTCS", "Q3", "Average Variation Distance", "Improved Accuracy"],
+    ["TPC-E", "Q2", "Average Variation Distance", "Improved Accuracy"],
+    ["BR2000", "Q2", "Average Variation Distance", "Improved Accuracy"]
+  ]
+}

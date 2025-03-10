@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Privacy-preserving vertical federated learning",
+        "Problem": ["Secure training", "Sensitive information exposure"],
+        "Method": ["Threshold partially homomorphic encryption", "Secure multiparty computation"],
+        "Results": {
+            "Dataset": ["Bank market", "Credit card", "Appliances energy"],
+            "Model": ["Pivot-DT", "Pivot-DT", "Pivot-GBDT"],
+            "Metric": ["Accuracy", "Accuracy", "MSE"]
+        }
+    }
+}

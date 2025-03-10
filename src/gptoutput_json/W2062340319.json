@@ -1,0 +1,16 @@
+{
+  "Keywords": ["Digital library", "Recommendation system", "User modeling", "Information retrieval", "Citation analysis"],
+  "Problem": "Current recommendation systems in digital libraries struggle to accurately reflect researchers' latent interests based on their publication history.",
+  "Method": "The paper develops a recommendation model that constructs user profiles from researchers' publication lists and enhances these profiles with related citations and references.",
+  "Model": "NO",
+  "Task": "Scholarly paper recommendation",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["ACL Papers", "Most recent Paper", "NDCG@5", "0.457"],
+    ["ACL Papers", "Most recent Paper with References", "NDCG@5", "0.521"],
+    ["ACL Papers", "Most recent Paper", "NDCG@10", "0.422"],
+    ["ACL Papers", "Most recent Paper with References", "NDCG@10", "0.459"],
+    ["ACL Papers", "Most recent Paper", "MRR", "0.568"],
+    ["ACL Papers", "Most recent Paper with References", "MRR", "0.624"]
+  ]
+}

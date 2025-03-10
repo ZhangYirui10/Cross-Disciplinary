@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Asia's engagement with international law",
+        "Problem": ["Under-representation", "Under-participation"],
+        "Method": ["Historical analysis", "Current analysis", "Future analysis"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

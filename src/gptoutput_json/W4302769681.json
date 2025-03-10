@@ -1,0 +1,15 @@
+{
+  "Keywords": ["CuO-Ce0.6Zr0.4O₂", "Microwave heating", "Catalytic activity", "CO oxidation"],
+  "Problem": "The study addresses the influence of CuO content on the catalytic activity for CO oxidation in CuO-Ce0.6Zr0.4O₂ catalysts.",
+  "Method": "Microwave heating decomposition is used to prepare CuO-Ce0.6Zr0.4O₂ catalysts with varying CuO content, which are then characterized and tested for CO oxidation performance.",
+  "Model": "NO",
+  "Task": "Catalytic activity evaluation for CO oxidation",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["N/A", "CuO-Ce0.6Zr0.4O₂ (5%)", "CO conversion", "90% at 89 °C"],
+    ["N/A", "CuO-Ce0.6Zr0.4O₂ (10%)", "CO conversion", "90% at 83 °C"],
+    ["N/A", "CuO-Ce0.6Zr0.4O₂ (15%)", "CO conversion", "90% at 80 °C"],
+    ["N/A", "CuO-Ce0.6Zr0.4O₂ (20%)", "CO conversion", "90% at 85 °C"],
+    ["N/A", "CuO-Ce0.6Zr0.4O₂ (25%)", "CO conversion", "90% at 87 °C"]
+  ]
+}

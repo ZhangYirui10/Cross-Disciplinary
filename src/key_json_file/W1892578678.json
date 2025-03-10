@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Object detection and tracking",
+        "Problem": ["Boundary effects", "Detection performance", "Tracking performance"],
+        "Method": ["Correlation filter", "Iterative optimization", "Augmented Lagrangian Methods"],
+        "Results": {
+            "Dataset": ["CMU Multi-PIE", "Various Sequences"],
+            "Model": [],
+            "Metric": ["Localization rate", "Precision"]
+        }
+    }
+}

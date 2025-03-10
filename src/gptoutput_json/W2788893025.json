@@ -1,0 +1,29 @@
+{
+  "Keywords": ["Aspect-aware", "Matrix Factorization", "Rating Prediction", "Recommendation Systems", "Review Analysis"],
+  "Problem": "Current rating prediction methods struggle with cold-start issues, non-transparency, and local recommendation inefficiencies due to solely using rating data.",
+  "Method": "The paper presents an Aspect-aware Latent Factor Model (ALFM) that combines user ratings and reviews to improve rating predictions by modeling user preferences and item features across multiple aspects.",
+  "Model": "Aspect-aware Latent Factor Model (ALFM)",
+  "Task": "Rating prediction in recommendation systems using reviews and ratings.",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["Instant Video", "ALFM", "RMSE", "0.967"],
+    ["Automotive", "ALFM", "RMSE", "0.885"],
+    ["Baby", "ALFM", "RMSE", "1.076"],
+    ["Beauty", "ALFM", "RMSE", "1.082"],
+    ["Cell Phones", "ALFM", "RMSE", "1.167"],
+    ["Clothing", "ALFM", "RMSE", "1.032"],
+    ["Digital Music", "ALFM", "RMSE", "0.920"],
+    ["Grocery", "ALFM", "RMSE", "0.982"],
+    ["Health", "ALFM", "RMSE", "1.042"],
+    ["Home & Kitchen", "ALFM", "RMSE", "1.049"],
+    ["Musical Instruments", "ALFM", "RMSE", "0.893"],
+    ["Office Products", "ALFM", "RMSE", "0.848"],
+    ["Patio", "ALFM", "RMSE", "1.001"],
+    ["Pet Supplies", "ALFM", "RMSE", "1.099"],
+    ["Sports & Outdoors", "ALFM", "RMSE", "0.933"],
+    ["Tools & Home", "ALFM", "RMSE", "0.974"],
+    ["Toys & Games", "ALFM", "RMSE", "0.902"],
+    ["Video Games", "ALFM", "RMSE", "1.070"],
+    ["Yelp 2017", "ALFM", "RMSE", "1.155"]
+  ]
+}

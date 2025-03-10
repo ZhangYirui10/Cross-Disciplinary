@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Appointment Reminder Assessment",
+        "Problem": ["Electronic reminders", "Patient waiting times"],
+        "Method": ["Cohort analysis", "VEText system"],
+        "Results": {
+            "Dataset": ["Waiting Time"],
+            "Model": ["VEText Intervention", "Before VEText", "After VEText"],
+            "Metric": ["Reduction", "Mean"]
+        }
+    }
+}

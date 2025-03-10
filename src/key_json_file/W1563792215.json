@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Discourse relation identification",
+        "Problem": ["Complexity", "Ambiguity"],
+        "Method": ["End-to-end parsing", "Relation classification", "Argument labeling", "Attribution identification"],
+        "Results": {
+            "Dataset": ["PDTB 2.0"],
+            "Model": ["End-to-End Parser"],
+            "Metric": ["Partial F1", "Exact F1"]
+        }
+    }
+}

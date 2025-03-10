@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Association rule mining",
+        "Problem": ["Diverse frequency occurrences", "Ineffective current methods"],
+        "Method": ["Multiple minimum supports", "Enhanced rule discovery"],
+        "Results": {
+            "Dataset": ["Synthetic Dataset"],
+            "Model": ["MSapriori"],
+            "Metric": ["Large Itemsets Found"]
+        }
+    }
+}

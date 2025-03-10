@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Impact assessment",
+        "Problem": ["Systemic vulnerabilities", "Creative cultural industries crisis"],
+        "Method": ["Case study analysis", "Sustainable models"],
+        "Results": {
+            "Dataset": ["Pink Dot"],
+            "Model": ["Cultural Participation"],
+            "Metric": ["Digital engagement"]
+        }
+    }
+}

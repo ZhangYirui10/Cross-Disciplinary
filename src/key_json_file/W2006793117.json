@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Face recognition",
+        "Problem": ["Pose variation", "Illumination variation", "Expression variation"],
+        "Method": ["Image capturing", "Diverse poses", "Variable illuminations", "Expressions"],
+        "Results": {
+            "Dataset": ["CMU PIE"],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

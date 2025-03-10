@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Continuous biometric verification",
+        "Problem": ["Usability", "Security compromise"],
+        "Method": ["Face verification", "Fingerprint verification"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Analyzing corporate discourse",
+        "Problem": ["Overemphasis on dataveillance", "Neglect of agency", "Impact on education essence"],
+        "Method": ["Discourse analysis"],
+        "Results": {
+            "Dataset": ["Blackboard", "IBM Watson Education", "Pearson"],
+            "Model": ["Real-time monitoring", "Personalized learning", "Digital ocean concept"],
+            "Metric": ["Visibility", "User engagement", "Data integration"]
+        }
+    }
+}

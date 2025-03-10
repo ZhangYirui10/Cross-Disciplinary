@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Keystroke Dynamics", "Biometrics", "Authentication", "Machine Learning"],
+  "Problem": "Current methods primarily focus on fixed strings for authentication, limiting the utility of keystroke dynamics in real-world applications where users type freely.",
+  "Method": "The paper explores keystroke dynamics for continuous authentication using a Goodness Measure and two classifiers for identifying users based on free-text sequences.",
+  "Model": "NO",
+  "Task": "User identification based on keystroke dynamics in a general setting.",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["English Words", "Classifier A", "Mean Accuracy", "0.0598 (FOR)"],
+    ["English Words", "Classifier B", "Mean Accuracy", "0.7955 (FOR)"],
+    ["Non-English Sequences", "Classifier B", "Mean Accuracy", "1.0000 (AN)"]
+  ]
+}

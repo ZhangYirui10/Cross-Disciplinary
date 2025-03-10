@@ -1,0 +1,9 @@
+{
+  "Keywords": ["Skyline Query", "Continuous Processing", "Moving Objects", "Spatiotemporal", "Kinetic Data Structure"],
+  "Problem": "The paper addresses the challenge of continuously processing skyline queries for moving objects, which are affected by both static and dynamic dimensions.",
+  "Method": "The authors propose a kinetic-based data structure and an efficient algorithm to maintain the skyline continuously by exploiting spatiotemporal coherence and filtering unqualified points.",
+  "Model": "NO",
+  "Task": "Continuous skyline query processing for moving objects",
+  "Main Results Table": "Table 1",
+  "Results": []
+}

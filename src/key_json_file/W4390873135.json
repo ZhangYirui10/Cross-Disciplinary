@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Text-to-Video Generation",
+        "Problem": ["Computational resources", "Large-scale datasets"],
+        "Method": ["Tune-A-Video", "Text-video pair", "Text-to-image models"],
+        "Results": {
+            "Dataset": ["DAVIS"],
+            "Model": ["Tune-A-Video"],
+            "Metric": ["Frame Consistency", "Textual Alignment"]
+        }
+    }
+}

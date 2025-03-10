@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Regulating technologies",
+        "Problem": ["Pace of change", "Economic impact", "Societal alteration"],
+        "Method": ["Regulatory framework", "Policy tools"],
+        "Results": {
+            "Dataset": ["Cybersecurity", "GDPR"],
+            "Model": ["Regulatory Authority Allocation", "Actor Involvement"],
+            "Metric": ["Regulation Change", "Resistance Overcoming"]
+        }
+    }
+}

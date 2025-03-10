@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Knowledge transfer in animal health",
+        "Problem": ["Information gap", "Ineffective management"],
+        "Method": ["Interactive multimedia tool"],
+        "Results": {
+            "Dataset": ["Year 2004", "Year 2005", "Year 2006", "Year 2007", "Year 2008"],
+            "Model": ["Total Users"],
+            "Metric": ["User Numbers"]
+        }
+    }
+}

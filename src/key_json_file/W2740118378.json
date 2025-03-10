@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Image Captioning",
+        "Problem": ["Generating accurate captions", "Implicit semantic information", "Natural language relationships"],
+        "Method": ["CNN", "RNN", "RHN", "LSTM"],
+        "Results": {
+            "Dataset": ["MS COCO", "Flickr30k"],
+            "Model": ["CNNL+RNN", "CNNL+RHN", "CNNL+LSTM"],
+            "Metric": ["CIDEr", "METEOR"]
+        }
+    }
+}

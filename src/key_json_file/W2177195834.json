@@ -1,0 +1,14 @@
+```json
+{
+    "Entities": {
+        "Task": "Raindrop detection and removal",
+        "Problem": ["Scene visibility degradation", "Outdoor vision systems"],
+        "Method": ["Spatio-temporal derivatives", "Video completion"],
+        "Results": {
+            "Dataset": ["Experiment 1", "Experiment 2"],
+            "Model": ["Detection", "Removal"],
+            "Metric": ["Precision", "Average Error"]
+        }
+    }
+}
+```

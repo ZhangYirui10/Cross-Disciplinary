@@ -1,0 +1,14 @@
+{
+  "Keywords": ["GenAI", "multimodal misinformation", "out-of-context detection", "evidence pollution", "robustness"],
+  "Problem": "The paper addresses vulnerabilities in out-of-context multimodal misinformation detectors caused by pollution from generative AI, leading to degraded detection performance.",
+  "Method": "The authors propose two strategies: cross-modal evidence reranking and cross-modal claim-evidence reasoning to enhance the robustness of misinformation detectors against polluted evidence.",
+  "Model": "NO",
+  "Task": "Out-of-context multimodal misinformation detection",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["NewsCLIPpings", "CCN", "Accuracy", "71.78%"],
+    ["NewsCLIPpings", "SNIFFER", "Accuracy", "76.42%"],
+    ["VERITE", "CCN", "Accuracy", "64.29%"],
+    ["VERITE", "SNIFFER", "Accuracy", "59.41%"]
+  ]
+}

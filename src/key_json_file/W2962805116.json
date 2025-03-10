@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Vertex ranking",
+        "Problem": ["Bipartite graphs", "Graph structure", "Prior information"],
+        "Method": ["BiRank algorithm", "Score assignment", "Regularization optimization"],
+        "Results": {
+            "Dataset": ["YouTube", "Flickr", "Last.fm"],
+            "Model": ["BiRank"],
+            "Metric": ["Spearman coefficient"]
+        }
+    }
+}

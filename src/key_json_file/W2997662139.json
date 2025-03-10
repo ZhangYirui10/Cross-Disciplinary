@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Conversational recommender system",
+        "Problem": ["Dynamic interactions", "Component integration"],
+        "Method": ["Estimation-Action-Reflection (EAR) framework"],
+        "Results": {
+            "Dataset": ["LastFM", "Yelp"],
+            "Model": ["EAR", "CRM"],
+            "Metric": ["SR@15"]
+        }
+    }
+}

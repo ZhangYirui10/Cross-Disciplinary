@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Data management in the metaverse",
+        "Problem": ["Large data challenges", "Diverse data generation", "Real-time interaction", "Effective data processing"],
+        "Method": ["Novel technologies", "Database approaches", "Real-time synchronization"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

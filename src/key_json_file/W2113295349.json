@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "k-dominant skylines",
+        "Problem": ["High-dimensional data", "Overwhelming points"],
+        "Method": ["k-dominant concept", "Relaxed dominance"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

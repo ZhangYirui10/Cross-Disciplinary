@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Aspect and opinion terms co-extraction",
+        "Problem": ["Extraction challenge", "User-generated texts", "No syntactic parsers"],
+        "Method": ["Coupled Multi-Layer Attentions", "Attention mechanisms", "End-to-end approach"],
+        "Results": {
+            "Dataset": ["SemEval-14 Restaurant", "SemEval-14 Laptop", "SemEval-15 Restaurant"],
+            "Model": ["CMLA", "CMLA", "CMLA"],
+            "Metric": ["Aspect Extraction F1", "Aspect Extraction F1", "Aspect Extraction F1"]
+        }
+    }
+}

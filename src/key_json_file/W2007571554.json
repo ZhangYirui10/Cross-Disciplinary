@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Predicting human gaze",
+        "Problem": ["Inadequate prediction", "Focus on pixel-level attributes", "Neglect of object and semantic-level information"],
+        "Method": ["Three-layered saliency architecture", "Integration of pixel attributes", "Integration of object attributes", "Integration of semantic attributes"],
+        "Results": {
+            "Dataset": ["OSIE"],
+            "Model": ["Control Group"],
+            "Metric": ["Fixation Density"]
+        }
+    }
+}

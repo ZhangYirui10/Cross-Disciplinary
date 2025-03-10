@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Twitter Political Polarization",
+        "Problem": ["Overstatement of engagement", "Misrepresentation of consumption habits"],
+        "Method": ["Bottom-up analysis", "Opinion leader identification", "Political relevance assessment"],
+        "Results": {
+            "Dataset": ["Political Opinion Leaders", "Political Figures"],
+            "Model": ["Followed Accounts"],
+            "Metric": ["Non-Political Opinion Leaders", "Celebrities"]
+        }
+    }
+}

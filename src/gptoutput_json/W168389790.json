@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Cohesive Subgraphs", "Social Network Analysis", "Graph Database", "Visual Analytics"],
+  "Problem": "Identifying cohesive subgraphs in large-scale social networks is challenging due to memory constraints and the need for efficient computation.",
+  "Method": "The paper presents a novel k-mutual-friend subgraph concept and implements both offline and online algorithms for scalable discovery and visualization in graph databases.",
+  "Model": "k-mutual-friend subgraph",
+  "Task": "Cohesive subgraph discovery in social networks",
+  "Main Results Table": "Table 4",
+  "Results": [
+    ["Epinions", "mImproved", "Response Time", "0.3s"],
+    ["Twitter", "Partition Algorithm", "Response Time", "1.5s"],
+    ["Facebook", "mOnline Algorithm", "Response Time", "3.5s"]
+  ]
+}

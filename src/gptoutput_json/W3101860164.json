@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Privacy Preserving", "Vertical Federated Learning", "Tree-based Models", "Decision Trees", "Security"],
+  "Problem": "Existing methods for federated learning often fail to securely train models on vertically partitioned data without revealing sensitive information.",
+  "Method": "The paper proposes Pivot, a hybrid approach combining threshold partially homomorphic encryption and secure multiparty computation to securely train decision trees and predict outcomes while protecting client data privacy.",
+  "Model": "Pivot",
+  "Task": "Privacy-preserving vertical federated learning for tree-based models",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["Bank market", "Pivot-DT", "Accuracy", "0.886077"],
+    ["Credit card", "Pivot-DT", "Accuracy", "0.821526"],
+    ["Appliances energy", "Pivot-GBDT", "MSE", "211.35326"]
+  ]
+}

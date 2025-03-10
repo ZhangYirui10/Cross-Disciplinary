@@ -1,0 +1,9 @@
+{
+  "Keywords": ["Pose estimation", "Illumination variation", "Facial expression", "Face recognition", "Computer vision"],
+  "Problem": "There is a need for a comprehensive facial image database to evaluate algorithms against variations in pose, illumination, and expression.",
+  "Method": "The authors collected the CMU PIE database by capturing over 40,000 images across multiple poses, illuminations, and expressions to facilitate robust face recognition algorithm evaluations.",
+  "Model": "NO",
+  "Task": "Face recognition and evaluation of pose and illumination robustness",
+  "Main Results Table": "Table X (not explicitly mentioned in the provided text)",
+  "Results": []
+}

@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Local Differential Privacy", "Multidimensional Data", "Statistical Analysis", "Machine Learning", "Privacy Protection"],
+  "Problem": "Current techniques inadequately address the collection and analysis of multidimensional data under local differential privacy, leading to suboptimal accuracy and inefficiency.",
+  "Method": "The paper proposes new local differential privacy mechanisms for collecting multidimensional numeric and categorical data, which demonstrate improved accuracy and lower noise variance compared to existing solutions.",
+  "Model": "NO",
+  "Task": "Data collection and analysis under local differential privacy for multidimensional data.",
+  "Main Results Table": "Table I",
+  "Results": [
+    ["BR Dataset", "Laplace", "MSE", "Higher than proposed methods"],
+    ["BR Dataset", "Duchi et al.", "MSE", "0.0001"],
+    ["BR Dataset", "PM", "MSE", "Lower than Duchi et al."],
+    ["BR Dataset", "HM", "MSE", "Best performance"]
+  ]
+}

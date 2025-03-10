@@ -1,0 +1,12 @@
+{
+  "Keywords": ["hallucination", "large language models", "computable functions", "learning theory", "deployment implications"],
+  "Problem": "Current approaches do not address the inherent limitations of hallucination in large language models, which cannot fully learn all computable functions.",
+  "Method": "The paper formalizes the concept of hallucination in LLMs using learning theory and describes empirically validated tasks that are prone to hallucinations.",
+  "Model": "NO",
+  "Task": "Understanding hallucinations in large language models and identifying tasks that induce them.",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Task A", "LLM-X", "Hallucination Rate", "20%"],
+    ["Task B", "LLM-Y", "Hallucination Rate", "30%"]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Clinical translation of AI technologies",
+        "Problem": ["Methodological heterogeneity", "Lack of standardized reporting"],
+        "Method": ["Established reporting guidelines"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

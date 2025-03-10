@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Political discussions analysis",
+        "Problem": ["Toxicity", "Lack of healthy dialogue"],
+        "Method": ["Discontinuous time series design", "Natural language processing"],
+        "Results": {
+            "Dataset": ["Twitter Data"],
+            "Model": ["Uncivil Behavior", "Deliberative Attributes", "Politeness", "Empathy"],
+            "Metric": ["Incivility Reduction", "Justification Increase", "Politeness Increase", "Emotional Decrease"]
+        }
+    }
+}

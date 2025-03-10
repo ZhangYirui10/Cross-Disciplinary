@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Data Collection Examination",
+        "Problem": ["Ethical Challenges", "Negative Implications", "Naturalisation"],
+        "Method": ["Discursive Deconstruction"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

@@ -1,0 +1,14 @@
+```json
+{
+    "Entities": {
+        "Task": "Task-oriented dialogue management",
+        "Problem": ["Complex architectures", "Out-of-vocabulary slot values"],
+        "Method": ["Sequicity", "Sequence-to-sequence model"],
+        "Results": {
+            "Dataset": ["CamRest676", "KVRET"],
+            "Model": ["TSCP"],
+            "Metric": ["BLEU", "Success F1"]
+        }
+    }
+}
+```

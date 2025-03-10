@@ -1,0 +1,21 @@
+{
+  "Keywords": ["Twitter data", "computational social science", "social media analysis", "data collection", "bot detection"],
+  "Problem": "The study aims to address biases in previous Twitter research due to lack of complete datasets and to provide a comprehensive understanding of Twitter's usage dynamics.",
+  "Method": "The paper details the collection of a complete 24-hour dataset of Twitter activity using the Academic API, analyzing user engagement, languages, and bot behaviors.",
+  "Model": "NO",
+  "Task": "Twitter data analysis and description.",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["Hashtag Category", "Occurrences", "", ""],
+    ["Celebrities", "20,809,742", "", ""],
+    ["Sex", "20,529,196", "", ""],
+    ["Iranian Protests", "13,488,295", "", ""],
+    ["Entertainment", "4,392,227", "", ""],
+    ["Advertisement", "4,644,540", "", ""],
+    ["Politics", "3,858,550", "", ""],
+    ["Finance", "3,549,107", "", ""],
+    ["Games", "3,348,128", "", ""],
+    ["Other", "2,672,291", "", ""],
+    ["Unknown", "4,176,432", "", ""]
+  ]
+}

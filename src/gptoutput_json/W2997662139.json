@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Conversational Recommendation", "Interactive Systems", "Recommender Systems", "Dialogue System"],
+  "Problem": "Current conversational recommender systems lack an effective framework for dynamic interactions between conversation and recommendation components.",
+  "Method": "The paper proposes the Estimation–Action–Reflection (EAR) framework, which consists of three stages to improve interactions in conversational recommender systems.",
+  "Model": "Estimation–Action–Reflection (EAR)",
+  "Task": "Conversational recommender system",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["LastFM", "EAR", "SR@15", "0.429*"],
+    ["LastFM", "CRM", "SR@15", "0.325"],
+    ["Yelp", "EAR", "SR@15", "0.971*"],
+    ["Yelp", "CRM", "SR@15", "0.923"]
+  ]
+}

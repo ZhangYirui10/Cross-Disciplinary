@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Photograph enhancement",
+        "Problem": ["Underexposure", "Overexposure", "Loss of detail", "Poor contrast"],
+        "Method": ["Wavelet decomposition", "Contrast transfer", "Texture transfer"],
+        "Results": {
+            "Dataset": ["HDR Scene"],
+            "Model": ["Alpha-blending", "Tone-mapped HDR", "Proposed Method"],
+            "Metric": ["Visual Quality", "Ghosting Effect"]
+        }
+    }
+}

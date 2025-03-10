@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Twitter", "Political Polarization", "Opinion Leaders", "Social Media Engagement", "Selective Exposure"],
+  "Problem": "Existing literature overstates the political engagement and polarization among American Twitter users, misrepresenting their actual media consumption habits.",
+  "Method": "The study employs a bottom-up approach to analyze the following patterns of a representative sample of American Twitter users, identifying opinion leaders and assessing their political relevance.",
+  "Model": "NO",
+  "Task": "Examining the politicization and polarization of American Twitter users.",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["Political Opinion Leaders", "Followed Accounts", "Non-Political Opinion Leaders", "10"],
+    ["Political Figures", "Followed Accounts", "Celebrities", "8.4"]
+  ]
+}

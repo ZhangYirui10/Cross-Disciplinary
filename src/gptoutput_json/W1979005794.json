@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Privacy Preservation", "Personalized Anonymity", "Data Generalization", "Sensitive Data Protection"],
+  "Problem": "Current methods exert the same level of privacy preservation for all individuals, leading to inadequate protection for some while overprotecting others.",
+  "Method": "The paper proposes a personalized anonymity technique that allows individuals to specify their privacy protection levels, minimizing generalization while maintaining data utility.",
+  "Model": "NO",
+  "Task": "Privacy preservation in data publication",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["Dataset Pri-leaf", "k-anonymity", "Breach Probability", "Above 0.25"],
+    ["Dataset Pri-leaf", "l-diversity", "Breach Probability", "Below 0.25"],
+    ["Dataset Pri-mixed", "Personalized method", "Breach Probability", "Below 0.25"]
+  ]
+}

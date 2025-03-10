@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Cohesive subgraph discovery",
+        "Problem": ["Memory constraints", "Efficient computation"],
+        "Method": ["k-mutual-friend subgraph", "Offline algorithm", "Online algorithm"],
+        "Results": {
+            "Dataset": ["Epinions", "Twitter", "Facebook"],
+            "Model": ["mImproved", "Partition Algorithm", "mOnline Algorithm"],
+            "Metric": ["Response Time"]
+        }
+    }
+}

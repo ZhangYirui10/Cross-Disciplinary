@@ -1,0 +1,14 @@
+```json
+{
+    "Entities": {
+        "Task": "Pattern classification",
+        "Problem": ["High-dimensional data", "Discriminant analysis"],
+        "Method": ["Fukunaga-Koontz Transform", "Multiple discriminant analysis"],
+        "Results": {
+            "Dataset": ["PIE", "Banca"],
+            "Model": ["LDA/FKT", "MDA/FKT"],
+            "Metric": ["Accuracy"]
+        }
+    }
+}
+```

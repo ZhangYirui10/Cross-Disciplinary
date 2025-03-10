@@ -1,0 +1,9 @@
+{
+  "Keywords": ["Artificial Intelligence", "Clinical Translation", "Healthcare", "Reporting Guidelines", "Digital Innovation"],
+  "Problem": "Widespread clinical implementation of AI technologies in healthcare is hindered by methodological heterogeneity and lack of standardized reporting.",
+  "Method": "The paper proposes utilizing established reporting guidelines to ensure scientific rigor in AI research, facilitating the translation from bench to bedside.",
+  "Model": "NO",
+  "Task": "Clinical translation of AI technologies in healthcare",
+  "Main Results Table": "Table 1",
+  "Results": []
+}

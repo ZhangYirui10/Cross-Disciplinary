@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Migrant Crisis Cooperation",
+        "Problem": ["One-way migration routes", "Wealth disparities"],
+        "Method": ["Pass-the-buck economic game"],
+        "Results": {
+            "Dataset": ["USA Participants", "Singapore Participants"],
+            "Model": ["First Leader (One-Way Route)", "Second Leader (One-Way Route)", "Second Leader (Symmetric)", "First Leader (Circular Route)"],
+            "Metric": ["Shelter Rate"]
+        }
+    }
+}

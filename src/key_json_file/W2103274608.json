@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Reflectance separation",
+        "Problem": ["Color segmentation difficulty", "Complex textures"],
+        "Method": ["Chromaticity analysis", "Intensity logarithmic differentiation", "Iterative framework"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

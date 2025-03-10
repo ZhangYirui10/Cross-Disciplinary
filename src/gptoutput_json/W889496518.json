@@ -1,0 +1,14 @@
+{
+  "Keywords": ["differential privacy", "event sequences", "infinite streams", "w-event privacy", "privacy budget"],
+  "Problem": "Current approaches inadequately protect sensitive information in event sequences occurring over infinite streams, especially when multiple events reveal user privacy.",
+  "Method": "The paper introduces w-event privacy, which secures event sequences occurring in successive time instants using a sliding window mechanism and dynamic budget allocation strategies.",
+  "Model": "NO",
+  "Task": "Statistics publishing with differential privacy over continuous streams",
+  "Main Results Table": "Table 3",
+  "Results": [
+    ["Rome Dataset", "BA", "MAE", "10^-2"],
+    ["Rome Dataset", "BD", "MAE", "0"],
+    ["World Cup Dataset", "BA", "MAE", "10^-2"],
+    ["World Cup Dataset", "FASΤw", "MAE", "0"]
+  ]
+}

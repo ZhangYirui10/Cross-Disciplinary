@@ -1,0 +1,33 @@
+{
+    "Entities": {
+        "Task": "Consumer and firm behavior analysis",
+        "Problem": ["Rationality assumptions", "Prediction failure"],
+        "Method": ["Behavioral economics models", "Psychological insights"],
+        "Results": {
+            "Dataset": [
+                "B2B pricing contracts",
+                "Sales force compensation",
+                "Gym membership price plans",
+                "Price competition",
+                "Market entry",
+                "Lowest-price guarantees"
+            ],
+            "Model": [
+                "Reference-dependent preferences",
+                "Inequality aversion",
+                "Hyperbolic discounting",
+                "Quantal response equilibrium",
+                "Cognitive hierarchy",
+                "Self-tuning EWA"
+            ],
+            "Metric": [
+                "Transaction utility weight",
+                "Envy parameters",
+                "Immediacy preference",
+                "Response sensitivity",
+                "Thinking steps",
+                "Feedback sensitivity"
+            ]
+        }
+    }
+}

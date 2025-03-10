@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Multimodal fusion",
+        "Problem": ["Integration complexity", "Diverse data sources"],
+        "Method": ["Linear weighted fusion", "SVM", "Dynamic Bayesian Networks"],
+        "Results": {
+            "Dataset": ["TRECVID", "XM2VTS", "BANCA"],
+            "Model": ["Linear weighted fusion", "SVM", "Dynamic Bayesian Networks"],
+            "Metric": ["Mean Average Precision", "Identification Rate", "Accuracy"]
+        }
+    }
+}

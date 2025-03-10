@@ -1,0 +1,12 @@
+{
+  "Keywords": ["One-Shot Video Tuning", "Text-to-Video Generation", "Diffusion Models"],
+  "Problem": "Current text-to-video generation methods require extensive computational resources and large-scale video datasets for training.",
+  "Method": "The paper proposes Tune-A-Video, a framework that utilizes one text-video pair and pre-trained text-to-image models for efficient text-to-video generation.",
+  "Model": "Tune-A-Video",
+  "Task": "Text-to-Video Generation",
+  "Main Results Table": "Table 1",
+  "Results": [
+    ["DAVIS", "Tune-A-Video", "Frame Consistency", "92.40%"],
+    ["DAVIS", "Tune-A-Video", "Textual Alignment", "85.00%"]
+  ]
+}

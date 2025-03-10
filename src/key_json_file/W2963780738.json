@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Image dehazing",
+        "Problem": ["Visibility reduction", "Contrast degradation", "Image processing complications"],
+        "Method": ["Quantitative benchmark", "Survey of dehazing methods"],
+        "Results": {
+            "Dataset": ["Fattal's dataset"],
+            "Model": ["Tan 08", "Fattal 08", "Kratz 09", "He 09", "Tarel 09", "Ancuti 13", "Meng 13", "Tang 14", "Fattal 14", "Cai 16", "Berman 16"],
+            "Metric": ["Mean Absolute Difference"]
+        }
+    }
+}

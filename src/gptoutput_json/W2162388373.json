@@ -1,0 +1,14 @@
+{
+  "Keywords": ["Comment-based Clustering", "Multi-View Clustering", "Web 2.0 Items", "Non-negative Matrix Factorization", "User Comments"],
+  "Problem": "Current clustering methods do not effectively utilize user-generated comments to improve the categorization of Web 2.0 items.",
+  "Method": "The paper proposes Co-regularized Non-negative Matrix Factorization (CoNMF), which leverages multiple data sources from user comments and intrinsic features to enhance clustering performance.",
+  "Model": "Co-regularized Non-negative Matrix Factorization (CoNMF)",
+  "Task": "Clustering Web 2.0 items using multi-view data sources.",
+  "Main Results Table": "Table 5",
+  "Results": [
+    ["Last.fm", "k-means", "Accuracy (%)", "40.1"],
+    ["Last.fm", "k-means", "F1 (%)", "40.1"],
+    ["Yelp", "CoNMF-P", "Accuracy (%)", "67.6"],
+    ["Yelp", "CoNMF-P", "F1 (%)", "63.8"]
+  ]
+}

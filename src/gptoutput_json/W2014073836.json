@@ -1,0 +1,13 @@
+{
+  "Keywords": ["Aircraft MRO", "Data Mining", "Text Mining", "Quotations", "Supplier Selection"],
+  "Problem": "MRO agencies struggle to provide accurate job quotations due to the reliance on limited normalized feedback data, which impairs cost and quality assessments.",
+  "Method": "The paper proposes a data mining approach that uses regular expressions and text mining techniques to enhance the quantity and quality of historical data for more precise MRO job quotations.",
+  "Model": "NO",
+  "Task": "Aircraft Maintenance, Repair and Overhaul cost estimation",
+  "Main Results Table": "Table 5",
+  "Results": [
+    ["Test Cases", "Estimation Accuracy", "20% Deviation", "76.3%"],
+    ["Test Cases", "Estimation Accuracy", "25% Deviation", "84.9%"],
+    ["Test Cases", "Estimation Accuracy", "10% Deviation", "65.5%"]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "Entities": {
+        "Task": "Cultural participation measurement",
+        "Problem": ["Lack of frameworks", "Multicultural community representation"],
+        "Method": ["Cultural indicator framework", "Policy review", "Event evaluation"],
+        "Results": {
+            "Dataset": [],
+            "Model": [],
+            "Metric": []
+        }
+    }
+}

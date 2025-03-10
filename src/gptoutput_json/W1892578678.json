@@ -1,0 +1,12 @@
+{
+  "Keywords": ["Correlation filters", "Object tracking", "Pattern detection"],
+  "Problem": "Current correlation filter methods suffer from boundary effects that negatively impact detection and tracking performance.",
+  "Method": "The paper proposes a novel correlation filter estimation approach that reduces boundary effects while maintaining computational efficiency through an iterative optimization method using Augmented Lagrangian Methods.",
+  "Model": "NO",
+  "Task": "Object detection and tracking",
+  "Main Results Table": "Table 2",
+  "Results": [
+    ["CMU Multi-PIE", "Our method", "Localization rate", "Best performance across all thresholds"],
+    ["Various Sequences", "Our method", "Precision", "Best performance over 8 out of 10 videos"]
+  ]
+}
