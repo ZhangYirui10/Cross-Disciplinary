@@ -19,6 +19,8 @@ class KnowledgeGraph:
             return result.data()
         
     def __replace_comma__(self, s):
+        if s == None:
+            return ""
         return s.replace("'", "\"")
 
     
@@ -26,13 +28,15 @@ class KnowledgeGraph:
         # label = "Professor"
         # name = "Yao Lu"
         # properties = {"name":"Yao Lu", "birthday": "1983"}
+        for i in properties:
+            properties[i] = self.__replace_comma__(properties[i])
+        
 
-        name = self.__replace_comma__(name)
-        if 'name' not in properties or self.check_node_exists(self.__replace_comma__(properties['name'])):
+        if 'name' not in properties or self.check_node_exists(properties['name']):
             return
         propertiesList = []
         for i in properties:
-            propertiesList.append(f"{i}: '{self.__replace_comma__(properties[i])}'")
+            propertiesList.append(f"{i}: '{properties[i]}'")
         propertiesStr = ", ".join(propertiesList)
 
         with self.driver.session() as session:
@@ -45,6 +49,7 @@ class KnowledgeGraph:
     def check_node_exists(self, name):
         with self.driver.session() as session:
             try:
+                name = self.__replace_comma__(name)
                 query = "OPTIONAL MATCH (n {name: '"+name+"'}) RETURN n"
                 result = session.run(query).data()
                 if len(result)>1 or 'None' not in str(result):
@@ -65,6 +70,8 @@ class KnowledgeGraph:
     def insert_connection(self, name1, name2, relation="HAVE"):
         with self.driver.session() as session:
             try:
+                name1 = self.__replace_comma__(name1)
+                name2 = self.__replace_comma__(name2)
                 session.run("MATCH (a {name: '"+ name1+"'}), (b {name: '"+name2+"'}) CREATE (a)-[r:"+relation+"]->(b)")
             except Exception as e:
                 print(e)
@@ -72,6 +79,4 @@ class KnowledgeGraph:
 
 if __name__ == "__main__":
     kg = KnowledgeGraph()
-    nodes = kg.query("Graph")
-    print(nodes)
-    kg.insert({"name": "Graph"})
+    print(kg.__replace_comma__("Yao's Lu"))

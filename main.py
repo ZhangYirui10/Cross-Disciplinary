@@ -1,4 +1,5 @@
 from src.knowledge_graph import KnowledgeGraph
+from src.callgpt import CallGPT
 import time
 import json
 # from flask import Flask, request, jsonify
@@ -58,10 +59,12 @@ def init_knowledge_graph():
 def main():
     # wait for the neo4j to start
     time.sleep(8)
-
+    
     init_knowledge_graph()
+    print(CallGPT("What is the impact of COVID-19 on the economy?"))
+    
 
 
 if __name__ == "__main__":
     main()
-    ds= input("Press enter to exit:")
+    input("Press enter to exit:")

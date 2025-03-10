@@ -2,6 +2,4 @@ __pycache__/
 *.pyc
 *.pyo
 *.log
-data/
 tests/
-.env
