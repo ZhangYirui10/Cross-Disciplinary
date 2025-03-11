@@ -101,7 +101,7 @@ def init_knowledge_graph():
                                                 kg.insert_connection("Method"+i['openalex_id'], entity)
                                 except Exception as e:
                                     print(e)
-                            if "Model" in data:
+                            if "Model" in data and data["Model"] != "NO":
                                 kg.insert("model", 'n', {
                                     "name": data["Model"],
                                     })
