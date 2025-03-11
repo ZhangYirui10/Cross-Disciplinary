@@ -1,0 +1,21 @@
+{
+    "faculty": [
+      {"name": "CHEN Tsuhan", "affiliation": "NUS Enterprise", "id": "A5000454484"},
+      {"name": "LEE Mong Li, Janice", "affiliation": "School of Computing", "id": "A5019988958"},
+      {"name": "Simon CHESTERMAN", "affiliation": "Faculty of Law", "id": "A5060434540"},
+      {"name": "Wynne HSU", "affiliation": "School of Computing", "id": "A5051209739"},
+      {"name": "Kokil JAIDKA", "affiliation": "Faculty of Arts and Social Science", "id": "A5079154791"},
+      {"name": "KAN Minyen", "affiliation": "School of Computing", "id": "A5066305082"},
+      {"name": "Mohan KANKANHALLI", "affiliation": "School of Computing", "id": "A5016415049"},
+      {"name": "Noah LIM", "affiliation": "Business School", "id": "A5015520559"},
+      {"name": "Terence SIM", "affiliation": "School of Computing", "id": "A5065478753"},
+      {"name": "Araz TAEIHAGH", "affiliation": "LKY School of Public Policy", "id": "A5072083988"},
+      {"name": "Robby TAN", "affiliation": "College of Design and Engineering", "id": "A5103147507"},
+      {"name": "Anthony TUNG", "affiliation": "School of Computing", "id": "A5023925931"},
+      {"name": "Jane WANG", "affiliation": "School of Business", "id": "A5100756197"},
+      {"name": "Xiaokui XIAO", "affiliation": "School of Computing", "id": "A5010903591"},
+      {"name": "Jun YU", "affiliation": "Faculty of Arts and Social Science", "id": "A5051519861"},
+      {"name": "Audrey YUE", "affiliation": "Faculty of Arts and Social Science", "id": "A5084558245"}
+    ]
+  }
+  

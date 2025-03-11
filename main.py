@@ -8,6 +8,13 @@ kg = KnowledgeGraph()
 
 def init_knowledge_graph():
     kg.clear_knowledge_graph()
+    with open('data/faculty.json', 'r') as a:
+                        fc = json.loads(a.read())["faculty"]
+                        for x in fc:
+                            kg.insert("faculty", 'x', {
+                                    "name": x['id'],
+                                    "affiliation": x['affiliation'],
+                                    "nametext": x['name']})
 
     with open('data/field.txt', 'r') as field_fin:
         for line in field_fin:
@@ -51,7 +58,10 @@ def init_knowledge_graph():
                         "doi": i['doi'],
                         "date": i['publication_date']})
                     for j in i['topics']:
-                        kg.insert_connection(i['title'], j['display_name'])
+                        kg.insert_connection(j['display_name'], i['title'])
+                    for x in fc:
+                            if i['author_id'] == x['id']:
+                                kg.insert_connection(x['id'], i['title'])
 
                     try:
                         with open(f"src/gptoutput_json/{i['openalex_id']}.json", 'r') as g:
