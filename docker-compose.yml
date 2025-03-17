@@ -29,11 +29,12 @@ services:
     container_name: python-app
     depends_on:
       - neo4j_cross
-
+      - chroma
     env_file:
       - .env
     environment:
       - API_KEY=${API_KEY}
+      - TOKENIZERS_PARALLELISM=false
     volumes:
       - ./src:/app/src
       - ./logs:/app/logs
