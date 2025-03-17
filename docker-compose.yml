@@ -32,6 +32,8 @@ services:
       - chroma
     env_file:
       - .env
+    links:
+      - chroma
     environment:
       - API_KEY=${API_KEY}
       - TOKENIZERS_PARALLELISM=false
