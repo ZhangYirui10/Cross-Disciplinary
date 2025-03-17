@@ -16,6 +16,12 @@ services:
       - neo4j_cross_logs:/logs
       # - neo4j_config:/config
       - neo4j_cross_plugin:/plugins
+  
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: chroma_service
+    ports:
+      - "8000:8000"
 
   python-app:
     build:
@@ -32,7 +38,7 @@ services:
       - ./src:/app/src
       - ./logs:/app/logs
     # ports:
-    #   - "8000:8000"  
+    #   - "8001:8001"  
 
 volumes:
   neo4j_cross_data:
