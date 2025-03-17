@@ -1,2 +1,4 @@
 neo4j
 openai
+chromadb-client
+sentence_transformers
