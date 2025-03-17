@@ -27,8 +27,8 @@ class ChromaClient:
 
     def delete_document(self):
         self.chroma_client.delete_collection(name=self.vector_name)
-        # print(type(self.collection.get()))  # 确认返回的类型
-        # print(self.collection.get())  # 查看完整结构
+        # print(type(self.collection.get()))  
+        # print(self.collection.get())  
         # all_ids = [doc["id"] for doc in self.collection.get()["ids"]]
 
         # if len(all_ids) > 0:
@@ -43,7 +43,6 @@ if __name__ == "__main__":
     # time.sleep(5)
     # example usage: caculate the embedding of a sentence
     # print(embedding("observability product"))
-
 
     knowledge_data = [
         {
