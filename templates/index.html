@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Knowledge Graph Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .search-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .search-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .search-button:hover {
+            background-color: #2980b9;
+        }
+
+        .results {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .final-answer {
+            margin-top: 20px;
+        }
+        .final-answer h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .final-answer .candidate {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .final-answer .candidate h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .final-answer .candidate p {
+            color: #34495e;
+            line-height: 1.6;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Research Knowledge Graph Search</h1>
+            <p>Search through our comprehensive research database</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="Enter your research query...">
+            <button class="search-button" onclick="performSearch()">Search</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Searching...</p>
+        </div>
+
+        <div class="results" id="results">
+            <div id="final-answer" class="final-answer"></div>
+        </div>
+    </div>
+
+    <script>
+        function formatProfessorCard(text) {
+            // 分割文本为候选人部分
+            const candidates = text.split(/### \d+\./).filter(c => c.trim());
+            let html = '';
+            
+            candidates.forEach(candidate => {
+                // 提取候选人名称和内容
+                const nameMatch = candidate.match(/\*\*(.*?)\*\*/);
+                const name = nameMatch ? nameMatch[1] : '';
+                const content = candidate.replace(/\*\*(.*?)\*\*/, '').trim();
+                
+                html += `
+                    <div class="candidate">
+                        <h4>${name}</h4>
+                        <p>${content.replace(/\*\*/g, '')}</p>
+                    </div>
+                `;
+            });
+            
+            return html;
+        }
+
+        async function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            if (!query) return;
+
+            // 显示加载动画
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('final-answer').innerHTML = '';
+
+            try {
+                console.log('Sending request with query:', query);
+                const analyzeResponse = await fetch(`/analyze?query=${encodeURIComponent(query.trim())}`);
+                console.log('Response status:', analyzeResponse.status);
+                
+                if (!analyzeResponse.ok) {
+                    throw new Error(`HTTP error! status: ${analyzeResponse.status}`);
+                }
+                
+                const analyzeData = await analyzeResponse.json();
+                console.log('Received data:', analyzeData);
+                
+                if (!analyzeData.final_answer) {
+                    throw new Error('No final_answer in response data');
+                }
+                
+                // 显示最终答案
+                const finalAnswerDiv = document.getElementById('final-answer');
+                finalAnswerDiv.innerHTML = `
+                    <h3>Analysis Results</h3>
+                    ${formatProfessorCard(analyzeData.final_answer)}
+                `;
+
+            } catch (error) {
+                console.error('Detailed error:', error);
+                document.getElementById('final-answer').innerHTML = `
+                    <p class="error">Error occurred while fetching results.</p>
+                    <p class="error-details">${error.message}</p>
+                `;
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+
+        // Allow search on Enter key
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    </script>
+</body>
+</html> 
