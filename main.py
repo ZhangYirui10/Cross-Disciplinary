@@ -117,7 +117,7 @@ def main():
     # dfstpkqamcnjb
     time.sleep(12)
     
-    init_knowledge_graph()
+    # init_knowledge_graph()
     # print(CallGPT("What is the impact of COVID-19 on the economy?"))
 
     app = Flask(__name__)

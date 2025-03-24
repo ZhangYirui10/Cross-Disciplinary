@@ -1,4 +1,5 @@
 from neo4j import GraphDatabase
+from main import get_from_chroma
 
 class KnowledgeGraph:
     insertkey = []
@@ -78,5 +79,6 @@ class KnowledgeGraph:
                 pass
 
 if __name__ == "__main__":
-    kg = KnowledgeGraph()
-    print(kg.__replace_comma__("Yao's Lu"))
+    # kg = KnowledgeGraph()
+    get_from_chroma("observability product")
+    # print(kg.__replace_comma__("Yao's Lu"))

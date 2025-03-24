@@ -51,20 +51,20 @@ if __name__ == "__main__":
     # example usage: caculate the embedding of a sentence
     # print(embedding("observability product"))
 
-    knowledge_data = [
-        {
-            "content": "This paper investigates the impact of sales contest prize structures on sales performance (task) by addressing the untested marketing theory that contests should have multiple, rank-ordered prizes (problem), using laboratory and field economic experiments (method).", 
-            "metadata": {"content": "This paper investigates the impact of sales contest prize structures on sales performance (task) by addressing the untested marketing theory that contests should have multiple, rank-ordered prizes (problem), using laboratory and field economic experiments (method)."}
-        },
-        {
-            "content": "proemetheus is an observability product that integrates applications", 
-            "metadata": {"content": "proemetheus is an observability product that integrates applications"}
-        }
-    ]
+    # knowledge_data = [
+    #     {
+    #         "content": "This paper investigates the impact of sales contest prize structures on sales performance (task) by addressing the untested marketing theory that contests should have multiple, rank-ordered prizes (problem), using laboratory and field economic experiments (method).", 
+    #         "metadata": {"content": "This paper investigates the impact of sales contest prize structures on sales performance (task) by addressing the untested marketing theory that contests should have multiple, rank-ordered prizes (problem), using laboratory and field economic experiments (method)."}
+    #     },
+    #     {
+    #         "content": "proemetheus is an observability product that integrates applications", 
+    #         "metadata": {"content": "proemetheus is an observability product that integrates applications"}
+    #     }
+    # ]
 
-    time.sleep(3)
+    # time.sleep(3)
 
-    cc = ChromaClient("vector_database_name_1")
+    cc = ChromaClient("vector_database_name_2")
     # cc.delete_document()
     for item in knowledge_data:
         cc.add_document(item["content"], item["metadata"])
