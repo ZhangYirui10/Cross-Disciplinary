@@ -47,13 +47,13 @@ if __name__ == "__main__":
     knowledge_data = [
         {
             "id": "1", 
-            "content": "For applying the permission on Keter, keter distinguishes tenants through different okta apps. If this is your first time trying to access keter, please log in to your business's own okta page and then apply for the keter app corresponding to the tenant name. Step 1: login the OKTA, Step 2: Find the Add Apps tab in the left menu bar, then click, Step 3: Input \"Keter\" in the search bar, find the Keter app, and click the Request button. Your request will be auto-aprroved. (If you don't find any results, it means you already have access to the Keter app.) step 4:Now you can see Keter icon on your OKTA home page, click it  you can begin your observability journey", 
+            "content": "For applying the permission on prometheus", 
             "metadata": {"category": "permission"}
         },
         {
             "id": "2", 
-            "content": "Keter is an observability product that integrates applications' logs, metrics, and trace data together. Keter is built for full stack observability, so that you get the whole picture of everything that enables fully understand your system and how to improve it. ", 
-            "metadata": {"category": "keter"}
+            "content": "proemetheus is an observability product that integrates applications", 
+            "metadata": {"category": "observsbility"}
         }
     ]
 
