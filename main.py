@@ -93,8 +93,8 @@ def init_knowledge_graph():
                             "doi": p['doi'],
                             "abstract": p['abstract'],
                             "date": p['publication_date']})
-                        extract_abstract = extract_from_abstract(p['abstract'])
-                        # extract_abstract = p['abstract']
+                        # extract_abstract = extract_from_abstract(p['abstract'])
+                        extract_abstract = p['abstract']
                         paper_cm.add_document(extract_abstract+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": extract_abstract})
 
                         for j in p['topics']:
@@ -118,10 +118,10 @@ def main():
     # dfstpkqamcnjb
     time.sleep(12)
     
-    # init_knowledge_graph()
+    init_knowledge_graph()
     # print(CallGPT("What is the impact of COVID-19 on the economy?"))
-
-    app = Flask(__name__)
+    template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
+    app = Flask(__name__,template_folder='templates')
     @app.route('/searchdb', methods=['GET'])
     def searchdb():
         query = request.args.get('query')
@@ -141,13 +141,47 @@ def main():
         </form>
         '''
         
-    template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
-    app = Flask(__name__, template_folder=template_dir)
-    app.debug = True  # 开启调试模式
+    # template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
+    # app = Flask(__name__, template_folder=template_dir)
+    # app.debug = True  # 开启调试模式
     
     @app.route('/')
     def index():
         return render_template('index.html')
+
+    @app.route('/analyze', methods=['GET'])
+    def analyze():
+        query = request.args.get('query', '').strip()
+        if not query:
+            return jsonify({"error": "Query parameter is required"}), 400
+            
+        print("Received query:", query)
+        # 调用 GPT 分析功能并返回 JSON 格式的结果
+        capabilities = capability_analyze(query)
+        cleaned_list = [s.strip("*") for s in capabilities]
+        print("Capabilities:", cleaned_list)
+        
+        # 对每个能力进行向量搜索
+        results = []
+        for capability in cleaned_list:
+            print(f"Searching for capability: {capability}")
+            chroma_results = get_from_chroma(capability)
+            print(f"Search results for {capability}:", chroma_results)
+            results.append({
+                "capability": capability,
+                "vector_results": chroma_results
+            })
+        
+        return jsonify({
+            "capabilities": cleaned_list,
+            "search_results": results
+        })
+
+    @app.route('/subgraph', methods=['GET'])
+    def get_subgraph():
+        return "subgraph"
+
+    # app.run(debug=False, host='0.0.0.0', port=8009)
 
     # @app.route('/searchdb', methods=['GET'])
     # def searchdb():

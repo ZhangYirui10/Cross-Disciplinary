@@ -10,7 +10,7 @@ def CallGPT(prompt):
     try:
         chat_completion = client.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
-            model="gpt-4o-mini",
+            model="gpt-4o",
         )
         return chat_completion.choices[0].message.content if chat_completion.choices else ""
     except Exception as e:
@@ -42,7 +42,48 @@ def capability_analyze(project_description):
     response = CallGPT(prompt)
     keywords = re.findall(r"\d\.\s*(.*?):", response)
     
-    return keywords
+    return keywords, response
+
+def get_final_answer(project_description, capability_list, capability_reasoning, capability_1_name, capability_1_results, capability_2_name, capability_2_results, capability_3_name, capability_3_results):
+    prompt = f"""
+    You are an expert in academic collaboration and faculty recommendation. Please help identify the most suitable researchers to collaborate on a specific project, based on capability-aligned search results across three technical dimensions.
+
+    ### Project Description:
+    {project_description}
+
+    ### Required Capabilities (inferred by GPT based on the project description):
+    Capabilities: {capability_list}
+
+    Justifications for each capability:
+    {capability_reasoning}
+
+    ### Capability Search Results:
+
+    #### Capability 1: {capability_1_name}
+    {capability_1_results}
+
+    #### Capability 2: {capability_2_name}
+    {capability_2_results}
+
+    #### Capability 3: {capability_3_name}
+    {capability_3_results}
+
+    ---
+
+    Based on the capability-aligned results, please identify the **top three professors** most suitable for this project. For each professor, provide a **concise but detailed paragraph** that covers the following:
+
+    - Start by summarizing which of the three capabilities this professor is strong in.  
+    - Support this with **specific representative papers**, and explain how these works demonstrate the professor’s expertise in the corresponding areas.  
+    - Then, based on their expertise and publication record, explain what **contributions** they can make to this specific project, and how their knowledge helps address the key goals or challenges in the project description.
+
+    Please **rank** the three professors by overall suitability (1 to 3), and briefly compare their strengths and relevance to the project.
+
+    Conclude with a final summary of why these three researchers are the **best fit** overall for the proposed project.
+    """
+    response = CallGPT(prompt)
+    
+    return response
+    
 
 
 if __name__ == "__main__":

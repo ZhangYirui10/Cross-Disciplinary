@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Knowledge Graph Search</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -87,25 +86,6 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .result-item {
-            padding: 1rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .result-item:last-child {
-            border-bottom: none;
-        }
-
-        .result-item h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-
-        .result-item p {
-            color: #7f8c8d;
-            line-height: 1.6;
-        }
-
         .loading {
             display: none;
             text-align: center;
@@ -127,53 +107,30 @@
             100% { transform: rotate(360deg); }
         }
 
-        .graph-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-            height: 500px;
-            position: relative;
+        .final-answer {
+            margin-top: 20px;
         }
-
-        .node {
-            cursor: pointer;
+        .final-answer h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
         }
-
-        .node circle {
-            fill: #fff;
-            stroke: #3498db;
-            stroke-width: 2px;
+        .final-answer .candidate {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
-        .node text {
-            font-size: 12px;
+        .final-answer .candidate h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
         }
-
-        .link {
-            stroke: #999;
-            stroke-opacity: 0.6;
-        }
-
-        .node.faculty circle {
-            fill: #3498db;
-        }
-
-        .node.paper circle {
-            fill: #2ecc71;
-        }
-
-        .node.topic circle {
-            fill: #e74c3c;
-        }
-
-        .node.field circle {
-            fill: #f1c40f;
-        }
-
-        .node.domain circle {
-            fill: #9b59b6;
+        .final-answer .candidate p {
+            color: #34495e;
+            line-height: 1.6;
+            white-space: pre-line;
         }
     </style>
 </head>
@@ -195,174 +152,74 @@
         </div>
 
         <div class="results" id="results">
-            <div class="capabilities-section">
-                <h2>AI Analysis Results</h2>
-                <div id="capabilities"></div>
-            </div>
-            <div class="vector-results-section">
-                <h2>Related Research</h2>
-                <div id="vectorResults"></div>
-            </div>
+            <div id="final-answer" class="final-answer"></div>
         </div>
     </div>
 
     <script>
-        let width = 800;
-        let height = 500;
-        let svg;
-        let simulation;
-
-        function initGraph() {
-            const graphContainer = document.querySelector('.graph-container');
-            width = graphContainer.clientWidth;
-            height = graphContainer.clientHeight;
-
-            // 清除现有的 SVG
-            d3.select(".graph-container svg").remove();
-
-            // 创建新的 SVG
-            svg = d3.select(".graph-container")
-                .append("svg")
-                .attr("width", width)
-                .attr("height", height);
-
-            // 创建箭头标记
-            svg.append("defs").selectAll("marker")
-                .data(["end"])
-                .enter().append("marker")
-                .attr("id", "arrow")
-                .attr("viewBox", "0 -5 10 10")
-                .attr("refX", 15)
-                .attr("refY", 0)
-                .attr("markerWidth", 6)
-                .attr("markerHeight", 6)
-                .attr("orient", "auto")
-                .append("path")
-                .attr("d", "M0,-5L10,0L0,5")
-                .attr("fill", "#999");
-
-            // 创建缩放行为
-            const zoom = d3.zoom()
-                .scaleExtent([0.1, 4])
-                .on("zoom", (event) => {
-                    svg.select("g").attr("transform", event.transform);
-                });
-
-            svg.call(zoom);
-
-            // 创建主组
-            svg.append("g");
-        }
-
-        function updateGraph(data) {
-            const g = svg.select("g");
-
-            // 创建力导向图模拟
-            simulation = d3.forceSimulation(data.nodes)
-                .force("link", d3.forceLink(data.links).id(d => d.id).distance(100))
-                .force("charge", d3.forceManyBody().strength(-300))
-                .force("center", d3.forceCenter(width / 2, height / 2));
-
-            // 创建连接线
-            const link = g.selectAll(".link")
-                .data(data.links)
-                .enter().append("line")
-                .attr("class", "link")
-                .attr("marker-end", "url(#arrow)");
-
-            // 创建节点组
-            const node = g.selectAll(".node")
-                .data(data.nodes)
-                .enter().append("g")
-                .attr("class", d => `node ${d.type}`)
-                .call(d3.drag()
-                    .on("start", dragstarted)
-                    .on("drag", dragged)
-                    .on("end", dragended));
-
-            // 添加节点圆圈
-            node.append("circle")
-                .attr("r", 5);
-
-            // 添加节点文本
-            node.append("text")
-                .attr("dx", 12)
-                .attr("dy", ".35em")
-                .text(d => d.name);
-
-            // 更新力导向图
-            simulation.on("tick", () => {
-                link
-                    .attr("x1", d => d.source.x)
-                    .attr("y1", d => d.source.y)
-                    .attr("x2", d => d.target.x)
-                    .attr("y2", d => d.target.y);
-
-                node
-                    .attr("transform", d => `translate(${d.x},${d.y})`);
+        function formatProfessorCard(text) {
+            // 分割文本为候选人部分
+            const candidates = text.split(/### \d+\./).filter(c => c.trim());
+            let html = '';
+            
+            candidates.forEach(candidate => {
+                // 提取候选人名称和内容
+                const nameMatch = candidate.match(/\*\*(.*?)\*\*/);
+                const name = nameMatch ? nameMatch[1] : '';
+                const content = candidate.replace(/\*\*(.*?)\*\*/, '').trim();
+                
+                html += `
+                    <div class="candidate">
+                        <h4>${name}</h4>
+                        <p>${content.replace(/\*\*/g, '')}</p>
+                    </div>
+                `;
             });
-        }
-
-        function dragstarted(event) {
-            if (!event.active) simulation.alphaTarget(0.3).restart();
-            event.subject.fx = event.subject.x;
-            event.subject.fy = event.subject.y;
-        }
-
-        function dragged(event) {
-            event.subject.fx = event.x;
-            event.subject.fy = event.y;
-        }
-
-        function dragended(event) {
-            if (!event.active) simulation.alphaTarget(0);
-            event.subject.fx = null;
-            event.subject.fy = null;
+            
+            return html;
         }
 
         async function performSearch() {
             const query = document.getElementById('searchInput').value;
-            if (!query.trim()) return;
+            if (!query) return;
 
-            const loading = document.getElementById('loading');
-            const results = document.getElementById('results');
-            const capabilities = document.getElementById('capabilities');
-            const vectorResults = document.getElementById('vectorResults');
-            
-            loading.style.display = 'block';
-            capabilities.innerHTML = '';
-            vectorResults.innerHTML = '';
+            // 显示加载动画
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('final-answer').innerHTML = '';
 
             try {
-                // 获取 GPT 分析结果
-                const analyzeResponse = await fetch(`/analyze?query=${encodeURIComponent(query)}`);
+                console.log('Sending request with query:', query);
+                const analyzeResponse = await fetch(`/analyze?query=${encodeURIComponent(query.trim())}`);
+                console.log('Response status:', analyzeResponse.status);
+                
+                if (!analyzeResponse.ok) {
+                    throw new Error(`HTTP error! status: ${analyzeResponse.status}`);
+                }
+                
                 const analyzeData = await analyzeResponse.json();
+                console.log('Received data:', analyzeData);
                 
-                // 获取子图数据
-                const subgraphResponse = await fetch(`/subgraph?query=${encodeURIComponent(query)}`);
-                const subgraphData = await subgraphResponse.json();
+                if (!analyzeData.final_answer) {
+                    throw new Error('No final_answer in response data');
+                }
                 
-                // 显示 GPT 分析结果
-                capabilities.innerHTML = analyzeData.capabilities.map((capability, index) => `
-                    <div class="result-item">
-                        <h3>Capability ${index + 1}</h3>
-                        <p>${capability}</p>
-                    </div>
-                `).join('');
-
-                // 更新图形
-                initGraph();
-                updateGraph(subgraphData);
+                // 显示最终答案
+                const finalAnswerDiv = document.getElementById('final-answer');
+                finalAnswerDiv.innerHTML = `
+                    <h3>Analysis Results</h3>
+                    ${formatProfessorCard(analyzeData.final_answer)}
+                `;
 
             } catch (error) {
-                results.innerHTML = '<div class="result-item"><p>Error occurred while searching. Please try again.</p></div>';
+                console.error('Detailed error:', error);
+                document.getElementById('final-answer').innerHTML = `
+                    <p class="error">Error occurred while fetching results.</p>
+                    <p class="error-details">${error.message}</p>
+                `;
             } finally {
-                loading.style.display = 'none';
+                document.getElementById('loading').style.display = 'none';
             }
         }
-
-        // 初始化图形
-        initGraph();
 
         // Allow search on Enter key
         document.getElementById('searchInput').addEventListener('keypress', function(e) {
