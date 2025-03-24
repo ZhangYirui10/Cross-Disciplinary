@@ -1,5 +1,4 @@
 from neo4j import GraphDatabase
-from main import get_from_chroma
 
 class KnowledgeGraph:
     insertkey = []
@@ -19,6 +18,20 @@ class KnowledgeGraph:
         with self.driver.session() as session:
             result = session.run("MATCH path = (a:Prof {name: '"+keyword.replace("'", "\"")+"'})-[*]->(c:Concept) WITH DISTINCT c return c")
             return result.data()
+        
+    def queryProf(self, keyword):
+        with self.driver.session() as session:
+            result = session.run("MATCH (n:faculty {name: '"+keyword.replace("'", "\"")+"'}) return n").data()
+            if len(result) == 0:
+                return {}
+            return result[0]['n']
+        
+    def queryPaper(self, keyword):
+        with self.driver.session() as session:
+            result = session.run("MATCH (n:paper {name: '"+keyword.replace("'", "\"")+"'}) return n").data()
+            if len(result) == 0:
+                return {}   
+            return result[0]['n']
         
     def __replace_comma__(self, s):
         if s == None:
@@ -109,6 +122,8 @@ class KnowledgeGraph:
             }
 
 if __name__ == "__main__":
-    # kg = KnowledgeGraph()
-    get_from_chroma("observability product")
+    kg = KnowledgeGraph()
+    print(kg.queryPaper("Single-Molecule Spectroscopy of Interfacial Electron Transfer"))
+    print(kg.queryProf("DONG Jin Song"))
+    # get_from_chroma("observability product")
     # print(kg.__replace_comma__("Yao's Lu"))
