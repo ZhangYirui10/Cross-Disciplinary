@@ -77,6 +77,35 @@ class KnowledgeGraph:
                 print(e)
                 pass
 
+    def get_subgraph(self, query):
+        with self.driver.session() as session:
+            # 使用模糊匹配查找相关节点
+            query = self.__replace_comma__(query)
+            result = session.run("""
+                MATCH (n)
+                WHERE n.name CONTAINS $query
+                MATCH path = (n)-[*1..3]-(related)
+                UNWIND nodes(path) as node
+                WITH DISTINCT node
+                MATCH (node)-[r]-(connected)
+                RETURN collect(DISTINCT {
+                    id: node.name,
+                    name: node.name,
+                    type: labels(node)[0],
+                    properties: properties(node)
+                }) as nodes,
+                collect(DISTINCT {
+                    source: startNode(r).name,
+                    target: endNode(r).name,
+                    type: type(r)
+                }) as links
+            """, query=query)
+            data = result.single()
+            return {
+                "nodes": data["nodes"] if data["nodes"] else [],
+                "links": data["links"] if data["links"] else []
+            }
+
 if __name__ == "__main__":
     kg = KnowledgeGraph()
     print(kg.__replace_comma__("Yao's Lu"))

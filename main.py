@@ -5,7 +5,8 @@ from src.chroma import ChromaClient
 import time
 import json
 import re
-from flask import Flask, request, jsonify
+import os
+from flask import Flask, request, jsonify, render_template
 # refst
 
 kg = KnowledgeGraph()
@@ -117,7 +118,7 @@ def main():
     # dfstpkqamcnjb
     time.sleep(12)
     
-    init_knowledge_graph()
+    # init_knowledge_graph()
     # print(CallGPT("What is the impact of COVID-19 on the economy?"))
 
     app = Flask(__name__)
@@ -140,6 +141,19 @@ def main():
         </form>
         '''
         
+    template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
+    app = Flask(__name__, template_folder=template_dir)
+    app.debug = True  # 开启调试模式
+    
+    @app.route('/')
+    def index():
+        return render_template('index.html')
+
+    # @app.route('/searchdb', methods=['GET'])
+    # def searchdb():
+    #     query = request.args.get('query')
+    #     print(query)
+    #     return jsonify(cm.query(query, 5))
 
     app.run(debug=False, host='0.0.0.0', port=8008)
 
