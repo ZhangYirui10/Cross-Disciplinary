@@ -79,13 +79,6 @@
             background-color: #2980b9;
         }
 
-        .results {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
         .loading {
             display: none;
             text-align: center;
@@ -108,29 +101,37 @@
         }
 
         .final-answer {
-            margin-top: 20px;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
         }
+
         .final-answer h3 {
             color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        .final-answer .candidate {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .final-answer .candidate h4 {
-            color: #2c3e50;
-            margin-bottom: 15px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
             border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
         }
-        .final-answer .candidate p {
+
+        .final-answer p {
             color: #34495e;
-            line-height: 1.6;
+            line-height: 1.8;
             white-space: pre-line;
+            font-size: 1.1rem;
+        }
+
+        .error {
+            color: #e74c3c;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .error-details {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
         }
     </style>
 </head>
@@ -157,28 +158,6 @@
     </div>
 
     <script>
-        function formatProfessorCard(text) {
-            // 分割文本为候选人部分
-            const candidates = text.split(/### \d+\./).filter(c => c.trim());
-            let html = '';
-            
-            candidates.forEach(candidate => {
-                // 提取候选人名称和内容
-                const nameMatch = candidate.match(/\*\*(.*?)\*\*/);
-                const name = nameMatch ? nameMatch[1] : '';
-                const content = candidate.replace(/\*\*(.*?)\*\*/, '').trim();
-                
-                html += `
-                    <div class="candidate">
-                        <h4>${name}</h4>
-                        <p>${content.replace(/\*\*/g, '')}</p>
-                    </div>
-                `;
-            });
-            
-            return html;
-        }
-
         async function performSearch() {
             const query = document.getElementById('searchInput').value;
             if (!query) return;
@@ -207,7 +186,7 @@
                 const finalAnswerDiv = document.getElementById('final-answer');
                 finalAnswerDiv.innerHTML = `
                     <h3>Analysis Results</h3>
-                    ${formatProfessorCard(analyzeData.final_answer)}
+                    <p>${analyzeData.final_answer}</p>
                 `;
 
             } catch (error) {

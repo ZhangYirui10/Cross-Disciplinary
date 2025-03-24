@@ -70,15 +70,26 @@ def get_final_answer(project_description, capability_list, capability_reasoning,
 
     ---
 
-    Based on the capability-aligned results, please identify the **top three professors** most suitable for this project. For each professor, provide a **concise but detailed paragraph** that covers the following:
+    Please identify the **top three professors** most suitable for this project. For each professor, provide structured information under the following headings:
+    You must follow the output format strictly. Each professor's section must contain the **professor's full name**, their **strong capabilities**, a list of **representative works (with paper titles)**, and their **potential contribution** to the project.
+    ---
 
-    - Start by summarizing which of the three capabilities this professor is strong in.  
-    - Support this with **specific representative papers**, and explain how these works demonstrate the professor’s expertise in the corresponding areas.  
-    - Then, based on their expertise and publication record, explain what **contributions** they can make to this specific project, and how their knowledge helps address the key goals or challenges in the project description.
+    Output Format (use EXACTLY this layout for each professor):
 
-    Please **rank** the three professors by overall suitability (1 to 3), and briefly compare their strengths and relevance to the project.
+    Professor: <Full Name>
 
-    Conclude with a final summary of why these three researchers are the **best fit** overall for the proposed project.
+    Strong Capabilities:  
+    <One paragraph summarizing which capabilities this professor is strong in and why>
+
+    Representative Work:  
+    1. "<Paper Title 1>" – <One sentence on how it supports the capability>  
+    2. "<Paper Title 2>" – <One sentence on how it supports the capability>  
+    (Include up to 3 papers. Use quotes for the paper titles.)
+
+    Potential Contribution to Project:  
+    <One paragraph explaining what the professor can bring to the project based on their expertise>
+
+    ---
     """
     response = CallGPT(prompt)
     

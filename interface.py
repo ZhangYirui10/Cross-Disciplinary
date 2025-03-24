@@ -58,23 +58,32 @@ def main():
         capability_3_name = cleaned_list[2] if len(cleaned_list) > 2 else ""
         capability_3_results = results[2]["vector_results"] if len(results) > 2 else {}
         
-        # 调用 get_final_answer
-        final_answer = get_final_answer(
-            project_description=project_description,  # 添加项目描述参数
-            capability_list=capability_list,
-            capability_reasoning=capability_reasoning,
-            capability_1_name=capability_1_name,
-            capability_1_results=capability_1_results,
-            capability_2_name=capability_2_name,
-            capability_2_results=capability_2_results,
-            capability_3_name=capability_3_name,
-            capability_3_results=capability_3_results
-        )
-        print(final_answer)
-        # 确保返回的是 JSON 格式
-        return jsonify({
-                "final_answer": str(final_answer)  # 确保转换为字符串
+        try:
+            # 调用 get_final_answer
+            final_answer = get_final_answer(
+                project_description=project_description,
+                capability_list=capability_list,
+                capability_reasoning=capability_reasoning,
+                capability_1_name=capability_1_name,
+                capability_1_results=capability_1_results,
+                capability_2_name=capability_2_name,
+                capability_2_results=capability_2_results,
+                capability_3_name=capability_3_name,
+                capability_3_results=capability_3_results
+            )
+            print("Final answer:", final_answer)
+            
+            # 返回最终答案
+            return jsonify({
+                "final_answer": str(final_answer)
             })
+            
+        except Exception as e:
+            print("Error in get_final_answer:", str(e))
+            return jsonify({
+                "error": "Error generating final answer",
+                "details": str(e)
+            }), 500
 
     @app.route('/subgraph', methods=['GET'])
     def get_subgraph():
