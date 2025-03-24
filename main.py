@@ -148,7 +148,7 @@ def init_knowledge_graph():
 def main():
     # wait for the neo4j to start
     # dfstpkqamcnjb
-    time.sleep(8)
+    time.sleep(18)
     
     init_knowledge_graph()
     # print(CallGPT("What is the impact of COVID-19 on the economy?"))
