@@ -37,7 +37,7 @@ def get_topics_from_openalex(origin_topics):
     return result
 
 def get_article_info_by_author_id(author_id):
-    url = f"https://api.openalex.org/works?filter=author.id:{author_id}&per-page=100"
+    url = f"https://api.openalex.org/works?filter=author.id:{author_id}&per-page=10"
 
     response = requests.get(url)
     data = response.json()

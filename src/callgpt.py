@@ -27,8 +27,6 @@ def ExtractPaper(fulltext):
         "- Summarize the method proposed in the paper in max 50 words.\n"
         "- Output as JSON: {'Method': 'The paper introduces a Large Selective Kernel Network that dynamically adjusts the receptive field in the feature extraction backbone to effectively model the context of different objects, giving improved object detection performance.'}\n"
         "- Determine whether the article proposes a new model and its name.\n"
-        "- Output as JSON: {'Model': 'Large Selective Kernel Network (LSKNet)'} (or 'NO' if no new model)\n"
-        "- Specify the task addressed by the paper.\n"
         "- Output as JSON: {'Task': 'Remote sensing object detection'}\n"
         "- Identify the table with the main results (not ablation).\n"
         "- Output as JSON: {'Main Results Table': 'Table 2'}\n"
@@ -54,6 +52,10 @@ def ExtractPaper(fulltext):
     
     return response
 
+def extract_from_abstract(text):
+    prompt = "This is the abstract of a research paper. analyze its content and summarize the key points. output in one sentence, describe the paper’s task, the problem it addresses, and the method it uses."
+    prompt += f"<abstract>{text}</abstract>"
+    return CallGPT(prompt)
 
 if __name__ == "__main__":
     input_dir = "markdowns"

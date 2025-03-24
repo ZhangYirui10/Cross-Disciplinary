@@ -16,14 +16,16 @@ def embedding(text):
 class ChromaClient:
     def __init__(self, vector_name="vector_database_name_1"):
         self.vector_name = vector_name
+        self.id = 100
         self.chroma_client = chromadb.HttpClient(host="chroma", port=8000)
         # print(self.chroma_client.list_collections())
         if self.vector_name in self.chroma_client.list_collections():
             self.chroma_client.delete_collection(name=self.vector_name)
         self.collection = self.chroma_client.get_or_create_collection(name=vector_name, embedding_function=embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2"))
 
-    def add_document(self, id, content, metadata):
-        self.collection.add(documents=[content], metadatas=[metadata], ids=[id])
+    def add_document(self, content, metadata):
+        self.collection.add(documents=[content], metadatas=[metadata], ids=[str(self.id)])
+        self.id += 1
 
     def delete_document(self):
         self.chroma_client.delete_collection(name=self.vector_name)
@@ -46,14 +48,12 @@ if __name__ == "__main__":
 
     knowledge_data = [
         {
-            "id": "1", 
-            "content": "For applying the permission on prometheus", 
-            "metadata": {"category": "permission"}
+            "content": "This paper investigates the impact of sales contest prize structures on sales performance (task) by addressing the untested marketing theory that contests should have multiple, rank-ordered prizes (problem), using laboratory and field economic experiments (method).", 
+            "metadata": {"content": "This paper investigates the impact of sales contest prize structures on sales performance (task) by addressing the untested marketing theory that contests should have multiple, rank-ordered prizes (problem), using laboratory and field economic experiments (method)."}
         },
         {
-            "id": "2", 
             "content": "proemetheus is an observability product that integrates applications", 
-            "metadata": {"category": "observsbility"}
+            "metadata": {"content": "proemetheus is an observability product that integrates applications"}
         }
     ]
 

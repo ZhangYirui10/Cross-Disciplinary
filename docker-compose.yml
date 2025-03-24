@@ -40,8 +40,8 @@ services:
     volumes:
       - ./src:/app/src
       - ./logs:/app/logs
-    # ports:
-    #   - "8001:8001"  
+    ports:
+      - "8008:8008"  
 
 volumes:
   neo4j_cross_data:

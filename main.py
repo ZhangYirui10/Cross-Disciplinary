@@ -1,20 +1,31 @@
 from src.knowledge_graph import KnowledgeGraph
-from src.callgpt import CallGPT
+from src.callgpt import extract_from_abstract
+from src.paper_loader import get_article_info_by_author_id
+from src.chroma import ChromaClient
 import time
 import json
-# from flask import Flask, request, jsonify
+import re
+from flask import Flask, request, jsonify
+# refst
 
 kg = KnowledgeGraph()
+cm = ChromaClient("vector_database_name_3")
+
+# input: <a href=\"\" ng-click=\"setFaculty('11','Algorithms & Theory');\"><span id='divlink' class='11'>Algorithms & Theory</span></a>
+def get_span_name(input):
+    pattern = re.compile(r"setFaculty\('\d+','(.*?)'\)")
+    faculties = pattern.findall(input)
+    return ','.join(faculties)
 
 def init_knowledge_graph():
     kg.clear_knowledge_graph()
-    with open('data/faculty.json', 'r') as a:
-                        fc = json.loads(a.read())["faculty"]
-                        for x in fc:
-                            kg.insert("faculty", 'x', {
-                                    "name": x['id'],
-                                    "affiliation": x['affiliation'],
-                                    "nametext": x['name']})
+    # with open('data/faculty.json', 'r') as a:
+    #                     fc = json.loads(a.read())["faculty"]
+    #                     for x in fc:
+    #                         kg.insert("faculty", 'x', {
+    #                                 "name": x['id'],
+    #                                 "affiliation": x['affiliation'],
+    #                                 "nametext": x['name']})
 
     with open('data/field.txt', 'r') as field_fin:
         for line in field_fin:
@@ -46,112 +57,67 @@ def init_knowledge_graph():
                     "link": row[10]})
                 kg.insert_connection(row[3], row[1])
 
-    with open('data/article.txt', 'r') as fin:
-        content = json.loads(fin.read())
-        for i in content:
+    with open('data/nus_faculty_with_openalex_id.json', 'r') as a:
+        fc = json.loads(a.read())
+        for faculty in fc:
             try:
-                if not kg.check_node_exists(i['title']):
-                    kg.insert("paper", 'p', {
-                        "name": i['title'],
-                        "openalex_id": i['openalex_id'],
-                        "author_id": i['author_id'],
-                        "doi": i['doi'],
-                        "date": i['publication_date']})
-                    for j in i['topics']:
-                        kg.insert_connection(j['display_name'], i['title'])
-                    for x in fc:
-                            if i['author_id'] == x['id']:
-                                kg.insert_connection(x['id'], i['title'])
+                for i in faculty['interests']:
+                    cm.add_document(i+"*,*" + faculty['Bio'] +"*,*" +faculty['name'], {"content": i})
+                kg.insert("faculty", 'x', {
+                    "name": faculty['name'],
+                    "title": faculty['title'],
+                    "email": faculty['email'],
+                    "office": faculty['office'],
+                    "tel": faculty['tel'],
+                    "pic": faculty['pic'],
+                    "socid": faculty['socid'],
+                    "Dept": faculty['Dept'],
+                    "Area": faculty['Area'],
+                    "Bio": faculty['Bio'],
+                    "ApptAdm": faculty['ApptAdm'],
+                    "researcharea": get_span_name(faculty['researcharea']),
+                    "biolinkstat": faculty['biolinkstat'],
+                    "photoSrc": faculty['photoSrc'],
+                    "interests": ",".join(faculty['interests']),
+                    "openalex_id": faculty['openalex_id']})
+                papers = get_article_info_by_author_id(faculty['openalex_id'])
+                for p in papers:
+                    if not kg.check_node_exists(p['title']):
+                        kg.insert("paper", 'p', {
+                            "name": p['title'],
+                            "openalex_id": p['openalex_id'],
+                            "author_id": p['author_id'],
+                            "doi": p['doi'],
+                            "abstract": p['abstract'],
+                            "date": p['publication_date']})
+                        cm.add_document(p['abstract']+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": j})
+                        for j in p['topics']:
+                            cm.add_document(j+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": j})
+                            kg.insert_connection( p['title'],j['display_name'])
+                        kg.insert_connection(faculty['name'],p['title'])
+                        # abstract = extract_from_abstract(p['abstract'])
 
-                    try:
-                        with open(f"src/gptoutput_json/{i['openalex_id']}.json", 'r') as g:
-                            data = json.loads(g.read())
-                            if "Keywords" in data:
-                                for kw in data["Keywords"]:
-                                    kg.insert("keyword", 'k', {
-                                        "name": kw})
-                                    kg.insert_connection(i['title'], kw)
-                            if "Problem" in data:
-                                kg.insert("problem", 'q', {
-                                    "name": "Problem"+i['openalex_id'],
-                                    "description": data["Problem"]})
-                                kg.insert_connection(i['title'], "Problem"+i['openalex_id'])
-                                try:
-                                    with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
-                                        gdata = json.loads(g.read())["Entities"]
-                                        if "Problem" in gdata:
-                                            for entity in gdata["Problem"]:
-                                                kg.insert("problemkeyword", 'a', {
-                                                    "name": entity})
-                                                kg.insert_connection("Problem"+i['openalex_id'], entity)
-                                except Exception as e:
-                                    print(e)
-                            if "Method" in data:
-                                kg.insert("method", 'm', {
-                                    "name":"Method"+i['openalex_id'],
-                                    "description": data["Method"]})
-                                kg.insert_connection(i['title'], "Method"+i['openalex_id'])
-                                try:
-                                    with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
-                                        gdata = json.loads(g.read())["Entities"]
-                                        if "Method" in gdata:
-                                            for entity in gdata["Method"]:
-                                                kg.insert("methodkeyword", 'c', {
-                                                    "name": entity})
-                                                kg.insert_connection("Method"+i['openalex_id'], entity)
-                                except Exception as e:
-                                    print(e)
-                            if "Model" in data and data["Model"] != "NO":
-                                kg.insert("model", 'n', {
-                                    "name": data["Model"],
-                                    })
-                                kg.insert_connection(i['title'], data["Model"])
-                            if "Task" in data:
-                                try:
-                                    with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
-                                        gdata = json.loads(g.read())["Entities"]
-                                        if "Task" in gdata:
-
-                                            kg.insert("task", 'j', {
-                                                "name": gdata['Task'],
-                                                "description": data["Task"]})
-                                            kg.insert_connection(i['title'], gdata['Task'])
-                                except Exception as e:
-                                    print(e)
-                            if "Results" in data:
-                                kg.insert("result", 'b', {
-                                    "name": "Result"+i['openalex_id'],
-                                    "description": str(data["Results"])})
-                                kg.insert_connection(i['title'], "Result"+i['openalex_id'])
-                                try:
-                                    with open(f"src/key_json_file/{i['openalex_id']}.json", 'r') as g:
-                                        gdata = json.loads(g.read())["Entities"]
-                                        if "Results" in gdata:
-                                            for entity in gdata["Results"]:
-                                                if gdata["Results"][entity]:
-                                                    kg.insert("resultkeyword", 'e', {
-                                                        "name": entity+i['openalex_id'],
-                                                        "description": ','.join(gdata["Results"][entity])})
-                                                    kg.insert_connection("Result"+i['openalex_id'], entity+i['openalex_id'])
-                                except Exception as e:
-                                    print(e)
-
-                            
-                    except Exception as e:
-                        print(e)
-                        pass
-
+                
             except Exception as e:
                 print(e)
                 continue
-        
+ 
 def main():
     # wait for the neo4j to start
     # dfstpkqamcnjb
-    time.sleep(18)
+    time.sleep(12)
     
     init_knowledge_graph()
     # print(CallGPT("What is the impact of COVID-19 on the economy?"))
+
+    app = Flask(__name__)
+    @app.route('/searchdb', methods=['GET'])
+    def searchdb():
+        query = request.args.get('query')
+        print(query)
+        return jsonify(cm.query(query, 5))
+
+    app.run(debug=False, host='0.0.0.0', port=8008)
     
 
 

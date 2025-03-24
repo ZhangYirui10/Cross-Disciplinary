@@ -4,3 +4,4 @@ chromadb-client
 sentence_transformers
 scholarly
 requests
+flask
