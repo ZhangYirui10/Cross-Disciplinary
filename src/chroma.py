@@ -38,8 +38,13 @@ class ChromaClient:
 
 
     def query(self, query_text, top_k=3):
-        retrieved_docs = self.collection.query(query_texts=[query_text], n_results=top_k)["documents"]
-        return " ".join(retrieved_docs[0])
+        retrieved_docs = self.collection.query(query_texts=[query_text], n_results=top_k)
+        result = []
+        for i in range(len(retrieved_docs['documents'])):
+            # if retrieved_docs['distances'][0][i] < 0.5:
+
+            result.append([retrieved_docs['documents'][0][i],retrieved_docs['distances'][0][i]])
+        return result
     
 if __name__ == "__main__":
     # time.sleep(5)
@@ -62,5 +67,5 @@ if __name__ == "__main__":
     cc = ChromaClient("vector_database_name_1")
     # cc.delete_document()
     for item in knowledge_data:
-        cc.add_document(item["id"], item["content"], item["metadata"])
+        cc.add_document(item["content"], item["metadata"])
     print(cc.query("observability product", top_k=1))

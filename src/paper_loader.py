@@ -21,15 +21,15 @@ def get_id_from_openc(id):
         # 'https://openalex.org/W3123532914'
         return id.split("/")[-1]
     else:
-        return None
+        return ""
     
 def get_topics_from_openalex(origin_topics):
     result = []
     for topic in origin_topics:
         result.append({
-            "topic_id": get_id_from_openc(topic.get("id", None)),
-            "display_name": topic.get("display_name", None),
-            "score": topic.get("score", None),
+            "topic_id": get_id_from_openc(topic.get("id", "")),
+            "display_name": topic.get("display_name", ""),
+            "score": topic.get("score", ""),
             "subfield": topic["subfield"]["display_name"],
             "field": topic["field"]["display_name"],
             "domain": topic["domain"]["display_name"],
@@ -45,15 +45,15 @@ def get_article_info_by_author_id(author_id):
     result = []
     for work in data['results']:
         result.append({
-            "title": work.get("title", None),
-            "doi": work.get("doi", None),
-            "openalex_id": get_id_from_openc(work.get("id", None)),
+            "title": work.get("title", ""),
+            "doi": work.get("doi", ""),
+            "openalex_id": get_id_from_openc(work.get("id", "")),
             "author_id": author_id,
-            "publication_date": work.get("publication_date", None),
-            "publication_year": work.get("publication_year", None),
-            "display_name": work.get("display_name", None),
-            "abstract": decode_abstract(work.get("abstract_inverted_index", None)),
-            "topics": get_topics_from_openalex(work.get("topics", None)),
+            "publication_date": work.get("publication_date", ""),
+            "publication_year": work.get("publication_year", ""),
+            "display_name": work.get("display_name", ""),
+            "abstract": decode_abstract(work.get("abstract_inverted_index", "")),
+            "topics": get_topics_from_openalex(work.get("topics", "")),
         })
     return result
 

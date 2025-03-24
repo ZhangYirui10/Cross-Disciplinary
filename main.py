@@ -9,7 +9,9 @@ from flask import Flask, request, jsonify
 # refst
 
 kg = KnowledgeGraph()
-cm = ChromaClient("vector_database_name_3")
+interest_cm = ChromaClient("vector_database_name_interest")
+topic_cm = ChromaClient("vector_database_name_topic")
+paper_cm = ChromaClient("vector_database_name_paper")
 
 # input: <a href=\"\" ng-click=\"setFaculty('11','Algorithms & Theory');\"><span id='divlink' class='11'>Algorithms & Theory</span></a>
 def get_span_name(input):
@@ -62,7 +64,7 @@ def init_knowledge_graph():
         for faculty in fc:
             try:
                 for i in faculty['interests']:
-                    cm.add_document(i+"*,*" + faculty['Bio'] +"*,*" +faculty['name'], {"content": i})
+                    interest_cm.add_document(i+"*,*" + faculty['Bio'] +"*,*" +faculty['name'], {"content": i})
                 kg.insert("faculty", 'x', {
                     "name": faculty['name'],
                     "title": faculty['title'],
@@ -90,18 +92,26 @@ def init_knowledge_graph():
                             "doi": p['doi'],
                             "abstract": p['abstract'],
                             "date": p['publication_date']})
-                        cm.add_document(p['abstract']+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": j})
+                        extract_abstract = extract_from_abstract(p['abstract'])
+                        # extract_abstract = p['abstract']
+                        paper_cm.add_document(extract_abstract+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": extract_abstract})
+
                         for j in p['topics']:
-                            cm.add_document(j+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": j})
+                            topic_cm.add_document(j['display_name']+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": j['display_name']})
                             kg.insert_connection( p['title'],j['display_name'])
                         kg.insert_connection(faculty['name'],p['title'])
-                        # abstract = extract_from_abstract(p['abstract'])
 
                 
             except Exception as e:
                 print(e)
                 continue
  
+def get_from_chroma(query):
+    return {
+        "interest": interest_cm.query(query, 5),
+        "topic": topic_cm.query(query, 5),
+        "paper": paper_cm.query(query, 5)
+    }
 def main():
     # wait for the neo4j to start
     # dfstpkqamcnjb
@@ -114,10 +124,28 @@ def main():
     @app.route('/searchdb', methods=['GET'])
     def searchdb():
         query = request.args.get('query')
-        print(query)
-        return jsonify(cm.query(query, 5))
+        return jsonify(get_from_chroma(query))
+
+    # return a beautiful http interface, it provides a search bar for user to search the database
+    @app.route('/home', methods=['GET'])
+    def home():
+        return '''
+        <!doctype html>
+        <title>Search Database</title>
+        <h1>Search Database</h1>
+        <form>
+            <label>Query:</label>
+            <input name="query">
+            <button>Search</button>
+        </form>
+        '''
+        
 
     app.run(debug=False, host='0.0.0.0', port=8008)
+
+    
+    
+
     
 
 
