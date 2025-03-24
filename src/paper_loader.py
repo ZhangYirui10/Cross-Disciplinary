@@ -1,6 +1,4 @@
-from scholarly import scholarly
 import requests
-from typing import Optional
 import json
 
 def decode_abstract(abstract_dict):
