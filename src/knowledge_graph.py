@@ -4,8 +4,8 @@ class KnowledgeGraph:
     insertkey = []
     def __init__(self):
         self.driver = GraphDatabase.driver(
-            # "bolt://neo4j_cross:7687",
-            "bolt://localhost:7687",
+            "bolt://neo4j_cross:7687",
+            # "bolt://localhost:7687",
             auth=("neo4j", "password")
         )
     

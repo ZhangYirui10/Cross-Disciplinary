@@ -1,4 +1,3 @@
-
 services:
   neo4j_cross:
     image: neo4j:5.12
@@ -22,28 +21,36 @@ services:
     container_name: chroma_service
     ports:
       - "8000:8000"
+    environment:
+      - CHROMA_SERVER_HOST=0.0.0.0
+      - CHROMA_SERVER_PORT=8000
+      - CHROMA_SERVER_HTTP_PORT=8000
+      - CHROMA_SERVER_CORS_ALLOW_ORIGINS=["*"]
+      - CHROMA_SERVER_CORS_ALLOW_CREDENTIALS=true
+    volumes:
+      - chroma_data:/chroma/chroma
 
   python-app:
     build:
       context: .  
     container_name: python-app
-    depends_on:
-      - neo4j_cross
-      - chroma
     env_file:
       - .env
-    links:
+    depends_on:
       - chroma
+      - neo4j_cross
     environment:
       - API_KEY=${API_KEY}
       - TOKENIZERS_PARALLELISM=false
+      - CHROMA_HOST=chroma
     volumes:
       - ./src:/app/src
       - ./logs:/app/logs
     ports:
-      - "8008:8008"  
+      - "8008:8008"
 
 volumes:
   neo4j_cross_data:
   neo4j_cross_logs:
   neo4j_cross_plugin:
+  chroma_data:

@@ -84,28 +84,64 @@ def init_knowledge_graph():
                     "interests": ",".join(faculty['interests']),
                     "openalex_id": faculty['openalex_id']})
                 papers = get_article_info_by_author_id(faculty['openalex_id'])
+                print("--------------------------------")
+                print(f"Processing faculty: {faculty['name']}")
+                print(f"Total papers found: {len(papers)}")
+                print("--------------------------------")
+                
+                paper_count = 0
                 for p in papers:
-                    if not kg.check_node_exists(p['title']):
-                        kg.insert("paper", 'p', {
-                            "name": p['title'],
-                            "openalex_id": p['openalex_id'],
-                            "author_id": p['author_id'],
-                            "doi": p['doi'],
-                            "abstract": p['abstract'],
-                            "date": p['publication_date']})
-                        # extract_abstract = extract_from_abstract(p['abstract'])
-                        extract_abstract = p['abstract']
-                        paper_cm.add_document(extract_abstract+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": extract_abstract})
+                    if paper_count >= 50:
+                        print(f"Reached limit of 50 papers for faculty {faculty['name']}")
+                        break
+                        
+                    try:
+                        # 检查所有必要字段是否都存在且不为空
+                        required_fields = ['title', 'openalex_id', 'author_id', 'doi', 'abstract', 'publication_date']
+                        missing_fields = [field for field in required_fields if not p.get(field)]
+                        
+                        if missing_fields:
+                            print(f"Skipping paper '{p.get('title', 'No title')}' due to missing fields: {', '.join(missing_fields)}")
+                            continue
+                            
+                        print(f"Processing paper: {p['title']}")
+                        
+                        if not kg.check_node_exists(p['title']):
+                            # 插入论文节点
+                            kg.insert("paper", 'p', {
+                                "name": p['title'],
+                                "openalex_id": p['openalex_id'],
+                                "author_id": p['author_id'],
+                                "doi": p['doi'],
+                                "abstract": p['abstract'],
+                                "date": p['publication_date']
+                            })
+                            
+                            # 处理摘要
+                            paper_cm.add_document(p['abstract']+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": p['abstract']})
 
-                        for j in p['topics']:
-                            topic_cm.add_document(j['display_name']+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": j['display_name']})
-                            kg.insert_connection( p['title'],j['display_name'])
-                        kg.insert_connection(faculty['name'],p['title'])
-
+                            # 处理主题
+                            if p.get('topics'):
+                                for j in p['topics']:
+                                    if j.get('display_name'):
+                                        topic_cm.add_document(j['display_name']+"*,*" + p['title'] +"*,*" +faculty['name'], {"content": j['display_name']})
+                                        kg.insert_connection(p['title'], j['display_name'])
+                            
+                            # 连接论文和教师
+                            kg.insert_connection(faculty['name'], p['title'])
+                            print(f"Successfully added paper: {p['title']}")
+                        else:
+                            print(f"Paper already exists: {p['title']}")
+                            
+                        paper_count += 1
+                            
+                    except Exception as e:
+                        print(f"Error processing paper '{p.get('title', 'No title')}': {str(e)}")
+                        continue  # 跳过当前文章，继续处理下一篇
                 
             except Exception as e:
-                print(e)
-                continue
+                print(f"Error processing faculty {faculty.get('name', 'Unknown')}: {str(e)}")
+                continue  # 处理下一个faculty
  
 def get_from_chroma(query):
     return {
@@ -118,7 +154,7 @@ def main():
     # dfstpkqamcnjb
     time.sleep(12)
     
-    # init_knowledge_graph()
+    init_knowledge_graph()
     # print(CallGPT("What is the impact of COVID-19 on the economy?"))
     template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
     app = Flask(__name__,template_folder='templates')

@@ -118,8 +118,115 @@
         .final-answer p {
             color: #34495e;
             line-height: 1.8;
-            white-space: pre-line;
             font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .professor-card {
+            background: white;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .professor-photo-container {
+            width: 200px;
+            height: 240px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .professor-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .professor-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .professor-info h4 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .professor-info p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #34495e;
+        }
+
+        .professor-info .label {
+            color: #7f8c8d;
+            font-weight: 600;
+            min-width: 80px;
+            display: inline-block;
+        }
+
+        .professor-info .bio {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .professor-info .bio .label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-link {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .paper-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .details-section {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .details-section h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+
+        .detail-item p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .detail-item .label {
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-right: 0.5rem;
         }
 
         .error {
@@ -132,6 +239,19 @@
             color: #7f8c8d;
             font-size: 0.9rem;
             margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .professor-card {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+
+            .professor-photo-container {
+                width: 160px;
+                height: 200px;
+                margin: 0 auto 1.5rem;
+            }
         }
     </style>
 </head>
@@ -158,11 +278,68 @@
     </div>
 
     <script>
+        function formatProfessorInfo(text, professors) {
+            console.log('Formatting professor info with:', { text, professors });
+            if (!professors || !Array.isArray(professors) || professors.length === 0) {
+                console.log('No professor data available');
+                return text;
+            }
+            
+            // Store original text for professor replacement
+            let formattedText = text;
+            
+            professors.forEach(prof => {
+                console.log('Processing professor:', prof);
+                // 使用更精确的正则表达式匹配
+                const profPattern = new RegExp(`Professor:\\s*${prof.name}(?![^<]*>)`, 'g');
+                const profCard = `
+                    <div class="professor-card">
+                        <div class="professor-photo-container">
+                            <img src="${prof.pic || 'https://via.placeholder.com/200x240'}" 
+                                 alt="${prof.name}" 
+                                 class="professor-photo"
+                                 onerror="this.src='https://via.placeholder.com/200x240?text=No+Photo'">
+                        </div>
+                        <div class="professor-info">
+                            <h4>${prof.name}</h4>
+                            <p><span class="label">Title</span> ${prof.title || 'N/A'}</p>
+                            <p><span class="label">Email</span> ${prof.email || 'N/A'}</p>
+                            <p><span class="label">Tel</span> ${prof.tel || 'N/A'}</p>
+                            <p><span class="label">Interests</span> ${prof.interests || 'N/A'}</p>
+                            <div class="bio">
+                                <span class="label">Biography</span>
+                                <p>${prof.Bio || 'N/A'}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                formattedText = formattedText.replace(profPattern, profCard);
+            });
+            return formattedText;
+        }
+
+        function formatPaperLinks(text, papers) {
+            console.log('Formatting paper links with:', { text, papers });
+            if (!papers || !Array.isArray(papers) || papers.length === 0) {
+                console.log('No paper data available');
+                return text;
+            }
+            
+            papers.forEach(paper => {
+                console.log('Processing paper:', paper);
+                if (paper.doi && paper.name) {
+                    const paperPattern = new RegExp(`"${paper.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`, 'g');
+                    const paperLink = `"<a href="https://doi.org/${paper.doi}" target="_blank" class="paper-link">${paper.name}</a>"`;
+                    text = text.replace(paperPattern, paperLink);
+                }
+            });
+            return text;
+        }
+
         async function performSearch() {
             const query = document.getElementById('searchInput').value;
             if (!query) return;
 
-            // 显示加载动画
             document.getElementById('loading').style.display = 'block';
             document.getElementById('final-answer').innerHTML = '';
 
@@ -171,10 +348,6 @@
                 const analyzeResponse = await fetch(`/analyze?query=${encodeURIComponent(query.trim())}`);
                 console.log('Response status:', analyzeResponse.status);
                 
-                if (!analyzeResponse.ok) {
-                    throw new Error(`HTTP error! status: ${analyzeResponse.status}`);
-                }
-                
                 const analyzeData = await analyzeResponse.json();
                 console.log('Received data:', analyzeData);
                 
@@ -182,11 +355,54 @@
                     throw new Error('No final_answer in response data');
                 }
                 
-                // 显示最终答案
+                // 重置最终答案的HTML内容
                 const finalAnswerDiv = document.getElementById('final-answer');
+                finalAnswerDiv.innerHTML = '';
+                
+                // Format the text with proper line breaks and bold headings
+                let formattedText = `
+                    <br><br><strong>Search Query:</strong><br>
+                    <div style="padding: 1rem; background: #f8f9fa; border-radius: 8px; margin: 1rem 0;">
+                        ${query}
+                    </div>
+                    
+                    <br><strong>Required Project Capabilities:</strong><br>
+                    <div style="padding: 1rem; background: #f8f9fa; border-radius: 8px; margin: 1rem 0;">
+                        ${analyzeData.response || 'No capabilities analysis available'}
+                    </div>
+                    
+                    <br><strong>Potential Collaborating Professors Analysis:</strong><br>
+                `;
+
+                // 添加教授分析内容
+                if (analyzeData.final_answer) {
+                    formattedText += analyzeData.final_answer
+                        .replace(/Strong Capabilities:/g, '<br><br><strong>Strong Capabilities:</strong><br>')
+                        .replace(/Representative Work:/g, '<br><br><strong>Representative Work:</strong><br>')
+                        .replace(/Potential Contribution to Project:/g, '<br><br><strong>Potential Contribution to Project:</strong><br>')
+                        .replace(/\. (?=[A-Z])/g, '. <br>')
+                        .replace(/---/g, '<br><br>')
+                        .replace(/Professor:/g, '<br>Professor:');
+                }
+                
+                // 先处理教授信息
+                if (analyzeData.professors) {
+                    formattedText = formatProfessorInfo(formattedText, analyzeData.professors);
+                } else {
+                    console.log('No professors data in response');
+                }
+                
+                // 然后处理论文链接
+                if (analyzeData.papers) {
+                    formattedText = formatPaperLinks(formattedText, analyzeData.papers);
+                } else {
+                    console.log('No papers data in response');
+                }
+                
+                // 更新显示
                 finalAnswerDiv.innerHTML = `
                     <h3>Analysis Results</h3>
-                    <p>${analyzeData.final_answer}</p>
+                    <div style="line-height: 1.6; padding: 0 1rem;">${formattedText}</div>
                 `;
 
             } catch (error) {

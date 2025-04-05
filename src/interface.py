@@ -1,6 +1,7 @@
 import os
 from flask import Flask, request, jsonify, render_template
 from chroma import ChromaClient
+from knowledge_graph import KnowledgeGraph
 
 def main():
     # 获取当前文件的目录

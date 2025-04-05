@@ -1,4 +1,6 @@
 import chromadb
+from chromadb.config import Settings
+import os
 import time
 from chromadb.utils import embedding_functions
 
@@ -17,8 +19,8 @@ class ChromaClient:
     def __init__(self, vector_name="vector_database_name_1"):
         self.vector_name = vector_name
         self.id = 100
-        # self.chroma_client = chromadb.HttpClient(host="chroma", port=8000)
-        self.chroma_client = chromadb.HttpClient(host="localhost", port=8000)
+        self.chroma_client = chromadb.HttpClient(host="chroma", port=8000)
+        # self.chroma_client = chromadb.HttpClient(host="localhost", port=8000)
         # print(self.chroma_client.list_collections())
         # if self.vector_name in self.chroma_client.list_collections():
         #     self.chroma_client.delete_collection(name=self.vector_name)
