@@ -21,7 +21,10 @@ class KnowledgeGraph:
         
     def queryProf(self, keyword):
         with self.driver.session() as session:
+            print(f"Searching for professor with keyword: {keyword}")  # Debug print
+            # Use case-insensitive partial matching
             result = session.run("MATCH (n:faculty {name: '"+keyword.replace("'", "\"")+"'}) return n").data()
+            print(f"Query result: {result}")  # Debug print
             if len(result) == 0:
                 return {}
             return result[0]['n']
@@ -32,6 +35,25 @@ class KnowledgeGraph:
             if len(result) == 0:
                 return {}   
             return result[0]['n']
+        
+    def queryProfPapers(self, prof_name):
+        """
+        Retrieves all paper titles authored by a specific professor.
+        
+        Args:
+            prof_name (str): The name of the professor
+            
+        Returns:
+            list: A list of paper titles authored by the professor
+        """
+        with self.driver.session() as session:
+            prof_name = self.__replace_comma__(prof_name)
+            query = """
+            MATCH (prof:faculty {name: $prof_name})-[:HAVE]->(paper:paper)
+            RETURN paper.name as paper_title
+            """
+            result = session.run(query, prof_name=prof_name).data()
+            return [record["paper_title"] for record in result]
         
     def __replace_comma__(self, s):
         if s == None:

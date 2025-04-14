@@ -200,27 +200,6 @@
     "openalex_id": "A5000454484"
   },
   {
-    "name": "CHEN Yu",
-    "title": "NUS Presidential Young Professor",
-    "email": "<img src=\"https://www.comp.nus.edu.sg/~sochr/www/stfphotos/ymYCnJZvbMyRXvVCThNRqQNcfRQMvKVQ.jpg\">",
-    "office": "COM2-02-58",
-    "tel": "660 12921",
-    "pic": "https://www.comp.nus.edu.sg/~sochr/www/stfphotos/cheny.jpg",
-    "socid": "cheny",
-    "Dept": "252",
-    "Area": "11",
-    "Bio": "https://www.comp.nus.edu.sg/cs/people/cheny",
-    "ApptAdm": "",
-    "researcharea": "<a href=\"\" ng-click=\"setFaculty('11','Algorithms & Theory');\"><span id='divlink' class='11'>Algorithms & Theory</span></a>",
-    "biolinkstat": "1",
-    "photoSrc": "<img src=\" https://www.comp.nus.edu.sg/~sochr/www/stfphotos/cheny.jpg\" onmouseover=\"this.src='https://www.comp.nus.edu.sg/~sochr/www/stfphotos/cheny.jpg'\" onmouseout=\"this.src='https://www.comp.nus.edu.sg/~sochr/www/stfphotos/cheny.jpg'\">",
-    "interests": [
-      "Sublinear Algorithms",
-      "Graph Sparsification"
-    ],
-    "openalex_id": "A5100402072"
-  },
-  {
     "name": "CHUA Tat Seng",
     "title": "Professor",
     "email": "<img src=\"https://www.comp.nus.edu.sg/~sochr/www/stfphotos/TCAfYMPflbitBdgCOmusorjdctlqLhKT.jpg\">",
@@ -940,24 +919,6 @@
       "Computational Sustainability"
     ],
     "openalex_id": "A5110628584"
-  },
-  {
-    "name": "LU Yao",
-    "title": "Assistant Professor",
-    "email": "<img src=\"https://www.comp.nus.edu.sg/~sochr/www/stfphotos/XdbacNIsmXUcFWJyPLxtJCEFlKThhMel.jpg\">",
-    "office": "COM2-03-42",
-    "tel": "660 17891",
-    "pic": "https://www.comp.nus.edu.sg/~sochr/www/stfphotos/luyao.jpg",
-    "socid": "luyao",
-    "Dept": "252",
-    "Area": "1,3,5",
-    "Bio": "https://www.comp.nus.edu.sg/cs/people/luyao",
-    "ApptAdm": "",
-    "researcharea": "<a href=\"\" ng-click=\"setFaculty('1','Artificial Iteligence');\"><span id='divlink' class='1'>Artificial Iteligence</span></a>, <a href=\"\" ng-click=\"setFaculty('3','Database');\"><span id='divlink' class='3'>Database</span></a>, <a href=\"\" ng-click=\"setFaculty('5','Systems & Networking');\"><span id='divlink' class='5'>Systems & Networking</span></a>",
-    "biolinkstat": "1",
-    "photoSrc": "<img src=\" https://www.comp.nus.edu.sg/~sochr/www/stfphotos/luyao.jpg\" onmouseover=\"this.src='https://www.comp.nus.edu.sg/~sochr/www/stfphotos/luyao.jpg'\" onmouseout=\"this.src='https://www.comp.nus.edu.sg/~sochr/www/stfphotos/luyao.jpg'\">",
-    "interests": [],
-    "openalex_id": "A5090998485"
   },
   {
     "name": "Richard MA",
@@ -1848,26 +1809,6 @@
     "openalex_id": "A5028568420"
   },
   {
-    "name": "YOU Yang",
-    "title": "NUS Presidential Young Professor",
-    "email": "<img src=\"https://www.comp.nus.edu.sg/~sochr/www/stfphotos/PNNIrtreEhWJXsGIKbGDgatJAKJyAXHP.jpg\">",
-    "office": "COM3-02-51",
-    "tel": "660 17698",
-    "pic": "https://www.comp.nus.edu.sg/~sochr/www/stfphotos/youy.jpg",
-    "socid": "youy",
-    "Dept": "252",
-    "Area": "1,5",
-    "Bio": "https://www.comp.nus.edu.sg/cs/people/youy",
-    "ApptAdm": "",
-    "researcharea": "<a href=\"\" ng-click=\"setFaculty('1','Artificial Iteligence');\"><span id='divlink' class='1'>Artificial Iteligence</span></a>, <a href=\"\" ng-click=\"setFaculty('5','Systems & Networking');\"><span id='divlink' class='5'>Systems & Networking</span></a>",
-    "biolinkstat": "1",
-    "photoSrc": "<img src=\" https://www.comp.nus.edu.sg/~sochr/www/stfphotos/youy.jpg\" onmouseover=\"this.src='https://www.comp.nus.edu.sg/~sochr/www/stfphotos/youy.jpg'\" onmouseout=\"this.src='https://www.comp.nus.edu.sg/~sochr/www/stfphotos/youy.jpg'\">",
-    "interests": [
-      "Machine Learning; High-Performance Computing; Parallel/Distributed Systems"
-    ],
-    "openalex_id": "A5061188077"
-  },
-  {
     "name": "YU Haifeng",
     "title": "Dean's Chair Associate Professor",
     "email": "<img src=\"https://www.comp.nus.edu.sg/~sochr/www/stfphotos/jtKizQCXYTtikTRwBVfQtBEmrtEVNdBP.jpg\">",
@@ -1889,24 +1830,6 @@
       "Distributed Computing"
     ],
     "openalex_id": "A5103087131"
-  },
-  {
-    "name": "ZHANG Jiaheng",
-    "title": "Assistant Professor",
-    "email": "<img src=\"https://www.comp.nus.edu.sg/~sochr/www/stfphotos/fiIGvOuroJoouUZdbJWJPDriIIxUhFLc.jpg\">",
-    "office": "COM2-03-08",
-    "tel": "660 15482",
-    "pic": "https://www.comp.nus.edu.sg/~sochr/www/stfphotos/zhangjh.jpg",
-    "socid": "zhangjh",
-    "Dept": "252",
-    "Area": "12",
-    "Bio": "https://www.comp.nus.edu.sg/cs/people/zhangjh",
-    "ApptAdm": "",
-    "researcharea": "<a href=\"\" ng-click=\"setFaculty('12','Security');\"><span id='divlink' class='12'>Security</span></a>",
-    "biolinkstat": "1",
-    "photoSrc": "<img src=\" https://www.comp.nus.edu.sg/~sochr/www/stfphotos/zhangjh.jpg\" onmouseover=\"this.src='https://www.comp.nus.edu.sg/~sochr/www/stfphotos/zhangjh.jpg'\" onmouseout=\"this.src='https://www.comp.nus.edu.sg/~sochr/www/stfphotos/zhangjh.jpg'\">",
-    "interests": [],
-    "openalex_id": "A5032474012"
   },
   {
     "name": "ZHANG Yang",

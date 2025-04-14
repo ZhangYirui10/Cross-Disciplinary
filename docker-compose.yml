@@ -46,6 +46,7 @@ services:
     volumes:
       - ./src:/app/src
       - ./logs:/app/logs
+      - ./professor_images:/app/professor_images
     ports:
       - "8008:8008"
 

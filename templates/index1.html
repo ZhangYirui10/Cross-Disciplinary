@@ -295,7 +295,7 @@
                 const profCard = `
                     <div class="professor-card">
                         <div class="professor-photo-container">
-                            <img src="/interface/images/${prof.socid}.jpg" 
+                            <img src="/images/${prof.socid}.jpg" 
                                  alt="${prof.name}" 
                                  class="professor-photo"
                                  onerror="this.src='https://via.placeholder.com/200x240?text=No+Photo'"
@@ -346,7 +346,7 @@
 
             try {
                 console.log('Sending request with query:', query);
-                const analyzeResponse = await fetch(`/interface/analyze?query=${encodeURIComponent(query.trim())}`);
+                const analyzeResponse = await fetch(`/analyze?query=${encodeURIComponent(query.trim())}`);
                 console.log('Response status:', analyzeResponse.status);
                 
                 const analyzeData = await analyzeResponse.json();

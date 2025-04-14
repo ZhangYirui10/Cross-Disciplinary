@@ -6,7 +6,8 @@ import time
 import json
 import re
 import os
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_from_directory
+import logging
 # refst
 
 kg = KnowledgeGraph()
@@ -151,13 +152,47 @@ def get_from_chroma(query):
     }
 def main():
     # wait for the neo4j to start
-    # dfstpkqamcnjb
     time.sleep(12)
     
-    init_knowledge_graph()
-    # print(CallGPT("What is the impact of COVID-19 on the economy?"))
+    # init_knowledge_graph()
     template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
-    app = Flask(__name__,template_folder='templates')
+    app = Flask(__name__, template_folder='templates')
+    
+    # Configure logging
+    app.logger.setLevel('DEBUG')
+    handler = logging.StreamHandler()
+    handler.setLevel('DEBUG')
+    app.logger.addHandler(handler)
+
+    # 添加静态文件路由
+    @app.route('/images/<path:filename>')
+    def serve_professor_image(filename):
+        print(f"\n=== DEBUG INFO ===")
+        print(f"Requested image: {filename}")
+        print(f"Current working directory: {os.getcwd()}")
+        print(f"Directory contents: {os.listdir('/app/professor_images')}")
+        print(f"File exists: {os.path.exists(os.path.join('/app/professor_images', filename))}")
+        print(f"File path: {os.path.join('/app/professor_images', filename)}")
+        print("================\n")
+        image_dir = os.path.join(os.getcwd(), 'professor_images')
+    
+        print(f"\n=== DEBUG INFO ===")
+        print(f"Requested image: {filename}")
+        print(f"Resolved dir: {image_dir}")
+        print(f"Directory contents: {os.listdir(image_dir)}")
+        print(f"File exists: {os.path.exists(os.path.join(image_dir, filename))}")
+        print(f"File path: {os.path.join(image_dir, filename)}")
+        print("================\n")
+        
+        try:
+            return send_from_directory(image_dir, filename)
+        except Exception as e:
+            print(f"\n=== ERROR ===")
+            print(f"Error type: {type(e)}")
+            print(f"Error message: {str(e)}")
+            print("=============\n")
+            return "Image not found", 404
+
     @app.route('/searchdb', methods=['GET'])
     def searchdb():
         query = request.args.get('query')

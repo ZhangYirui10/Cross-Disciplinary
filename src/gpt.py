@@ -70,21 +70,21 @@ def get_final_answer(project_description, capability_list, capability_reasoning,
 
     ---
 
-    Please identify the **top three professors** most suitable for this project. For each professor, provide structured information under the following headings:
-    You must follow the output format strictly. Each professor's section must contain the **professor's full name**, their **strong capabilities**, a list of **representative works (with paper titles)**, and their **potential contribution** to the project.
+    Please identify the **top three professors** most suitable for this project. Select the professors based on a holistic comparison across all three capabilities and their demonstrated relevance in the provided information. Do not intentionally vary the selection across runs—choose the three professors who are most objectively and consistently suitable. 
+    For each professor, provide structured information under the following headings. You must follow the output format strictly. Each professor's section must contain the **professor's full name**, their **relevant research**, a list of **selected publications (with paper titles)**, and their **potential contribution** to the project.
     ---
 
     Output Format (use EXACTLY this layout for each professor):
 
     Professor: <Full Name>
 
-    Strong Capabilities:  
-    <One paragraph summarizing which capabilities this professor is strong in and why>
+    Relevant Research:
+    <One paragraph summarizing the professor's demonstrated research areas and strengths, with supporting context or examples>
 
-    Representative Work:  
+    Selected Publications: 
     1. "<Paper Title 1>" – <One sentence on how it supports the capability>  
     2. "<Paper Title 2>" – <One sentence on how it supports the capability>  
-    (Include up to 3 papers. Use quotes for the paper titles.)
+    (Include up to 3 papers. Use quotes for the paper titles. Do not fabricate any publications—only include those explicitly mentioned in the provided search results.)
 
     Potential Contribution to Project:  
     <One paragraph explaining what the professor can bring to the project based on their expertise>
@@ -94,7 +94,74 @@ def get_final_answer(project_description, capability_list, capability_reasoning,
     response = CallGPT(prompt)
     
     return response
+
+def get_professor_analysis(input_data):
+    """
+    Analyzes professors based on their relevance to a project without making selection decisions.
+    The professors are already selected and ranked by the scoring algorithm.
     
+    Args:
+        input_data (dict): Contains project description, capabilities, professors and papers
+    
+    Returns:
+        str: Analysis of the professors' relevance to the project
+    """
+    project_description = input_data["project_description"]
+    capabilities = input_data["capabilities"]
+    capability_reasoning = input_data["capability_reasoning"]
+    professors = input_data["professors"]
+    papers = input_data["papers"]
+    
+    # Format professors with their scores
+    professors_text = ""
+    for prof in professors:
+        prof_info = f"Professor: {prof.get('name', 'Unknown')}\n"
+        prof_info += f"Score: {prof.get('score', 0)}\n"
+        prof_info += f"Bio: {prof.get('Bio', 'N/A')}\n"
+        prof_info += f"Research Areas: {prof.get('researcharea', 'N/A')}\n"
+        prof_info += f"Interests: {prof.get('interests', 'N/A')}\n\n"
+        professors_text += prof_info
+    
+    # Format papers
+    papers_text = ""
+    for paper in papers:
+        paper_info = f"Title: {paper.get('name', 'Unknown')}\n"
+        paper_info += f"Abstract: {paper.get('abstract', 'N/A')}\n\n"
+        papers_text += paper_info
+    
+    prompt = f"""
+    You are an expert in academic collaboration. You need to analyze professors' relevance to a specific project based on their profiles and papers.
+    
+    ### Project Description:
+    {project_description}
+    
+    ### Required Capabilities (inferred based on the project description):
+    {capabilities}
+    
+    Justifications for these capabilities:
+    {capability_reasoning}
+    
+    ### Selected Professors (already ranked by algorithm based on relevance score):
+    {professors_text}
+    
+    ### Relevant Papers:
+    {papers_text}
+    
+    ---
+    
+    For each professor, provide an analysis addressing the following points:
+    
+    1. How their expertise aligns with the required capabilities
+    2. What specific contributions they could make to the project
+    3. How their previous work (papers, research areas) relates to the project
+    
+    Present your analysis in a structured format. Do not attempt to re-rank or select professors - they have already been ranked by a scoring algorithm.
+    
+    Keep your analysis factual and based on the provided information. For each professor, explain why they received a high relevance score.
+    """
+    
+    response = CallGPT(prompt)
+    return response
 
 
 if __name__ == "__main__":
